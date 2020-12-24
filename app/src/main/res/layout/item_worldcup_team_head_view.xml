@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/team_head_view"
+    android:layout_width="match_parent"
+    android:layout_height="186dp">
+
+    <com.box.common.core.widget.CoreImageView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/team_headview_bg"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <com.box.common.core.widget.CoreSimpleDraweeView
+        android:id="@+id/team_image"
+        android:layout_width="87dp"
+        android:layout_height="54dp"
+        android:layout_marginBottom="34dp"
+        android:layout_marginLeft="18dp"
+        android:layout_marginRight="14dp"
+        android:scaleType="fitXY"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:placeholderImage="@drawable/nationalflag_default"/>
+
+    <com.box.common.core.widget.CoreTextView
+        android:id="@+id/team_reserve"
+        android:layout_width="70dp"
+        android:layout_height="26dp"
+        android:layout_marginBottom="6dp"
+        android:layout_marginRight="13dp"
+        android:background="@drawable/team_reserve_text_bg_selector"
+        android:gravity="center"
+        android:text="@string/Team_Reserve"
+        android:textColor="@color/color_9"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toBottomOf="@+id/team_image"
+        app:layout_constraintRight_toRightOf="parent"/>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/team_info"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginLeft="14dp"
+        android:layout_marginRight="14dp"
+        app:layout_constraintBottom_toBottomOf="@id/team_image"
+        app:layout_constraintLeft_toRightOf="@id/team_image"
+        app:layout_constraintRight_toLeftOf="@+id/team_reserve"
+        app:layout_constraintTop_toTopOf="@id/team_image">
+
+        <com.box.common.core.widget.CoreTextView
+            android:id="@+id/team_title_japan"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:gravity="start"
+            android:maxLines="1"
+            android:textColor="@color/color_9"
+            android:textStyle="bold"
+            app:autoSizeMaxTextSize="17sp"
+            app:autoSizeMinTextSize="1sp"
+            app:autoSizeStepGranularity="1sp"
+            app:autoSizeTextType="uniform"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+        <com.box.common.core.widget.CoreTextView
+            android:id="@+id/team_title_eng"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:textColor="@color/color_4"
+            android:textSize="11sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+        <com.box.common.core.widget.CoreTextView
+            android:id="@+id/team_other"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:textColor="@color/color_4"
+            android:textSize="11sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

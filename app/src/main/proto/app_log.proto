@@ -1,0 +1,107 @@
+syntax = "proto2";
+import "base.proto";
+option java_package = "com.box.app.news.proto";
+
+enum ImpressionType {
+    IMPRESSION_ARTICLE_LIST = 0;
+}
+
+enum ImpressionCellType {
+    IMPRESSION_CELL_ARTICLE = 0;
+    IMPRESSION_CELL_VIDEO = 1;
+    IMPRESSION_CELL_CARD = 2;
+    IMPRESSION_CELL_IMAGE = 3;
+    IMPRESSION_CELL_GUIDE = 4;
+    IMPRESSION_CELL_GIF = 5;
+    IMPRESSION_CELL_OTHER = 6;
+    IMPRESSION_CELL_HEADLINE = 7;
+    IMPRESSION_CELL_ESSAY = 8;
+}
+
+message ImpressionCell {
+    optional string item_id      = 1;
+    repeated int64 enter_time   = 2; // 每个impression的进入时间，暂时不传
+    optional int64 duration     = 3;
+    optional int64 max_duration = 4;
+    optional ImpressionCellType type = 5;
+    optional string tags      = 6;
+}
+
+message Impression {
+    optional ImpressionType type = 1;
+    optional string item_id = 2;
+    repeated ImpressionCell impression_cell = 3;
+    optional int64  timestamp = 4;
+}
+
+enum EventName {
+    EVENT_ARTICLE_LIST   = 0;
+    EVENT_ARTICLE_DETAIL = 1;
+    EVENT_WEATHER = 2;
+    EVENT_QUERY = 3;
+    EVENT_VIDEO = 4;
+    EVENT_SHARE = 5;
+    EVENT_APNS = 6;
+    EVENT_GIF = 7;
+    EVENT_OTHER = 8;
+    EVENT_ESSAY = 9;
+}
+
+message Event {
+    optional EventName  name  = 1;
+    optional string     label = 2;
+    optional EventBody  body  = 3;
+    optional int64 timestamp  = 4;
+    optional string     log_id = 5;
+    optional string     extra_flag = 6; // 附加标识,feed操作"refresh"/"load_more"
+    optional string     other_info = 7;
+}
+
+message EventBody {
+    optional string item_id    = 1;
+    optional int64 enter_time  = 2;
+    optional int64 duration    = 3;
+    optional Progress progress = 4;
+    optional Refer    refer    = 5;
+    optional Query    query    = 6;
+    optional string   platform = 7;
+    optional string   open_url = 8;
+    optional Play     play     = 9;
+    optional string   tags     = 10;
+}
+
+message Query {
+    optional string query_key  = 1;
+    optional string session_id = 2;
+    optional ContentType query_type = 3;
+    optional int64 click_index = 4;
+    optional int64 page_num = 5;
+}
+
+message Refer {
+    optional string name    = 1;
+    optional string item_id = 2;
+    optional string detail  = 3;
+}
+
+message Progress {
+    optional int64 page_height = 1;
+    optional int64 read_height = 2;
+    optional int64 progress    = 3;
+}
+
+message Play {
+    optional int64 duration       = 1;
+    optional int64 play_duration  = 2;
+    optional int64 play_time      = 3;
+    optional int64 start_timestamp = 4;
+    optional Refer position_source_refer = 5;
+    optional Refer position_refer = 6;
+    optional bool  is_embedded = 7;
+}
+
+message NewsAppLog {
+    optional Header header = 1;
+    repeated Event event = 2;
+    repeated Impression impression = 3;
+}

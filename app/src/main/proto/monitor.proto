@@ -1,0 +1,56 @@
+syntax = "proto2";
+import "base.proto";
+option java_package = "com.box.app.news.proto";
+
+enum MonitorItemType {
+    EVENT_ERROR  = 0;
+    EVENT_SAMPLE = 1;
+    EVENT_DEBUG  = 2;
+}
+
+message MonitorItem {
+    optional MonitorItemType type = 1;
+    optional string  label        = 2;
+    optional int64   status       = 3;
+    optional int64   lantency     = 4;
+    optional string  trace_code   = 5;
+    optional Access  access       = 6;
+    optional string  uri          = 7;
+    optional bool    is_active    = 8;
+    optional string  error_domain = 9;
+    repeated MonitorMetric metric = 10;
+    optional int64   start_time	  = 11;
+    optional int64   timestamp    = 12;
+    optional string  log_id       = 13;
+    optional MonitorWebMetric web_metric = 14;
+}
+
+message MonitorWebMetric {
+    optional string url                             = 1;
+    optional double fetch_start                     = 2;
+    optional double show_start                     = 3;
+    optional double fetch_duration                  = 4;
+    optional double unfinished_progress             = 5;
+    optional double unfinished_progress_duration    = 6;
+}
+
+message MonitorMetric {
+    optional string url        				= 1;
+    optional int64  status     				= 2;
+    optional double fetch_start          	= 3;
+    optional double domain_look_up_start 	= 4;
+    optional double domain_look_up_end   	= 5;
+    optional double connect_start        	= 6;
+    optional double secure_connection_start	= 7;
+    optional double secure_connection_end   	= 8;
+    optional double connect_end       		= 9;
+    optional double request_start      		= 10;
+    optional double request_end        		= 11;
+    optional double response_start     		= 12;
+    optional double response_end       		= 13;
+}
+
+message NewsMonitor {
+    optional Header header 		= 1;
+    repeated MonitorItem item 	= 2;
+}

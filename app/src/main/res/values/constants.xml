@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">NewsBox Pro</string>
+    <string name="duration_default">00:00</string>
+    <bool name="firebase_performance_logcat_enabled">false</bool>
+<!--AFKey-->
+    <string name="appsflyer_dev_key">TODO</string>
+<!--友盟Key-->
+    <string name="umeng_appkey">TODO</string>
+    <string name="umeng_channel">TODO</string>
+<!--FacebookKey-->
+    <string name="facebook_app_id">TODO</string>
+    <string name="facebook_content_provider">TODO</string>
+    <string name="fb_login_protocol_scheme">TODO</string>
+<!--VungleKey-->
+<!--<string name="vungle_app_id">PH</string>-->
+<!--ZCoup广告Key-->
+    <string name="zcoup_slot_id">TODO</string>
+<!--Unity广告key-->
+    <string name="unity_game_id">TODO</string>
+<!--JumpRawKey-->
+    <string name="jumpraw_slot_id">TODO</string>
+<!--推特登录Key-->
+    <string name="com.twitter.sdk.android.CONSUMER_KEY">TODO</string>
+    <string name="com.twitter.sdk.android.CONSUMER_SECRET">TODO</string>
+<!--AdMobKey-->
+    <string name="admob_app_id">ca-app-pub-3940256099942544~3347511713</string>
+<!--反馈Email-->
+    <string name="report_email">report@newsbox-inc.com</string>
+
+</resources>

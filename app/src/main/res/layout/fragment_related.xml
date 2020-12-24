@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.box.common.core.widget.CoreConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    style="@style/Core.Widget.Layout.Parent.Layer"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/transparent"
+    tools:context=".page.activity.MainActivity">
+
+    <View
+        android:layout_width="0dp"
+        android:layout_height="5dp"
+        android:background="@color/color_29"
+        app:layout_constraintBottom_toBottomOf="@+id/related_txt"
+        android:layout_marginBottom="2.4dp"
+        app:layout_constraintLeft_toLeftOf="@+id/related_txt"
+        app:layout_constraintRight_toRightOf="@+id/related_txt"/>
+
+    <com.box.common.core.widget.CoreTextView
+        android:id="@+id/related_txt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:paddingLeft="4dp"
+        android:paddingRight="4dp"
+        android:text="@string/News_RelatedNews"
+        android:includeFontPadding="false"
+        android:textColor="@color/color_1"
+        android:textSize="17sp"
+        android:textStyle="bold"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/dig_btn"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@id/common_content_rv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="28dp"
+        app:layout_constraintTop_toBottomOf="@+id/related_txt"/>
+
+</com.box.common.core.widget.CoreConstraintLayout>

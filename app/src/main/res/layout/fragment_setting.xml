@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    style="@style/Core.Widget.Layout.Parent.Layer"
+    android:background="@color/color_8"
+    tools:context=".page.activity.MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:orientation="vertical">
+
+        <com.box.common.extension.widget.bar.setting.SettingBar
+            android:id="@+id/setting_information_bar"
+            style="@style/AppTheme.Widget.SettingBar.Setting"
+            app:showArrow="true"
+            app:title="@string/Setting_Profile" />
+
+        <View style="@style/AppTheme.Widget.Line.Horizontal.Setting" />
+
+        <com.box.common.extension.widget.bar.setting.SettingBar
+            android:id="@+id/setting_feedback_bar"
+            style="@style/AppTheme.Widget.SettingBar.Setting"
+            app:showArrow="true"
+            app:title="@string/Setting_Feedback" />
+
+        <View style="@style/AppTheme.Widget.Line.Horizontal.Setting" />
+
+        <com.box.common.extension.widget.bar.setting.SettingBar
+            android:id="@+id/setting_font_bar"
+            style="@style/AppTheme.Widget.SettingBar.Setting"
+            app:showArrow="true"
+            app:showValue="true"
+            app:title="@string/Setting_FontSize" />
+
+        <View style="@style/AppTheme.Widget.Line.Horizontal.Setting" />
+
+        <com.box.common.extension.widget.bar.setting.SettingBar
+            android:id="@+id/setting_version_bar"
+            style="@style/AppTheme.Widget.SettingBar.Setting"
+            app:showArrow="false"
+            app:showValue="true"
+            app:title="@string/Setting_CurrentVersion" />
+
+        <View
+            style="@style/AppTheme.Widget.Line.Horizontal.Setting"
+            android:layout_height="6dp"
+            android:layout_marginLeft="0dp"
+            android:layout_marginRight="0dp" />
+
+        <com.box.common.extension.widget.bar.setting.SettingBar
+            android:id="@+id/setting_video_clarity_bar"
+            style="@style/AppTheme.Widget.SettingBar.Setting"
+            app:showArrow="true"
+            app:showValue="true"
+            app:title="@string/Setting_DefinitionSetting" />
+
+        <View style="@style/AppTheme.Widget.Line.Horizontal.Setting" />
+
+        <com.box.common.extension.widget.bar.setting.SettingBar
+            android:id="@+id/setting_push_bar"
+            style="@style/AppTheme.Widget.SettingBar.Setting"
+            app:showArrow="true"
+            app:title="@string/Push_Setting" />
+
+        <View style="@style/AppTheme.Widget.Line.Horizontal.Setting" />
+
+        <com.box.common.extension.widget.bar.setting.SettingBar
+            android:id="@+id/setting_term_bar"
+            style="@style/AppTheme.Widget.SettingBar.Setting"
+            app:showArrow="true"
+            app:title="@string/Setting_UserTerms" />
+
+        <View
+            style="@style/AppTheme.Widget.Line.Horizontal.Setting"
+            android:layout_height="6dp"
+            android:layout_marginLeft="0dp"
+            android:layout_marginRight="0dp" />
+
+        <com.box.common.core.widget.CoreTextView
+            android:id="@+id/logout_btn"
+            style="@style/AppTheme.Widget.SettingBar.Setting"
+            android:gravity="center"
+            android:text="@string/Common_LogOut"
+            android:textColor="@color/color_1"
+            android:textSize="14sp"
+            android:visibility="gone"
+            tools:visibility="visible" />
+
+        <View
+            style="@style/AppTheme.Widget.Line.Horizontal.Setting"
+            android:layout_height="45dp"
+            android:layout_marginLeft="0dp"
+            android:layout_marginRight="0dp" />
+
+    </LinearLayout>
+
+</ScrollView>

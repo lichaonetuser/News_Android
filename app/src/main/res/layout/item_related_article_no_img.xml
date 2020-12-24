@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.box.common.core.widget.CoreConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/root_layout"
+    style="@style/AppTheme.NewsItem.RootLayout"
+    android:background="@color/color_8"
+    android:paddingBottom="10dp"
+    android:paddingLeft="10dp"
+    android:paddingRight="10dp"
+    android:paddingTop="10dp"
+    tools:context=".page.activity.MainActivity"
+    tools:ignore="RtlHardcoded,RtlSymmetry">
+
+    <com.box.app.news.widget.FontTextView
+        android:id="@+id/news_title_txt"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:ellipsize="end"
+        android:maxLines="4"
+        android:textColor="@color/color_1"
+        android:textStyle="normal"
+        android:textSize="16sp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:subscribeTextSizeChangeEvent="false"
+        app:updateFontSizeWhenInit="false"
+        tools:lineSpacingExtra="5dp"
+        tools:text="新闻标题行1\n新闻标题行2\n新闻标题行3\n新闻标题行4"
+        tools:textSize="14sp"/>
+
+    <com.box.common.core.widget.CoreTextView
+        android:id="@+id/news_source_txt"
+        style="@style/AppTheme.NewsItem.Source"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="bottom"
+        android:paddingTop="6dp"
+        android:singleLine="true"
+        android:ellipsize="end"
+        android:textColor="@color/color_3"
+        android:textSize="9sp"
+        app:layout_constraintLeft_toLeftOf="@+id/news_title_txt"
+        app:layout_constraintTop_toBottomOf="@+id/news_title_txt"
+        tools:text="来源"
+        tools:ignore="SmallSp" />
+
+    <com.box.common.core.widget.CoreTextView
+        android:id="@+id/news_emit_time_txt"
+        style="@style/AppTheme.NewsItem.Time"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_marginLeft="11dp"
+        android:layout_marginStart="11dp"
+        android:gravity="bottom"
+        android:padding="0dp"
+        android:paddingTop="6dp"
+        android:textColor="@color/color_3"
+        android:textSize="10sp"
+        app:layout_constraintBottom_toBottomOf="@+id/news_source_txt"
+        app:layout_constraintLeft_toRightOf="@+id/news_source_txt"
+        app:layout_constraintRight_toLeftOf="@+id/remove_btn"
+        app:layout_constraintTop_toTopOf="@+id/news_source_txt"
+        tools:text="发布时间"
+        tools:ignore="SmallSp" />
+
+</com.box.common.core.widget.CoreConstraintLayout>

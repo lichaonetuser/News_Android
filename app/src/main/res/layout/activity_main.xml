@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    style="@style/Core.Widget.Layout.Parent"
+    android:fitsSystemWindows="false"
+    tools:context=".page.activity.MainActivity">
+
+    <FrameLayout
+        android:id="@id/container_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:background="@color/core_tools_design_container" />
+
+    <View
+        android:id="@+id/ad_mask"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:clickable="false"
+        android:fitsSystemWindows="false"
+        android:background="@drawable/splash" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

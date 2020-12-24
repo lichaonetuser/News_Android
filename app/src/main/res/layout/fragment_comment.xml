@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <View
+        android:layout_width="0dp"
+        android:layout_height="5dp"
+        android:layout_marginBottom="2.4dp"
+        android:background="@color/color_29"
+        app:layout_constraintBottom_toBottomOf="@+id/comment_txt"
+        app:layout_constraintLeft_toLeftOf="@+id/comment_txt"
+        app:layout_constraintRight_toRightOf="@+id/comment_txt"/>
+
+    <com.box.common.core.widget.CoreTextView
+        android:id="@+id/comment_txt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:gravity="center"
+        android:includeFontPadding="false"
+        android:paddingLeft="4dp"
+        android:paddingRight="4dp"
+        android:text="@string/Comment_Comment"
+        android:textColor="@color/color_1"
+        android:textSize="17sp"
+        android:textStyle="bold"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"/>
+
+    <com.box.common.extension.widget.layout.loading.LoadingLayout
+        android:id="@+id/loading_layout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="22dp"
+        app:emptyId="@layout/layout_comment_empty"
+        app:failId="@layout/layout_comment_fail"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/comment_txt"
+        app:loadingId="@layout/layout_comment_loading">
+
+        <com.box.app.news.widget.nested.NestedChildRecyclerView
+            android:id="@id/common_content_rv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fadingEdge="none"
+            android:fadingEdgeLength="0dp"
+            android:requiresFadingEdge="none"/>
+
+    </com.box.common.extension.widget.layout.loading.LoadingLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+
+

@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <declare-styleable name="FontTextView">
+        <attr name="subscribeTextSizeChangeEvent" format="boolean"/>
+        <attr name="updateFontSizeWhenInit" format="boolean"/>
+    </declare-styleable>
+
+    <declare-styleable name="RangeSeekBar">
+        <attr name="max" format="float"/>
+        <attr name="min" format="float"/>
+        <attr name="reserve" format="float"/>
+        <attr name="cells" format="integer"/>
+        <attr name="progressHintMode" format="enum">
+            <enum name="defaultMode" value="0"/>
+            <enum name="alwaysHide" value="1"/>
+            <enum name="alwaysShow" value="2"/>
+        </attr>
+        <attr name="lineColorSelected" format="color"/>
+        <attr name="lineColorEdge" format="color"/>
+        <attr name="thumbPrimaryColor" format="color"/>
+        <attr name="thumbSecondaryColor" format="color"/>
+        <attr name="markTextArray" format="reference"/>
+        <attr name="thumbResId" format="reference"/>
+        <!-- must use 9 path ！！！-->
+        <attr name="progressHintResId" format="reference"/>
+        <attr name="textPadding" format="dimension"/>
+        <attr name="textSize" format="dimension"/>
+        <attr name="hintBGHeight" format="dimension"/>
+        <attr name="hintBGWith" format="dimension"/>
+        <attr name="hintBGPadding" format="dimension"/>
+        <attr name="seekBarHeight" format="dimension"/>
+        <attr name="thumbSize" format="dimension"/>
+        <attr name="cellMode" format="enum">
+            <enum name="number" value="0"/>
+            <enum name="other" value="1"/>
+        </attr>
+        <attr name="seekBarMode" format="enum">
+            <enum name="single" value="1"/>
+            <enum name="range" value="2"/>
+        </attr>
+
+    </declare-styleable>
+
+    <declare-styleable name="TagView">
+        <attr name="out_hor_space" format="dimension"/>
+        <attr name="in_ver_space" format="dimension"/>
+        <attr name="in_hor_space" format="dimension"/>
+        <attr name="border_radius" format="dimension"/>
+        <attr name="border_thinness" format="integer"/>
+        <attr name="name_text_size" format="integer"/>
+    </declare-styleable>
+
+    <declare-styleable name="FontSeekBar">
+        <!--横线与竖线的颜色-->
+        <attr name="line_color" format="color"/>
+        <!--滑块线的颜色-->
+        <attr name="slider_line_color" format="color"/>
+        <!--滑块内部颜色-->
+        <attr name="slider_inner_color" format="color"/>
+        <!--文字的颜色-->
+        <attr name="slider_text_color" format="color"/>
+        <!--滑块的半径，单位必须为dp-->
+        <attr name="slider_radius" format="dimension"/>
+        <!--滑块线的粗细，单位必须为dp-->
+        <attr name="slider_line_thinness" format="dimension"/>
+        <!--横线的粗细，单位必须为dp-->
+        <attr name="horizon_line_thinness" format="dimension"/>
+        <!--竖线的粗细，单位必须为dp-->
+        <attr name="vertical_line_thinness" format="dimension"/>
+        <!--竖线的高度，单位必须为dp-->
+        <attr name="vertical_line_height" format="dimension"/>
+        <!--文字的大小，单位必须为dp-->
+        <attr name="slider_text_size" format="dimension"/>
+        <!--字体是否加粗-->
+        <attr name="is_slider_text_bold" format="boolean"/>
+    </declare-styleable>
+
+    <!--标题控件-->
+    <declare-styleable name="TitleTextView">
+        <!--文字标题-->
+        <attr name="title_text_color" format="color"/>
+        <!--文字大小-->
+        <attr name="title_text_size" format="integer"/>
+        <!--文字间水平间距-->
+        <attr name="text_hor_space" format="dimension"/>
+        <!--文字行间距-->
+        <attr name="text_ver_space" format="dimension"/>
+        <!--文字是否加粗-->
+        <attr name="is_title_text_bold" format="boolean"/>
+        <!--标题的最大行数-->
+        <attr name="title_max_lines" format="integer"/>
+        <!--是否监听字体大小变化-->
+        <attr name="is_subscribe_text_size_change" format="boolean"/>
+    </declare-styleable>
+
+</resources>

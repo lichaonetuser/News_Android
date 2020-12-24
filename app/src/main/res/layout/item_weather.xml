@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    style="@style/Core.Widget.Layout.Item"
+    android:layout_height="55dp"
+    android:paddingTop="11dp"
+    android:layout_marginLeft="20dp"
+    android:layout_marginRight="20dp"
+    android:gravity="center_vertical"
+    android:orientation="horizontal"
+    tools:context=".page.activity.MainActivity">
+
+    <LinearLayout
+        android:id="@+id/date_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_gravity="center_vertical"
+        android:gravity="center_vertical"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <com.box.common.core.widget.CoreTextView
+            android:id="@+id/week_txt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="bottom"
+            android:includeFontPadding="false"
+            android:textColor="@color/color_1"
+            android:textSize="9sp"
+            app:layout_constraintBottom_toTopOf="@+id/date_txt"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_chainStyle="spread"
+            tools:ignore="SmallSp"
+            tools:text="水曜日"/>
+
+        <com.box.common.core.widget.CoreLinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="3dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="@+id/week_txt"
+            app:layout_constraintTop_toBottomOf="@+id/week_txt">
+
+            <com.box.common.core.widget.CoreImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="3dp"
+                android:src="@drawable/date_logo"/>
+
+            <com.box.common.core.widget.CoreTextView
+                android:id="@+id/date_txt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="top"
+                android:includeFontPadding="false"
+                android:paddingBottom="1dp"
+                android:textColor="@color/color_1"
+                android:textSize="13sp"
+                tools:ignore="SmallSp"
+                tools:text="12/12"/>
+        </com.box.common.core.widget.CoreLinearLayout>
+
+    </LinearLayout>
+
+    <View
+        style="@style/AppTheme.Core.Widget.Line.Vertical"
+        android:layout_height="23dp"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintRight_toRightOf="@+id/date_layout"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/weather_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingLeft="50dp"
+        android:paddingRight="20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/date_layout"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <com.box.common.core.widget.CoreSimpleDraweeView
+            android:id="@+id/weather_img"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            app:actualImageScaleType="fitXY"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+        <TextView
+            android:id="@+id/weather_txt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="11dp"
+            android:layout_marginStart="11dp"
+            android:includeFontPadding="false"
+            android:textColor="@color/color_1"
+            android:textSize="13sp"
+            app:layout_constraintLeft_toRightOf="@+id/weather_img"
+            app:layout_constraintStart_toEndOf="@+id/weather_img"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="33° / 17°"/>
+
+        <com.box.common.core.widget.CoreTextView
+            android:id="@+id/description_txt"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:ellipsize="marquee"
+            android:includeFontPadding="false"
+            android:textColor="@color/color_1"
+            android:textSize="9sp"
+            app:layout_constraintLeft_toLeftOf="@+id/weather_txt"
+            app:layout_constraintTop_toBottomOf="@+id/weather_txt"
+            tools:ignore="SmallSp"
+            tools:text="大雨，外出需要小心"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <View
+        style="@style/AppTheme.Core.Widget.Line.Vertical"
+        android:layout_height="23dp"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintRight_toRightOf="@+id/weather_layout"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <com.box.common.core.widget.CoreLinearLayout
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:gravity="center_vertical|end"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toRightOf="@+id/weather_layout"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <com.box.common.core.widget.CoreImageView
+            android:id="@+id/location_img"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="6dp"
+            android:layout_marginRight="6dp"
+            android:src="@drawable/location_logo"/>
+
+        <com.box.common.core.widget.CoreTextView
+            android:id="@+id/location_txt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:gravity="center"
+            android:maxLines="1"
+            android:textColor="@color/color_1"
+            android:textSize="14sp"
+            app:autoSizeMaxTextSize="14sp"
+            app:autoSizeMinTextSize="6sp"
+            app:autoSizeStepGranularity="1sp"
+            app:autoSizeTextType="uniform"
+            tools:text="安云郡府中町"/>
+
+    </com.box.common.core.widget.CoreLinearLayout>
+
+    <com.box.common.core.widget.CoreTextView
+        android:id="@+id/set_location_btn"
+        android:layout_width="0dp"
+        android:layout_height="28dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginStart="5dp"
+        android:background="@drawable/news_list_weather_location_bg"
+        android:drawableEnd="@drawable/weather_arrow_ic"
+        android:drawableRight="@drawable/weather_arrow_ic"
+        android:ellipsize="end"
+        android:gravity="center"
+        android:text="@string/Weather_DefaultDescription"
+        android:textColor="@color/color_1"
+        android:textSize="12sp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toRightOf="@+id/space"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <androidx.legacy.widget.Space
+        android:id="@+id/space"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginEnd="15dp"
+        android:layout_marginRight="15dp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintRight_toRightOf="@+id/date_layout"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

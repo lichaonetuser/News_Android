@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.box.common.extension.widget.layout.loading.LoadingLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@id/loading_layout"
+    style="@style/Core.Widget.Layout.Parent.Layer"
+    android:background="@color/transparent">
+
+    <com.box.common.core.widget.CoreRelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.scwang.smartrefresh.layout.SmartRefreshLayout
+            android:id="@+id/refresh_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:overScrollMode="never"
+            app:srlEnablePreviewInEditMode="true">
+
+            <com.box.app.news.widget.ArticleRefreshHeader
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <com.box.common.core.widget.CoreRecyclerView
+                    android:id="@id/common_content_rv"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:overScrollMode="never"/>
+
+            </FrameLayout>
+
+        </com.scwang.smartrefresh.layout.SmartRefreshLayout>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/comment_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginBottom="18dp"
+            android:layout_marginEnd="14dp"
+            android:layout_marginRight="14dp"
+            android:clickable="true"
+            android:focusable="true"
+            app:cardCornerRadius="17dp"
+            app:cardElevation="2dp"
+            app:cardUseCompatPadding="true"
+            app:elevation="0dp">
+
+            <com.box.common.core.widget.CoreTextView
+                android:layout_width="100dp"
+                android:layout_height="35dp"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:drawablePadding="5dp"
+                android:gravity="center"
+                android:text="@string/Comment_Comment"
+                android:textColor="@color/color_temp_4"
+                app:centerDrawableLeft="@drawable/world_cup_board_reply_btn"
+                app:centerDrawableLeftHeight="13dp"
+                app:centerDrawableLeftWidth="15dp"
+                app:useCenterDrawable="true"/>
+
+        </androidx.cardview.widget.CardView>
+
+    </com.box.common.core.widget.CoreRelativeLayout>
+
+</com.box.common.extension.widget.layout.loading.LoadingLayout>

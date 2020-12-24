@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.box.common.core.widget.CoreConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingBottom="8dp">
+
+    <com.box.common.core.widget.CoreSimpleDraweeView
+        android:id="@+id/user_img"
+        style="@style/AppTheme.Widget.DraweeView.Cover"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+        android:layout_marginRight="8dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:roundAsCircle="true"
+        app:roundingBorderColor="@color/color_9"
+        app:roundingBorderWidth="2dp"
+        tools:background="@color/color_1"
+        tools:ignore="RtlHardcoded"/>
+
+    <com.box.common.core.widget.CoreTextView
+        android:id="@+id/user_name"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="14dp"
+        android:ellipsize="end"
+        android:maxLines="2"
+        android:textColor="@color/color_2"
+        android:textSize="12sp"
+        app:layout_constraintLeft_toRightOf="@+id/user_img"
+        app:layout_constraintRight_toLeftOf="@+id/more_btn"
+        app:layout_constraintTop_toTopOf="@+id/user_img"
+        tools:ignore="RtlHardcoded"
+        tools:text="用户姓名"/>
+
+    <com.box.common.core.widget.CoreImageView
+        android:id="@+id/more_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="11dp"
+        android:padding="4dp"
+        android:src="@drawable/comment_more_ic"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="@+id/user_name"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/user_name"
+        tools:ignore="RtlHardcoded"/>
+
+    <com.box.app.news.widget.FontTextView
+        android:id="@+id/comment_txt"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="9dp"
+        android:textColor="@color/color_1"
+        android:textSize="14sp"
+        app:layout_constraintLeft_toLeftOf="@+id/user_name"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/user_img"
+        tools:text="评论内容"/>
+
+    <com.box.app.news.widget.FontTextView
+        android:id="@+id/reply_txt"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:background="@color/color_8"
+        android:paddingBottom="9dp"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:paddingTop="9dp"
+        android:textColor="@color/color_2"
+        android:textSize="14sp"
+        android:visibility="gone"
+        app:layout_constraintLeft_toLeftOf="@+id/comment_txt"
+        app:layout_constraintRight_toRightOf="@+id/comment_txt"
+        app:layout_constraintTop_toBottomOf="@+id/comment_txt"
+        tools:text="回复内容"
+        tools:visibility="visible"/>
+
+    <com.box.common.core.widget.CoreTextView
+        android:id="@+id/comment_time_txt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/color_4"
+        android:textSize="12sp"
+        app:layout_constraintLeft_toLeftOf="@+id/comment_txt"
+        app:layout_constraintTop_toBottomOf="@+id/user_name"
+        tools:text="17分前"/>
+
+    <com.box.common.core.widget.CoreTextView
+        android:id="@+id/dig_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:drawablePadding="1dp"
+        android:drawableRight="@drawable/common_like_ic_selector"
+        android:padding="7dp"
+        android:textColor="@color/comment_dig_text_selector"
+        app:layout_constraintBottom_toBottomOf="@+id/user_img"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="RtlHardcoded"
+        tools:text="262"/>
+
+</com.box.common.core.widget.CoreConstraintLayout>

@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    style="@style/Core.Widget.Layout.Parent.Layer"
+    tools:context=".page.activity.MainActivity">
+
+    <View
+        android:id="@+id/top_bg_view"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="@+id/topbar"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:background="@color/core_tools_design_view"/>
+
+    <com.box.common.extension.widget.bar.status.StatusBar
+        android:id="@id/status_bar"
+        style="@style/Core.Widget.StatusBar"
+        android:background="@color/color_indicator_select"/>
+
+    <com.box.common.core.widget.CoreImageView
+        android:id="@+id/logo_img"
+        android:layout_width="0dp"
+        android:layout_height="44dp"
+        android:scaleType="fitStart"
+        android:src="@drawable/news_topbar_logo_ic"
+        android:visibility="gone"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/status_bar"/>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/topbar"
+        android:layout_height="@dimen/news_tab_height"
+        android:layout_width="0dp"
+        android:background="@color/color_indicator_select"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/logo_img">
+
+        <com.box.common.core.widget.CoreTextView
+            android:id="@+id/worldcup_date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:gravity="center"
+            android:textColor="@color/worldcup_text_color"
+            android:paddingTop="3dp"
+            android:textSize="9sp"
+            android:visibility="gone"
+            android:background="@drawable/wordcup_promotion"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"/>
+
+        <com.box.common.extension.widget.bar.indicator.IndicatorBar
+            android:id="@+id/container_indicator"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/news_tab_height"
+            android:layout_marginLeft="19dp"
+            app:layout_constraintLeft_toRightOf="@+id/worldcup_date"
+            app:layout_constraintRight_toRightOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <com.box.common.core.widget.CoreViewPager
+        android:id="@+id/container_vp"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/topbar"
+        tools:background="@color/core_tools_design_container"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

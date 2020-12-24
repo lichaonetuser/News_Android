@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.box.common.core.widget.CoreRelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="45dp">
+
+    <com.box.common.core.widget.CoreImageView
+        android:id="@+id/icon_img"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/search_hotword_title_icon"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="15dp"
+        android:layout_marginStart="15dp" />
+
+    <TextView
+        android:id="@+id/content_txt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="5dp"
+        android:layout_toRightOf="@+id/icon_img"
+        android:singleLine="true"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        android:textColor="@color/color_1"
+        android:ellipsize="end"
+        android:layout_marginStart="5dp"
+        android:layout_toEndOf="@+id/icon_img"
+        tools:ignore="PxUsage"
+        tools:text="热词"/>
+
+</com.box.common.core.widget.CoreRelativeLayout>

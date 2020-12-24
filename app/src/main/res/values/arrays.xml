@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string-array name="font_size_array">
+        <item>S</item>
+        <item>M</item>
+        <item>L</item>
+    </string-array>
+
+    <string-array name="week_array">
+        <item>@string/Time_Sun</item>
+        <item>@string/Time_Mon</item>
+        <item>@string/Time_Tue</item>
+        <item>@string/Time_Wed</item>
+        <item>@string/Time_Thu</item>
+        <item>@string/Time_Fri</item>
+        <item>@string/Time_Sat</item>
+    </string-array>
+
+    <array name="frame_anim_news_refresh_header">
+        <item>@drawable/frame_anim_news_refresh_header_01</item>
+        <item>@drawable/frame_anim_news_refresh_header_02</item>
+        <item>@drawable/frame_anim_news_refresh_header_03</item>
+        <item>@drawable/frame_anim_news_refresh_header_04</item>
+        <item>@drawable/frame_anim_news_refresh_header_05</item>
+        <item>@drawable/frame_anim_news_refresh_header_06</item>
+        <item>@drawable/frame_anim_news_refresh_header_07</item>
+        <item>@drawable/frame_anim_news_refresh_header_08</item>
+        <item>@drawable/frame_anim_news_refresh_header_09</item>
+        <item>@drawable/frame_anim_news_refresh_header_10</item>
+        <item>@drawable/frame_anim_news_refresh_header_11</item>
+        <item>@drawable/frame_anim_news_refresh_header_12</item>
+        <item>@drawable/frame_anim_news_refresh_header_13</item>
+        <item>@drawable/frame_anim_news_refresh_header_14</item>
+        <item>@drawable/frame_anim_news_refresh_header_15</item>
+        <item>@drawable/frame_anim_news_refresh_header_16</item>
+        <item>@drawable/frame_anim_news_refresh_header_17</item>
+        <item>@drawable/frame_anim_news_refresh_header_18</item>
+        <item>@drawable/frame_anim_news_refresh_header_19</item>
+        <item>@drawable/frame_anim_news_refresh_header_20</item>
+        <item>@drawable/frame_anim_news_refresh_header_21</item>
+        <item>@drawable/frame_anim_news_refresh_header_22</item>
+        <item>@drawable/frame_anim_news_refresh_header_23</item>
+        <item>@drawable/frame_anim_news_refresh_header_24</item>
+        <item>@drawable/frame_anim_news_refresh_header_25</item>
+        <item>@drawable/frame_anim_news_refresh_header_26</item>
+        <item>@drawable/frame_anim_news_refresh_header_27</item>
+        <item>@drawable/frame_anim_news_refresh_header_28</item>
+        <item>@drawable/frame_anim_news_refresh_header_29</item>
+        <item>@drawable/frame_anim_news_refresh_header_30</item>
+        <item>@drawable/frame_anim_news_refresh_header_31</item>
+        <item>@drawable/frame_anim_news_refresh_header_32</item>
+        <item>@drawable/frame_anim_news_refresh_header_33</item>
+        <item>@drawable/frame_anim_news_refresh_header_34</item>
+    </array>
+
+    <array name="frame_anim_news_refresh_pull">
+        <item>@drawable/article_pull_0</item>
+        <item>@drawable/article_pull_1</item>
+        <item>@drawable/article_pull_2</item>
+        <item>@drawable/article_pull_3</item>
+        <item>@drawable/article_pull_4</item>
+        <item>@drawable/article_pull_5</item>
+        <item>@drawable/article_pull_6</item>
+        <item>@drawable/article_pull_7</item>
+        <item>@drawable/article_pull_8</item>
+        <item>@drawable/article_pull_9</item>
+        <item>@drawable/article_pull_10</item>
+        <item>@drawable/article_pull_11</item>
+    </array>
+
+    <array name="frame_anim_news_refresh_release">
+        <item>@drawable/article_release_0</item>
+        <item>@drawable/article_release_1</item>
+        <item>@drawable/article_release_2</item>
+        <item>@drawable/article_release_3</item>
+        <item>@drawable/article_release_4</item>
+        <item>@drawable/article_release_5</item>
+        <item>@drawable/article_release_6</item>
+        <item>@drawable/article_release_7</item>
+        <item>@drawable/article_release_8</item>
+        <item>@drawable/article_release_9</item>
+        <item>@drawable/article_release_10</item>
+        <item>@drawable/article_release_11</item>
+        <item>@drawable/article_release_12</item>
+        <item>@drawable/article_release_13</item>
+        <item>@drawable/article_release_14</item>
+        <item>@drawable/article_release_15</item>
+        <item>@drawable/article_release_16</item>
+        <item>@drawable/article_release_17</item>
+        <item>@drawable/article_release_18</item>
+        <item>@drawable/article_release_19</item>
+        <item>@drawable/article_release_20</item>
+        <item>@drawable/article_release_21</item>
+        <item>@drawable/article_release_22</item>
+        <item>@drawable/article_release_23</item>
+        <item>@drawable/article_release_24</item>
+        <item>@drawable/article_release_25</item>
+        <item>@drawable/article_release_26</item>
+    </array>
+
+    <array name="frame_anim_video_refresh_pull">
+        <item>@drawable/video_pull_0</item>
+        <item>@drawable/video_pull_1</item>
+        <item>@drawable/video_pull_2</item>
+        <item>@drawable/video_pull_3</item>
+        <item>@drawable/video_pull_4</item>
+        <item>@drawable/video_pull_5</item>
+        <item>@drawable/video_pull_6</item>
+        <item>@drawable/video_pull_7</item>
+        <item>@drawable/video_pull_8</item>
+        <item>@drawable/video_pull_9</item>
+        <item>@drawable/video_pull_10</item>
+        <item>@drawable/video_pull_11</item>
+    </array>
+
+    <array name="frame_anim_video_refresh_release">
+        <item>@drawable/video_release_0</item>
+        <item>@drawable/video_release_1</item>
+        <item>@drawable/video_release_2</item>
+        <item>@drawable/video_release_3</item>
+        <item>@drawable/video_release_4</item>
+        <item>@drawable/video_release_5</item>
+        <item>@drawable/video_release_6</item>
+        <item>@drawable/video_release_7</item>
+        <item>@drawable/video_release_8</item>
+        <item>@drawable/video_release_9</item>
+        <item>@drawable/video_release_10</item>
+        <item>@drawable/video_release_11</item>
+        <item>@drawable/video_release_12</item>
+        <item>@drawable/video_release_13</item>
+        <item>@drawable/video_release_14</item>
+        <item>@drawable/video_release_15</item>
+        <item>@drawable/video_release_16</item>
+        <item>@drawable/video_release_17</item>
+        <item>@drawable/video_release_18</item>
+        <item>@drawable/video_release_19</item>
+        <item>@drawable/video_release_20</item>
+        <item>@drawable/video_release_21</item>
+        <item>@drawable/video_release_22</item>
+        <item>@drawable/video_release_23</item>
+        <item>@drawable/video_release_24</item>
+        <item>@drawable/video_release_25</item>
+        <item>@drawable/video_release_26</item>
+    </array>
+</resources>

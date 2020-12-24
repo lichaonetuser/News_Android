@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.box.common.core.widget.CoreConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/ad_layout"
+    style="@style/AppTheme.NewsItem.RootLayout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingBottom="12dp">
+
+    <com.box.common.core.widget.CoreConstraintLayout
+        android:id="@+id/ad_content_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <com.box.common.core.widget.CoreSimpleDraweeView
+            android:id="@+id/ad_primary_img"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:actualImageScaleType="fitCenter"
+            app:layout_constraintDimensionRatio="h,16:9"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:placeholderImage="@drawable/default_news_pic_img"
+            app:placeholderImageScaleType="fitXY"
+            tools:background="@drawable/default_news_pic_img" />
+
+        <com.box.common.core.widget.CoreTextView
+            android:id="@+id/ad_headline_txt"
+            style="@style/AppTheme.NewsItem.Title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:textColor="@color/color_3"
+            android:textSize="16sp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/ad_primary_img"
+            app:title_max_lines="3"
+            app:title_text_size="16"
+            tools:text="广告标题"
+            tools:textSize="16sp" />
+
+        <com.box.common.core.widget.CoreImageView
+            android:id="@+id/ad_logo_img"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5.5dp"
+            android:src="@drawable/admob_native_ad_img"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/ad_headline_txt" />
+
+        <com.box.common.core.widget.CoreButton
+            android:id="@+id/ad_action_btn"
+            android:layout_width="0dp"
+            android:clickable="false"
+            android:layout_height="30dp"
+            android:layout_marginTop="6dp"
+            android:background="@drawable/ad_action_btn"
+            android:text="@string/Common_Loading"
+            android:textColor="@color/color_15"
+            android:textSize="15sp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/ad_logo_img" />
+
+    </com.box.common.core.widget.CoreConstraintLayout>
+
+</com.box.common.core.widget.CoreConstraintLayout>

@@ -1,0 +1,232 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                                             xmlns:app="http://schemas.android.com/apk/res-auto"
+                                             xmlns:tools="http://schemas.android.com/tools"
+                                             android:id="@+id/match_detail_view"
+                                             android:layout_width="match_parent"
+                                             android:layout_height="100dp"
+                                             android:background="@color/color_9">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/match_detail_desc"
+        android:layout_width="0dp"
+        android:layout_height="31dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <com.box.common.core.widget.CoreTextView
+            android:id="@+id/match_season_round"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginLeft="10dp"
+            android:gravity="start|center_vertical"
+            android:singleLine="true"
+            android:textColor="@color/color_1"
+            android:textSize="11sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toLeftOf="@+id/match_date_week"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="shdshdjhsjah"/>
+
+        <com.box.common.core.widget.CoreTextView
+            android:id="@+id/match_date_week"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginRight="10dp"
+            android:gravity="end|center_vertical"
+            android:singleLine="true"
+            android:textColor="@color/color_1"
+            android:textSize="11sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toRightOf="@+id/match_season_round"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="shdshdjhsjah"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <View
+        android:id="@+id/title_line"
+        style="@style/AppTheme.Core.Widget.Line.Horizontal"
+        android:layout_height="1px"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:background="@color/color_8"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/match_detail_desc"/>
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/match_status"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_marginTop="13dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/title_line">
+
+        <com.box.common.core.widget.CoreTextView
+            android:id="@+id/match_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="23:00"
+            android:textColor="#d42f37"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+        <com.box.common.core.widget.CoreTextView
+            android:id="@+id/match_status_detail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/color_4"
+            android:textSize="11sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/match_time"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/match_score_status"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_marginTop="13dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/title_line">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/match_score"
+            android:layout_width="55dp"
+            android:layout_height="wrap_content"
+            android:background="@color/color_indicator_select"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <View
+                android:id="@+id/score_line"
+                style="@style/AppTheme.Core.Widget.Line.Horizontal"
+                android:layout_width="8dp"
+                android:layout_height="2dp"
+                android:background="@color/worldcup_text_color"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent"/>
+
+            <com.box.common.core.widget.CoreTextView
+                android:id="@+id/home_score"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:includeFontPadding="false"
+                android:textColor="@color/worldcup_text_color"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toLeftOf="@+id/score_line"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:text="1"/>
+
+            <com.box.common.core.widget.CoreTextView
+                android:id="@+id/away_score"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:includeFontPadding="false"
+                android:textColor="@color/worldcup_text_color"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toRightOf="@+id/score_line"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:text="2"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <com.box.common.core.widget.CoreTextView
+            android:id="@+id/match_score_status_detail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:textColor="@color/color_4"
+            android:textSize="11sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/match_score"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    <com.box.common.core.widget.CoreSimpleDraweeView
+        android:id="@+id/team_home_image"
+        android:layout_width="50dp"
+        android:layout_height="31dp"
+        android:layout_marginRight="26dp"
+        android:background="@drawable/nation_flag_bg"
+        android:padding="1px"
+        android:scaleType="fitXY"
+        app:layout_constraintBottom_toBottomOf="@+id/match_status"
+        app:layout_constraintRight_toLeftOf="@+id/match_status"
+        app:layout_constraintTop_toTopOf="@+id/match_status"
+        app:placeholderImage="@drawable/nationalflag_default"/>
+
+    <com.box.common.core.widget.CoreTextView
+        android:id="@+id/team_home_title"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="4dp"
+        android:gravity="end"
+        android:lineSpacingExtra="4dp"
+        android:maxLines="2"
+        android:textColor="@color/color_1"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/match_status"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@+id/team_home_image"
+        app:layout_constraintTop_toTopOf="@+id/match_status"/>
+
+    <com.box.common.core.widget.CoreSimpleDraweeView
+        android:id="@+id/team_away_image"
+        android:layout_width="50dp"
+        android:layout_height="31dp"
+        android:layout_marginLeft="26dp"
+        android:background="@drawable/nation_flag_bg"
+        android:padding="1px"
+        android:scaleType="fitXY"
+        app:layout_constraintBottom_toBottomOf="@+id/match_status"
+        app:layout_constraintLeft_toRightOf="@+id/match_status"
+        app:layout_constraintTop_toTopOf="@+id/match_status"
+        app:placeholderImage="@drawable/nationalflag_default"/>
+
+    <com.box.common.core.widget.CoreTextView
+        android:id="@+id/team_away_title"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="4dp"
+        android:layout_marginRight="10dp"
+        android:gravity="start"
+        android:maxLines="2"
+        android:singleLine="false"
+        android:textColor="@color/color_1"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/match_status"
+        app:layout_constraintLeft_toRightOf="@+id/team_away_image"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/match_status"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

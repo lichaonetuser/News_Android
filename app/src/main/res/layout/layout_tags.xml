@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<mehdi.sakout.fancybuttons.FancyButton
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:fancy="http://schemas.android.com/apk/res-auto"
+    android:gravity="center"
+    android:layout_width="wrap_content"
+    android:layout_height="30dp"
+    android:paddingTop="5dp"
+    android:paddingBottom="5dp"
+    android:paddingLeft="10dp"
+    android:paddingRight="15dp"
+    fancy:fb_iconPaddingTop="4dp"
+    fancy:fb_radius="20dp"
+    fancy:fb_defaultColor="@color/white"
+    >
+
+</mehdi.sakout.fancybuttons.FancyButton>

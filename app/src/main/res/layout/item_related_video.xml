@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.box.common.core.widget.CoreConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/root_layout"
+    style="@style/AppTheme.NewsItem.RootLayout"
+    android:background="@color/color_8"
+    android:paddingBottom="12dp"
+    android:paddingLeft="11dp"
+    android:paddingRight="11dp"
+    android:paddingTop="12dp"
+    tools:context=".page.activity.MainActivity"
+    tools:ignore="RtlHardcoded,RtlSymmetry">
+
+    <com.box.common.core.widget.CoreSimpleDraweeView
+        android:id="@+id/news_img"
+        style="@style/AppTheme.NewsItem.Image"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:roundedCornerRadius="0dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:viewAspectRatio="2.5"
+        tools:background="@drawable/releated_news_pic_img"/>
+
+    <View
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:alpha="0.1"
+        android:background="@color/color_14"
+        app:layout_constraintBottom_toBottomOf="@+id/news_img"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <com.box.common.core.widget.CoreImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/video_play_btn"
+        app:layout_constraintBottom_toBottomOf="@+id/news_img"
+        app:layout_constraintLeft_toLeftOf="@+id/news_img"
+        app:layout_constraintRight_toRightOf="@+id/news_img"
+        app:layout_constraintTop_toTopOf="@+id/news_img"/>
+
+    <com.box.common.core.widget.CoreTextView
+        android:id="@+id/duration_txt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:includeFontPadding="false"
+        android:paddingLeft="6dp"
+        android:paddingRight="7dp"
+        android:text="@string/duration_default"
+        android:textColor="@color/color_9"
+        android:textSize="10sp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/news_list_duration"
+        app:layout_constraintRight_toRightOf="@id/news_img"
+        app:layout_constraintTop_toTopOf="@id/news_img"
+        tools:text="00:00"
+        tools:visibility="visible"
+        tools:ignore="SmallSp" />
+
+    <com.box.app.news.widget.FontTextView
+        android:id="@+id/news_title_txt"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:paddingTop="8dp"
+        android:ellipsize="end"
+        android:maxLines="3"
+        android:textColor="@color/color_1"
+        android:textStyle="normal"
+        android:textSize="16sp"
+        android:lineSpacingExtra="5dp"
+        android:includeFontPadding="false"
+        app:layout_constraintTop_toBottomOf="@id/news_img"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:subscribeTextSizeChangeEvent="false"
+        app:updateFontSizeWhenInit="false"
+        tools:lineSpacingExtra="4dp"
+        tools:text="新闻标题行1\n新闻标题行2\n新闻标题行3\n新闻标题行4\n"
+        tools:textSize="14sp"/>
+
+    <com.box.common.core.widget.CoreTextView
+        android:id="@+id/news_source_txt"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:includeFontPadding="false"
+        android:paddingTop="10dp"
+        android:textColor="@color/color_3"
+        android:textSize="9sp"
+        android:singleLine="true"
+        android:ellipsize="end"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/news_title_txt"
+        tools:text="来源来源来源来源来源"
+        tools:ignore="SmallSp" />
+</com.box.common.core.widget.CoreConstraintLayout>

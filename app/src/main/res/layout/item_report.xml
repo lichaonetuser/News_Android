@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.box.common.core.widget.CoreLinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    style="@style/Core.Widget.Layout.Item"
+    android:layout_height="44dp"
+    android:gravity="center_vertical"
+    android:orientation="horizontal"
+    android:background="@drawable/report_btn_bg"
+    tools:context=".page.activity.MainActivity">
+
+    <com.box.common.core.widget.CoreTextView
+        android:id="@+id/report_reason_txt"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:drawablePadding="4dp"
+        android:gravity="center_vertical"
+        android:paddingLeft="18dp"
+        android:paddingRight="18dp"
+        android:textColor="@color/color_1"
+        android:textSize="14sp"
+        tools:drawableRight="@drawable/report_go_ic"
+        tools:text="举报理由"/>
+
+</com.box.common.core.widget.CoreLinearLayout>

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/lock_screen_item"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center_vertical"
+    android:paddingTop="9.5dp"
+    android:paddingBottom="9.5dp"
+    android:paddingLeft="19dp"
+    android:paddingRight="15dp"
+    android:background="@drawable/selector_multi_item_bg"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.facebook.drawee.view.SimpleDraweeView
+        android:id="@+id/lock_screen_item_cover"
+        android:layout_width="89dp"
+        android:layout_height="67dp"
+        android:layout_marginRight="7dp"
+        app:roundedCornerRadius="3dp"
+        app:actualImageScaleType="fitCenter"
+        app:placeholderImage="@drawable/default_news_pic_img"/>
+    <TextView
+        android:id="@+id/lock_screen_item_content"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:textColor="@color/color_1"
+        android:maxLines="3"
+        android:ellipsize="end"
+        android:lineSpacingExtra="5dp"
+        android:textSize="16sp"
+        android:textStyle="bold" />
+    <ImageView
+        android:id="@+id/lock_screen_item_more"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/lock_screen_item_more"
+        android:layout_marginLeft="19dp" />
+</LinearLayout>

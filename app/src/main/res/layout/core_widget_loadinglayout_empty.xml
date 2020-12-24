@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.box.common.core.widget.CoreLinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@id/loading_layout_empty"
+    style="@style/Core.Widget.Layout.Parent"
+    android:background="@color/transparent"
+    android:clickable="true"
+    android:focusable="true"
+    android:gravity="center"
+    android:orientation="vertical">
+
+    <com.box.common.core.widget.CoreImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/loading_layout_empty_img"/>
+
+    <com.box.common.core.widget.CoreTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="25dp"
+        android:gravity="center"
+        android:text="@string/Common_NoContent"
+        android:textColor="@color/color_4"
+        android:textSize="11dp"
+        android:visibility="gone"/>
+
+</com.box.common.core.widget.CoreLinearLayout>

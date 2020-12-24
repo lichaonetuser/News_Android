@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    style="@style/Core.Widget.Layout.Parent.Layer"
+    tools:context=".page.activity.MainActivity">
+
+    <com.box.common.extension.widget.bar.status.StatusBar
+        android:id="@id/status_bar"
+        style="@style/Core.Widget.StatusBar"
+        android:background="@color/color_status_bar"/>
+
+    <com.box.common.extension.widget.bar.title.TitleBar
+        android:id="@id/title_bar"
+        style="@style/Core.Widget.TitleBar"
+        app:title="@string/Setting_Profile"/>
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/title_bar">
+
+        <com.box.common.extension.widget.bar.setting.SettingBar
+            android:id="@+id/profile_avatar_bar"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            app:showArrow="true"
+            app:showValue="false"
+            app:title="@string/Common_ProfileAvatar"
+            app:titleColor="@color/color_1"
+            app:valueColor="@color/color_4">
+
+            <com.box.common.core.widget.CoreSimpleDraweeView
+                android:id="@+id/user_cover_img"
+                style="@style/AppTheme.Widget.DraweeView.Cover"
+                android:layout_width="29dp"
+                android:layout_height="29dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="41dp"
+                app:roundAsCircle="true"
+                tools:ignore="RtlHardcoded"/>
+
+        </com.box.common.extension.widget.bar.setting.SettingBar>
+
+        <View
+            style="@style/AppTheme.Core.Widget.Line.Horizontal"
+            android:layout_marginLeft="13dp"
+            android:layout_marginRight="13dp"/>
+
+        <com.box.common.extension.widget.bar.setting.SettingBar
+            android:id="@+id/profile_name_bar"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            app:showArrow="true"
+            app:showValue="true"
+            app:title="@string/Common_NickName"
+            app:titleColor="@color/color_1"
+            app:valueColor="@color/color_4"/>
+
+        <View
+            style="@style/AppTheme.Core.Widget.Line.Horizontal"
+            android:layout_marginLeft="13dp"
+            android:layout_marginRight="13dp"/>
+
+        <com.box.common.extension.widget.bar.setting.SettingBar
+            android:id="@+id/profile_sex_bar"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            app:showArrow="true"
+            app:showValue="true"
+            app:title="@string/Common_Gender"
+            app:titleColor="@color/color_1"
+            app:valueColor="@color/color_4"/>
+
+        <View
+            style="@style/AppTheme.Core.Widget.Line.Horizontal"
+            android:layout_marginLeft="13dp"
+            android:layout_marginRight="13dp"/>
+
+        <com.box.common.extension.widget.bar.setting.SettingBar
+            android:id="@+id/profile_age_bar"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            app:showArrow="true"
+            app:showValue="true"
+            app:title="@string/Common_AgeStage"
+            app:titleColor="@color/color_1"
+            app:valueColor="@color/color_4"/>
+
+        <View
+            style="@style/AppTheme.Core.Widget.Line.Horizontal"
+            android:layout_marginLeft="13dp"
+            android:layout_marginRight="13dp"/>
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.box.common.core.widget.CoreTextView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="@dimen/news_tab_height"
+    android:background="@drawable/news_topbar_bg_tab"
+    android:gravity="center"
+    android:maxLines="1"
+    android:paddingLeft="10dp"
+    android:paddingRight="10dp"
+    android:textColor="@color/white"
+    android:textSize="13sp"
+    tools:context=".page.activity.MainActivity"
+    tools:text="CategoryName"
+    tools:textColor="@color/black"/>

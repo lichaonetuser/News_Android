@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="color_0">#2f2f2f</color>
+    <color name="color_1">#222222</color> <!-- 文章主标题 -->
+    <color name="color_2">#595959</color>
+    <color name="color_3">#8c8c8c</color> <!-- 文章副标题 -->
+    <color name="color_4">#999999</color> <!-- 辅助信息 -->
+    <color name="color_5">#d7d7d7</color> <!-- button线框 -->
+    <color name="color_6">#ebebeb</color> <!-- 间隔线 -->
+    <color name="color_7">#f0f0f0</color> <!-- 反馈输入背景 -->
+    <color name="color_8">#f7f7f7</color>
+    <color name="color_9">#ffffff</color>
+    <color name="color_9_16">#41ffffff</color>
+    <color name="color_9_40">#66ffffff</color>
+    <color name="color_9_50">#7fffffff</color>
+    <color name="color_10">#7c5ce4</color>
+    <color name="color_11">#0087e7</color>
+    <color name="color_12">#dbf1ff</color>
+    <color name="color_13">#f1faff</color>
+    <color name="color_14">#000000</color>
+    <color name="color_14_16">#29000000</color>
+    <color name="color_14_30">#4d000000</color>
+    <color name="color_14_35">#59000000</color>
+    <color name="color_14_40">#66000000</color>
+    <color name="color_14_50">#7f000000</color>
+    <color name="color_14_60">#99000000</color>
+    <color name="color_15">#6192f6</color>
+    <color name="color_16">#f563d8</color>
+    <color name="color_17">#f75b5b</color>
+    <color name="color_18">#e8e9ea</color> <!-- 网页输入框 -->
+    <color name="color_19">#f75850</color>
+    <color name="color_20">#ec453d</color>
+    <color name="color_21">#ff9b3a</color>
+    <color name="color_22">#fc8c1f</color>
+    <color name="color_23">#89cd55</color>
+    <color name="color_24">#7dc447</color>
+    <color name="color_25">#6998e6</color>
+    <color name="color_26">#538ceb</color>
+    <color name="color_27">#9276e3</color>
+    <color name="color_28">#8b6de1</color>
+    <color name="color_29">#ffe42a</color>
+    <color name="color_30">#444444</color>
+    <color name="color_31">#acacac</color>
+    <color name="color_32">#ffa200</color>
+    <color name="color_40">#444444</color>
+    <color name="color_41">#acacac</color>
+    <color name="color_42">#ffa200</color>
+    <color name="color_43">#767676</color>
+    <color name="color_44">#929292</color>
+    <color name="color_45">#007aff</color>
+    <color name="color_46">#f4f4f4</color>
+    <color name="color_47">#d13e3e</color>
+    <color name="color_48">#ed913e</color>
+    <color name="color_49">#fffefe</color>
+    <color name="color_50">#fff117</color>
+
+    <color name="video_progress_seekbar">#c82e26</color>
+
+    <color name="core_line_color">@color/color_6</color>
+    <color name="core_list_divider_color">@color/color_6</color>
+    <color name="color_status_bar">@color/color_1</color>  <!-- color_status_bar适配6.0以下 -->
+
+    <!--FIXME 等待整理 -->
+    <color name="color_like_away_team">#d82d2d</color>
+    <color name="color_like_home_team">#306ce6</color>
+    <color name="color_indicator_select">#d42f37</color>
+    <color name="worldcup_text_color">#fff2be</color>
+
+    <color name="color_temp_1">#d42f37</color>
+    <color name="color_temp_2">#121212</color>
+    <color name="color_temp_3">#dadde3</color>
+    <color name="color_temp_4">#1a1a1a</color>
+
+    <color name="weather_temp_high">#f77d5c</color>
+    <color name="weather_temp_low">#887ef2</color>
+
+    <color name="select_sex_age_title_color">#1f1f1f</color>
+    <color name="select_age_unselected">#f2f2f2</color>
+    <color name="select_sex_female_selected">#FA8597</color>
+    <color name="select_sex_male_selected">#5FC3E0</color>
+</resources>

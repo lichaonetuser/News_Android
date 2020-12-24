@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_height="wrap_content"
+    android:layout_width="match_parent"
+    tools:context=".page.activity.MainActivity">
+
+    <View
+        android:id="@+id/divider_top_view"
+        android:layout_width="match_parent"
+        android:layout_height="8dp"
+        android:background="@color/color_7"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/headline_header_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/divider_top_view"
+        android:paddingLeft="9dp"
+        android:paddingRight="10dp"
+        android:layout_marginTop="8dp">
+
+        <com.box.common.core.widget.CoreSimpleDraweeView
+            android:id="@+id/headline_icon_img"
+            android:layout_width="150dp"
+            android:layout_height="26dp"
+            app:placeholderImage="@drawable/article_headline_title_icon"
+            app:failureImage="@drawable/article_headline_title_icon"
+            app:placeholderImageScaleType="fitCenter"
+            app:failureImageScaleType="fitCenter"
+            app:actualImageScaleType="fitCenter"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+
+        <com.box.common.core.widget.CoreTextView
+            android:id="@+id/headline_time_txt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="14sp"
+            android:textColor="@color/color_1"
+            android:text="12312312312"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintRight_toRightOf="parent"/>
+
+        <com.box.common.core.widget.CoreImageView
+            android:id="@+id/headline_time_icon_img"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/article_headline_calendar_icon"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintRight_toLeftOf="@+id/headline_time_txt"
+            android:layout_marginRight="6dp"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <com.box.common.core.widget.CoreRecyclerView
+        android:id="@+id/headline_child_list_rv"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="5dp"
+        android:focusable="false"
+        android:focusableInTouchMode="false"
+        app:layout_constraintTop_toBottomOf="@+id/headline_header_layout">
+    </com.box.common.core.widget.CoreRecyclerView>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/headline_more_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/headline_child_list_rv"
+        android:paddingTop="9dp"
+        android:paddingBottom="18dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent">
+
+            <com.box.common.core.widget.CoreTextView
+                android:id="@+id/headline_go_txt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/color_1"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:textSize="11dp"
+                android:text="123123123123"
+                android:textStyle="bold"/>
+
+            <com.box.common.core.widget.CoreImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/article_headline_go_img"
+                app:layout_constraintLeft_toRightOf="@+id/headline_go_txt"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:layout_marginLeft="7dp"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <com.box.common.core.widget.CoreImageView
+            android:id="@+id/headline_cancel_icon_img"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:src="@drawable/article_headline_bottom_logo"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <View
+        android:id="@+id/divider_bottom_view"
+        android:layout_width="match_parent"
+        android:layout_height="8dp"
+        android:background="@color/color_7"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+</androidx.constraintlayout.widget.ConstraintLayout>

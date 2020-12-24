@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <item name="loading_layout" type="id"/>
+    <item name="loading_layout_loading" type="id"/>
+    <item name="loading_layout_loading_pb" type="id"/>
+    <item name="loading_layout_empty" type="id"/>
+    <item name="loading_layout_empty_img" type="id"/>
+    <item name="loading_layout_empty_txt" type="id"/>
+    <item name="loading_layout_empty_btn" type="id"/>
+    <item name="loading_layout_fail" type="id"/>
+    <item name="loading_layout_fail_img" type="id"/>
+    <item name="loading_layout_fail_txt" type="id"/>
+    <item name="loading_layout_fail_btn" type="id"/>
+
+    <attr name="LoadingLayout" format="reference"/>
+
+    <declare-styleable name="LoadingLayout">
+        <attr name="contentId" format="reference"/>
+        <attr name="loadingId" format="reference"/>
+        <attr name="emptyId" format="reference"/>
+        <attr name="failId" format="reference"/>
+        <attr name="defaultVisibleId" format="reference"/>
+    </declare-styleable>
+
+    <style name="Core_LoadingLayout"/>
+
+
+</resources>

@@ -1,0 +1,289 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    style="@style/Core.Widget.Layout.Parent.Layer"
+    tools:context=".page.activity.MainActivity">
+
+    <com.box.app.news.widget.nested.NestedParentScrollView
+        android:id="@+id/scroll_view"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/bottom_bar"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/video_view">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:descendantFocusability="blocksDescendants"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:orientation="vertical"
+            android:paddingTop="8dp">
+
+            <!--这里如果使用ConstraintLayout在4.3上有高度测量问题-->
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:descendantFocusability="blocksDescendants"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:paddingLeft="14dp"
+                android:paddingRight="14dp">
+
+                <com.box.app.news.widget.FontTextView
+                    android:id="@+id/video_title_txt"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginRight="8dp"
+                    android:layout_toLeftOf="@+id/desc_open_btn"
+                    android:focusable="true"
+                    android:focusableInTouchMode="true"
+                    android:lineSpacingExtra="4dp"
+                    android:textColor="@color/color_1"
+                    android:textStyle="bold"
+                    tools:ignore="RtlHardcoded"
+                    tools:text="视频标题行1\n视频标题行2"
+                    tools:textSize="16sp"/>
+
+                <com.box.common.core.widget.CoreImageView
+                    android:id="@+id/desc_open_btn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentTop="true"
+                    android:focusable="true"
+                    android:focusableInTouchMode="true"
+                    android:src="@drawable/video_detail_desc_open_btn"/>
+
+                <com.box.common.core.widget.CoreTextView
+                    android:id="@+id/desc_txt"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/video_title_txt"
+                    android:layout_marginTop="15dp"
+                    android:focusable="true"
+                    android:focusableInTouchMode="true"
+                    android:lineSpacingExtra="3dp"
+                    android:textColor="@color/color_3"
+                    android:textSize="11sp"
+                    android:visibility="gone"
+                    tools:text="视频描述\n视频描述"
+                    tools:visibility="visible"/>
+
+                <com.box.common.core.widget.CoreSimpleDraweeView
+                    android:id="@+id/user_img"
+                    style="@style/AppTheme.Widget.DraweeView.Cover"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:layout_below="@+id/desc_txt"
+                    android:layout_marginTop="18dp"
+                    android:focusable="true"
+                    android:focusableInTouchMode="true"
+                    app:roundAsCircle="true"
+                    app:roundingBorderColor="@color/color_6"
+                    app:roundingBorderWidth="0.5dp"
+                    tools:background="@color/core_tools_design_img"/>
+
+                <com.box.common.core.widget.CoreTextView
+                    android:id="@+id/user_name_txt"
+                    android:layout_width="0dp"
+                    android:layout_height="24dp"
+                    android:layout_alignTop="@+id/user_img"
+                    android:layout_marginLeft="8dp"
+                    android:layout_toLeftOf="@+id/origin_btn"
+                    android:layout_toRightOf="@+id/user_img"
+                    android:ellipsize="end"
+                    android:focusable="true"
+                    android:focusableInTouchMode="true"
+                    android:gravity="center_vertical"
+                    android:includeFontPadding="false"
+                    android:maxLines="1"
+                    android:paddingRight="30dp"
+                    android:textColor="@color/color_2"
+                    android:textSize="12sp"
+                    tools:ignore="RtlHardcoded,RtlSymmetry"
+                    tools:text="测试用户名"/>
+
+                <com.box.common.core.widget.CoreTextView
+                    android:id="@+id/origin_btn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="24dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignTop="@+id/user_img"
+                    android:drawableEnd="@drawable/common_web_enter_ic"
+                    android:drawablePadding="1dp"
+                    android:drawableRight="@drawable/common_web_enter_ic"
+                    android:ellipsize="end"
+                    android:focusable="true"
+                    android:focusableInTouchMode="true"
+                    android:gravity="end|center_vertical"
+                    android:includeFontPadding="false"
+                    android:maxLines="1"
+                    android:text="@string/Video_ReadOnWeb"
+                    android:textColor="@color/color_11"
+                    android:textSize="12sp"/>
+
+            </RelativeLayout>
+
+            <FrameLayout
+                android:id="@+id/container_dig_bury_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="14dp"
+                android:layout_marginTop="40dp"
+                android:paddingLeft="14dp"
+                android:paddingRight="14dp"
+                tools:background="@color/core_tools_design_container"
+                tools:layout_height="200dp"/>
+
+            <FrameLayout
+                android:id="@+id/container_related_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="55dp"
+                android:paddingLeft="14dp"
+                android:paddingRight="14dp"
+                tools:background="@color/core_tools_design_container"
+                tools:layout_height="200dp"/>
+
+            <FrameLayout
+                android:id="@+id/container_comment_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="55dp"
+                tools:background="@color/core_tools_design_container"
+                tools:layout_height="200dp"/>
+
+        </LinearLayout>
+
+    </com.box.app.news.widget.nested.NestedParentScrollView>
+
+    <com.box.common.extension.widget.bar.status.StatusBar
+        android:id="@id/status_bar"
+        style="@style/Core.Widget.StatusBar"
+        android:background="@color/color_14"/>
+
+    <com.box.app.news.widget.NewsVideoView
+        android:id="@+id/video_view"
+        style="@style/AppTheme.NewsItem.Image"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="0dp"
+        app:layout_constraintDimensionRatio="h,16:9"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/status_bar"
+        app:roundedCornerRadius="0dp"
+        tools:background="@drawable/default_news_pic_img"/>
+
+    <com.box.common.core.widget.CoreImageView
+        android:id="@+id/video_back_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/title_bar_height"
+        android:layout_centerVertical="true"
+        android:contentDescription="@null"
+        android:padding="7dp"
+        android:scaleType="fitCenter"
+        android:src="@drawable/news_detail_topbar_back_btn"
+        android:tint="@color/color_9"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/status_bar"
+        tools:visibility="visible"/>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/bottom_bar"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@color/color_9"
+        android:paddingBottom="2dp"
+        android:paddingTop="1dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent">
+
+        <View style="@style/AppTheme.Core.Widget.Line.Horizontal"/>
+
+        <com.box.common.core.widget.CoreTextView
+            android:id="@+id/write_comment_btn"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginBottom="6dp"
+            android:layout_marginLeft="14dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginTop="6dp"
+            android:background="@drawable/user_input_bg"
+            android:enabled="true"
+            android:gravity="center_vertical"
+            android:paddingLeft="12dp"
+            android:paddingRight="12dp"
+            android:text="@string/Tip_WriteAComment"
+            android:textColor="@color/user_input_comment_text_selector"
+            android:textSize="12sp"
+            app:layout_constraintBottom_toBottomOf="@+id/share_btn"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toLeftOf="@+id/comment_btn"
+            app:layout_constraintTop_toTopOf="@+id/share_btn"
+            tools:ignore="RtlHardcoded"/>
+
+        <com.box.common.core.widget.CoreImageView
+            android:id="@+id/comment_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:padding="6dp"
+            android:src="@drawable/user_comment_btn"
+            app:layout_constraintBottom_toBottomOf="@+id/share_btn"
+            app:layout_constraintRight_toLeftOf="@+id/collect_btn"
+            app:layout_constraintTop_toTopOf="@+id/share_btn"/>
+
+        <com.box.common.core.widget.CoreTextView
+            android:id="@+id/comment_count_txt"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_marginRight="3dp"
+            android:layout_marginTop="9dp"
+            android:background="@drawable/user_input_comment_count_bg"
+            android:gravity="center"
+            android:paddingLeft="3dp"
+            android:paddingRight="3dp"
+            android:textColor="@color/color_9"
+            android:textSize="8sp"
+            android:visibility="gone"
+            app:layout_constraintRight_toRightOf="@+id/comment_btn"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="RtlHardcoded,SmallSp"
+            tools:text="994"
+            tools:visibility="visible"/>
+
+        <com.box.app.news.widget.CollectView
+            android:id="@+id/collect_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:padding="6dp"
+            android:src="@drawable/user_collect_btn"
+            app:layout_constraintBottom_toBottomOf="@+id/share_btn"
+            app:layout_constraintRight_toLeftOf="@+id/share_btn"
+            app:layout_constraintTop_toTopOf="@+id/share_btn"/>
+
+        <com.box.common.core.widget.CoreImageView
+            android:id="@+id/share_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="8dp"
+            android:padding="6dp"
+            android:src="@drawable/user_share_btn"
+            app:layout_constraintRight_toRightOf="parent"
+            app:useCommonPressedEffect="true"
+            tools:ignore="RtlHardcoded"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

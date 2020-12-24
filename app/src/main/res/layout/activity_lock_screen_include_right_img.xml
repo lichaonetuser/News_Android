@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.box.common.core.widget.CoreConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/right_img_layout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingLeft="19dp"
+    android:paddingRight="15dp"
+    app:layout_constraintLeft_toLeftOf="parent"
+    app:layout_constraintRight_toRightOf="parent"
+    app:layout_constraintTop_toTopOf="@+id/no_img_layout"
+    tools:background="@color/color_1">
+
+    <com.box.common.core.widget.CoreTextView
+        android:id="@+id/push_content"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginEnd="13dp"
+        android:layout_marginRight="13dp"
+        android:ellipsize="end"
+        android:maxLines="3"
+        android:lineSpacingExtra="5dp"
+        android:textStyle="bold"
+        android:textSize="16sp"
+        android:layout_marginTop="8dp"
+        android:textColor="@color/color_1"
+        app:layout_constraintBottom_toBottomOf="@+id/push_img"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@+id/push_img"
+        app:layout_constraintTop_toTopOf="@+id/push_img"
+        tools:text="新闻标题2新闻标闻标闻标闻标闻标闻标闻标闻标题行2"
+        tools:textSize="17sp"/>
+
+    <com.box.common.core.widget.CoreSimpleDraweeView
+        android:id="@+id/push_img"
+        style="@style/AppTheme.NewsItem.Image"
+        android:layout_width="106dp"
+        android:layout_height="77dp"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:background="@drawable/releated_news_pic_img"/>
+
+</com.box.common.core.widget.CoreConstraintLayout>

@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    style="@style/Core.Widget.Layout.Parent.Layer">
+
+    <com.box.common.extension.widget.bar.status.StatusBar
+        android:id="@id/status_bar"
+        style="@style/Core.Widget.StatusBar"
+        android:background="@color/color_status_bar"/>
+
+    <com.box.common.extension.widget.bar.title.TitleBar
+        android:id="@id/title_bar"
+        style="@style/Core.Widget.TitleBar"
+        app:showBack="false"
+        app:title="@string/Weather_ChooseCity">
+
+        <com.box.common.core.widget.CoreTextView
+            android:id="@id/back_btn"
+            style="@style/AppTheme.TitleBar.Btn"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:clickable="true"
+            android:focusable="true"
+            android:paddingLeft="16dp"
+            android:paddingRight="16dp"
+            android:text="@string/Common_Cancel"
+            android:textColor="@color/color_11"
+            app:useCommonPressedEffect="true"/>
+
+    </com.box.common.extension.widget.bar.title.TitleBar>
+
+    <com.box.common.core.widget.CoreTextView
+        android:id="@+id/location_btn"
+        android:layout_width="0dp"
+        android:layout_height="51dp"
+        android:layout_marginTop="15dp"
+        android:background="@color/color_8"
+        android:drawableLeft="@drawable/weather_location_current_btn"
+        android:drawablePadding="10dp"
+        android:drawableStart="@drawable/weather_location_current_btn"
+        android:gravity="start|center_vertical"
+        android:paddingLeft="18dp"
+        android:paddingRight="18dp"
+        android:text="@string/Weather_UseCurrentLocation"
+        android:textColor="@color/color_1"
+        android:textSize="15sp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/title_bar"/>
+
+    <com.box.common.core.widget.CoreTextView
+        android:id="@+id/city_txt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="10dp"
+        android:layout_marginRight="10dp"
+        android:clickable="false"
+        android:textColor="@color/color_4"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toBottomOf="@+id/location_btn"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/location_btn"
+        tools:text="北海道"
+        tools:visibility="visible"/>
+
+    <ImageView
+        android:id="@+id/location_arrow_img"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="10dp"
+        android:layout_marginRight="10dp"
+        android:clickable="false"
+        android:contentDescription="@null"
+        android:src="@drawable/core_setting_list_arrow_ic"
+        app:layout_constraintBottom_toBottomOf="@+id/location_btn"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/location_btn"/>
+
+    <ProgressBar
+        android:id="@+id/location_pb"
+        android:layout_width="14dp"
+        android:layout_height="14dp"
+        android:clickable="false"
+        android:layout_marginEnd="10dp"
+        android:layout_marginRight="10dp"
+        android:contentDescription="@null"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="@+id/location_btn"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/location_btn"
+        tools:visibility="visible"/>
+
+    <com.box.common.core.widget.CoreTextView
+        android:id="@+id/search_btn"
+        android:layout_width="0dp"
+        android:layout_height="51dp"
+        android:layout_marginTop="8dp"
+        android:background="@color/color_8"
+        android:drawableLeft="@drawable/weather_location_search_btn"
+        android:drawablePadding="10dp"
+        android:drawableStart="@drawable/weather_location_search_btn"
+        android:gravity="start|center_vertical"
+        android:paddingLeft="18dp"
+        android:paddingRight="18dp"
+        android:text="@string/Weather_KeywordSearch"
+        android:textColor="@color/color_1"
+        android:textSize="15sp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/location_btn"/>
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="10dp"
+        android:layout_marginRight="10dp"
+        android:clickable="false"
+        android:contentDescription="@null"
+        android:src="@drawable/core_setting_list_arrow_ic"
+        app:layout_constraintBottom_toBottomOf="@+id/search_btn"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/search_btn"/>
+
+    <com.box.common.core.widget.CoreTextView
+        android:id="@+id/weather_choose_city_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="11dp"
+        android:layout_marginStart="11dp"
+        android:layout_marginTop="30dp"
+        android:text="@string/Weather_ChooseCity"
+        android:textColor="@color/color_4"
+        android:textSize="16sp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/search_btn"/>
+
+    <com.box.common.extension.widget.layout.loading.LoadingLayout
+        android:id="@id/loading_layout"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="1dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/weather_choose_city_label">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@id/common_content_rv"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:overScrollMode="never"/>
+
+    </com.box.common.extension.widget.layout.loading.LoadingLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

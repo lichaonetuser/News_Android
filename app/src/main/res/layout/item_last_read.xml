@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.box.common.core.widget.CoreLinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    style="@style/Core.Widget.Layout.Item"
+    android:layout_height="32dp"
+    android:background="@drawable/shape_round_rec_stroke_blue"
+    android:layout_marginLeft="18dp"
+    android:layout_marginRight="18dp"
+    android:gravity="center"
+    android:orientation="horizontal"
+    android:layout_marginBottom="23dp"
+    android:layout_marginTop="19dp"
+    tools:context=".page.activity.MainActivity">
+
+    <com.box.common.core.widget.CoreTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:drawableEnd="@drawable/news_list_last_read_refresh_ic"
+        android:drawablePadding="3dp"
+        android:drawableRight="@drawable/news_list_last_read_refresh_ic"
+        android:ellipsize="end"
+        android:gravity="center"
+        android:maxLines="1"
+        android:text="@string/News_LastTimeReadClickRefresh"
+        android:textColor="@color/color_45"
+        android:textSize="11sp"
+        android:textStyle="italic"
+        tools:ignore="SmallSp"/>
+
+</com.box.common.core.widget.CoreLinearLayout>

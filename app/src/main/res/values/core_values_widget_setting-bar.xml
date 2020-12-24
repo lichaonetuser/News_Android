@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <dimen name="setting_bar_height">50dp</dimen>
+
+    <declare-styleable name="SettingBar">
+        <attr name="icon" format="reference"/>
+        <attr name="title"/>
+        <attr name="titleBold" format="boolean"/>
+        <attr name="titleSize" format="dimension"/>
+        <attr name="titleColor" format="color"/>
+        <attr name="valueColor" format="color"/>
+        <attr name="showArrow" format="boolean"/>
+        <attr name="showValue" format="boolean"/>
+        <attr name="showTopLine" format="boolean"/>
+        <attr name="showBottomLine" format="boolean"/>
+        <attr name="showCheck" format="boolean"/>
+    </declare-styleable>
+
+</resources>

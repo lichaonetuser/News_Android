@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    style="@style/Core.Widget.Layout.Parent.Layer"
+    android:layout_height="wrap_content"
+    tools:context=".page.activity.MainActivity">
+
+    <View
+        style="@style/AppTheme.Core.Widget.Line.Horizontal"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <com.box.common.core.widget.CoreTextView
+        android:id="@+id/report_txt"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@color/color_8"
+        android:gravity="center"
+        android:paddingBottom="11dp"
+        android:paddingTop="17dp"
+        android:text="@string/Common_Report"
+        android:textColor="@color/color_1"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/report_rv"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"/>
+
+    <View
+        style="@style/AppTheme.Core.Widget.Line.Horizontal"
+        app:layout_constraintTop_toBottomOf="@+id/report_txt"/>
+
+    <com.box.common.core.widget.CoreRecyclerView
+        android:id="@+id/report_rv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:clickable="true"
+        android:clipChildren="false"
+        android:clipToPadding="false"
+        android:focusable="true"
+        app:layout_constraintBottom_toTopOf="@+id/cancel_btn"/>
+
+    <com.box.common.core.widget.CoreTextView
+        android:id="@+id/cancel_btn"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@color/color_9"
+        android:gravity="center"
+        android:paddingBottom="14dp"
+        android:paddingTop="14dp"
+        android:text="@string/Common_Cancel"
+        android:textColor="@color/report_btn_text_color"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

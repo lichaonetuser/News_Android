@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:fancy="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    style="@style/Core.Widget.Layout.Parent.Layer"
+    android:background="@color/transparent"
+    tools:context=".page.activity.MainActivity">
+
+    <View
+        android:id="@+id/top_bg_view"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="@+id/container_indicator"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:background="@color/core_tools_design_view" />
+
+    <com.box.common.extension.widget.bar.status.StatusBar
+        android:id="@id/status_bar"
+        style="@style/Core.Widget.StatusBar"
+        android:background="@color/transparent" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/header_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/status_bar">
+
+        <com.box.common.core.widget.CoreImageView
+            android:id="@+id/logo_img"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/news_logo_height"
+            android:scaleType="fitCenter"
+            android:src="@drawable/news_topbar_logo_ic"
+            app:layout_constraintBottom_toTopOf="parent"
+            app:layout_constraintTop_toBottomOf="parent" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/search_bar_layout"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginBottom="8dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginLeft="11dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginStart="11dp"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/main_titlebar_search_style"
+            android:padding="5dp"
+            app:layout_constraintBottom_toBottomOf="@+id/logo_img"
+            app:layout_constraintLeft_toRightOf="@+id/logo_img"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/logo_img"
+            app:layout_goneMarginRight="10dp">
+
+            <com.box.app.news.widget.SearchBanner
+                android:id="@+id/search_hint_txt"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    <com.box.common.extension.widget.bar.indicator.IndicatorBar
+        android:id="@+id/container_indicator"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/news_tab_height"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@+id/new_channel_button"
+        app:layout_constraintTop_toBottomOf="@+id/header_layout"
+        tools:background="@color/core_tools_design_view" />
+
+    <!--频道编辑页按钮左侧的渐变-->
+    <View
+        android:id="@+id/channel_gradient_shadow"
+        android:layout_width="16dp"
+        android:layout_height="0dp"
+        android:background="@drawable/channel_gradient_background"
+        app:layout_constraintBottom_toBottomOf="@+id/container_indicator"
+        app:layout_constraintRight_toLeftOf="@+id/new_channel_button"
+        app:layout_constraintTop_toTopOf="@+id/container_indicator" />
+
+    <mehdi.sakout.fancybuttons.FancyButton
+        android:id="@+id/new_channel_indicator"
+        android:layout_width="wrap_content"
+        android:layout_height="18dp"
+        android:paddingEnd="3dp"
+        android:paddingLeft="6dp"
+        android:paddingRight="3dp"
+        android:paddingStart="6dp"
+        android:text="@string/Tip_NewChannel"
+        android:textColor="@color/white"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="@+id/container_indicator"
+        app:layout_constraintRight_toLeftOf="@+id/new_channel_button"
+        app:layout_constraintTop_toTopOf="@+id/container_indicator"
+        fancy:fb_defaultColor="@color/color_20"
+        fancy:fb_iconPaddingLeft="-1dp"
+        fancy:fb_iconPaddingTop="6dp"
+        fancy:fb_iconPosition="right"
+        fancy:fb_iconResource="@drawable/channel_go"
+        fancy:fb_radius="2dp"
+        fancy:fb_textSize="9sp"
+        tools:visibility="visible" />
+
+    <ImageView
+        android:id="@+id/new_channel_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="7dp"
+        android:layout_marginRight="7dp"
+        android:background="@color/white"
+        android:paddingLeft="3dp"
+        android:paddingRight="3dp"
+        android:src="@drawable/titlebar_edit"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="@+id/container_indicator"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/container_indicator"
+        tools:ignore="ContentDescription"
+        tools:visibility="visible" />
+
+    <ImageView
+        android:id="@+id/new_icon_article"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="3dp"
+        android:layout_marginRight="3dp"
+        android:paddingEnd="0.5dp"
+        android:paddingRight="0.5dp"
+        android:paddingTop="0.5dp"
+        android:src="@drawable/newicon"
+        android:visibility="gone"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/container_indicator"
+        tools:ignore="ContentDescription,RtlSymmetry"
+        tools:visibility="visible" />
+
+    <com.box.common.core.widget.CoreViewPager
+        android:id="@+id/container_vp"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/container_indicator"
+        tools:background="@color/core_tools_design_container" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

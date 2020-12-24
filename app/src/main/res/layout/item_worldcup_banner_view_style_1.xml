@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/root_layout"
+    android:layout_width="match_parent"
+    android:layout_height="125dp">
+
+    <com.box.common.core.widget.CoreSimpleDraweeView
+        android:id="@+id/banner_view_style_1_image"
+        android:layout_width="0dp"
+        android:layout_height="125dp"
+        app:placeholderImage="@color/color_7"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:actualImageScaleType="fitXY" />
+
+    <com.box.common.core.widget.CoreTextView
+        android:id="@+id/video_title"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="7dp"
+        android:layout_marginRight="7dp"
+        android:gravity="start"
+        android:layout_marginBottom="7dp"
+        android:textSize="14sp"
+        android:textColor="@color/color_9"
+        android:textStyle="bold"
+        android:singleLine="true"
+        android:ellipsize="end"
+        android:shadowColor="@color/color_14_30"
+        android:shadowRadius="0"
+        android:shadowDx="10"
+        android:shadowDy="10"
+        app:layout_constraintLeft_toLeftOf="@+id/banner_view_style_1_image"
+        app:layout_constraintRight_toRightOf="@+id/banner_view_style_1_image"
+        app:layout_constraintBottom_toBottomOf="@+id/banner_view_style_1_image"/>
+
+    <com.box.common.core.widget.CoreImageView
+        android:id="@+id/play_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/user_news_video"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="@+id/banner_view_style_1_image"
+        app:layout_constraintLeft_toLeftOf="@+id/banner_view_style_1_image"
+        app:layout_constraintRight_toRightOf="@+id/banner_view_style_1_image"
+        app:layout_constraintTop_toTopOf="@+id/banner_view_style_1_image" />
+
+    <com.box.common.core.widget.CoreImageView
+        android:id="@+id/gif_flag"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/user_news_gif"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="@+id/banner_view_style_1_image"
+        app:layout_constraintLeft_toLeftOf="@+id/banner_view_style_1_image"
+        app:layout_constraintRight_toRightOf="@+id/banner_view_style_1_image"
+        app:layout_constraintTop_toTopOf="@+id/banner_view_style_1_image" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

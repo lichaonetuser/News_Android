@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <item name="container_layout" type="id"/>
+    <item name="container_vp" type="id"/>
+    <item name="list_ad_test" type="id"/>
+
+</resources>

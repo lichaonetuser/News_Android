@@ -1,0 +1,4 @@
+<resources>
+    <dimen name="core_list_divider_size">1px</dimen>
+    <dimen name="core_line_size">1px</dimen>
+</resources>

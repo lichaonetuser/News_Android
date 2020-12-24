@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.box.common.core.widget.CoreRelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    style="@style/Core.Widget.Layout.Parent.Layer"
+    android:background="@color/transparent"
+    android:clickable="false"
+    android:fitsSystemWindows="true"
+    android:focusable="false"
+    android:focusableInTouchMode="false"
+    tools:background="@color/black_50"
+    tools:context=".page.activity.MainActivity">
+
+    <View
+        style="@style/AppTheme.Core.Widget.Line.Horizontal"
+        android:layout_above="@+id/comment_layout"/>
+
+    <com.box.common.core.widget.CoreRelativeLayout
+        android:id="@+id/comment_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@color/color_9"
+        android:clickable="true"
+        android:paddingBottom="9dp"
+        tools:ignore="KeyboardInaccessibleWidget">
+
+        <com.box.common.core.widget.CoreEditText
+            android:id="@+id/comment_input_etxt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_marginBottom="9dp"
+            android:layout_marginLeft="14dp"
+            android:layout_marginTop="10dp"
+            android:layout_toLeftOf="@+id/submit_btn"
+            android:background="@drawable/user_input_dialog_bg"
+            android:enabled="true"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:gravity="center_vertical"
+            android:hint="@string/Tip_WriteAComment"
+            android:inputType="textMultiLine"
+            android:lineSpacingExtra="4dp"
+            android:maxLength="140"
+            android:maxLines="3"
+            android:minHeight="34dp"
+            android:paddingBottom="9dp"
+            android:paddingLeft="12dp"
+            android:paddingRight="12dp"
+            android:paddingTop="9dp"
+            android:scrollbars="vertical"
+            android:textColor="@color/color_1"
+            android:textColorHint="@color/color_1"
+            android:textSize="14sp"
+            tools:ignore="RtlHardcoded"/>
+
+        <com.box.common.core.widget.CoreTextView
+            android:id="@+id/submit_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/comment_input_etxt"
+            android:layout_alignParentRight="true"
+            android:layout_alignTop="@+id/comment_input_etxt"
+            android:enabled="false"
+            android:gravity="center"
+            android:paddingLeft="14dp"
+            android:paddingRight="14dp"
+            android:text="@string/Common_Submit"
+            android:textColor="@color/user_input_comment_sumbit_selector"
+            android:textSize="16sp"
+            tools:ignore="RtlHardcoded"/>
+
+        <com.box.common.core.widget.CoreCheckedTextView
+            android:id="@+id/anonymous_check"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@+id/comment_input_etxt"
+            android:layout_marginLeft="8dp"
+            android:drawableLeft="@drawable/common_check"
+            android:drawablePadding="7dp"
+            android:gravity="center"
+            android:padding="6dp"
+            android:text="@string/Comment_Anonymous"
+            android:textColor="@color/user_input_comment_anonymous_selector"
+            tools:ignore="RtlHardcoded"/>
+
+        <com.box.common.core.widget.CoreCheckedTextView
+            android:id="@+id/world_cup_check"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/comment_input_etxt"
+            android:layout_marginLeft="8dp"
+            android:layout_toRightOf="@+id/anonymous_check"
+            android:drawableLeft="@drawable/common_check"
+            android:drawablePadding="7dp"
+            android:gravity="center"
+            android:padding="6dp"
+            android:text="@string/WorldCup2018_Comment_RepostToGatherPage"
+            android:textColor="@color/user_input_comment_anonymous_selector"
+            android:visibility="gone"
+            tools:ignore="RtlHardcoded"
+            tools:visibility="gone"/>
+
+        <com.box.common.core.widget.CoreTextView
+            android:id="@+id/limit_txt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/anonymous_check"
+            android:layout_alignParentRight="true"
+            android:layout_alignTop="@+id/anonymous_check"
+            android:layout_marginRight="14dp"
+            android:gravity="center"
+            android:textColor="@color/color_4"
+            android:textSize="10sp"
+            tools:ignore="RtlHardcoded,SmallSp"
+            tools:text="140"/>
+
+    </com.box.common.core.widget.CoreRelativeLayout>
+
+</com.box.common.core.widget.CoreRelativeLayout>

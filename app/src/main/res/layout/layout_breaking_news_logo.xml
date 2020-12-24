@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <com.box.common.core.widget.CoreImageView
+        android:id="@+id/article_breaking_news_out_icon_img"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/article_breaking_news_out_icon"/>
+
+    <com.box.common.core.widget.CoreImageView
+        android:id="@+id/article_breaking_news_inner_icon_img"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/article_breaking_news_inner_icon"
+        app:layout_constraintLeft_toLeftOf="@+id/article_breaking_news_out_icon_img"
+        app:layout_constraintRight_toRightOf="@+id/article_breaking_news_out_icon_img"
+        app:layout_constraintBottom_toBottomOf="@+id/article_breaking_news_out_icon_img"
+        app:layout_constraintTop_toTopOf="@+id/article_breaking_news_out_icon_img"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

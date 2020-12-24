@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    style="@style/Core.Widget.Layout.Parent.Layer"
+    android:background="@color/color_8"
+    tools:context=".page.activity.MainActivity">
+
+    <com.box.common.extension.widget.bar.status.StatusBar
+        android:id="@id/status_bar"
+        style="@style/Core.Widget.StatusBar"
+        android:background="@color/color_status_bar"/>
+
+    <com.box.common.extension.widget.bar.title.TitleBar
+        android:id="@id/title_bar"
+        style="@style/Core.Widget.TitleBar"
+        android:background="@color/color_9"
+        app:showBack="false">
+
+        <com.box.common.core.widget.CoreTextView
+            android:id="@+id/back_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:gravity="center"
+            android:paddingLeft="11dp"
+            android:paddingRight="11dp"
+            android:text="@string/Common_Cancel"
+            android:textColor="@color/color_1"
+            android:textSize="14sp"/>
+
+        <com.box.common.core.widget.CoreTextView
+            android:id="@+id/done_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:enabled="false"
+            android:gravity="center"
+            android:paddingLeft="11dp"
+            android:paddingRight="11dp"
+            android:text="@string/Common_Done"
+            android:textColor="@color/common_titlebar_btn_selector"
+            android:textSize="14sp"/>
+
+    </com.box.common.extension.widget.bar.title.TitleBar>
+
+    <com.box.common.core.widget.CoreEditText
+        android:id="@+id/user_name_etxt"
+        android:layout_width="0dp"
+        android:layout_height="44dp"
+        android:layout_marginTop="17dp"
+        android:background="@color/color_9"
+        android:hint="@string/Tip_PleaseEnterAccount"
+        android:inputType="text"
+        android:maxLength="20"
+        android:maxLines="1"
+        android:paddingLeft="12dp"
+        android:paddingRight="44dp"
+        android:textColor="@color/color_1"
+        android:textColorHint="@color/color_4"
+        android:textSize="15sp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/title_bar"
+        tools:ignore="RtlHardcoded"/>
+
+    <com.box.common.core.widget.CoreImageView
+        android:id="@+id/clean_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="16dp"
+        android:src="@drawable/profile_input_clean_btn"
+        app:layout_constraintBottom_toBottomOf="@+id/user_name_etxt"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/user_name_etxt"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

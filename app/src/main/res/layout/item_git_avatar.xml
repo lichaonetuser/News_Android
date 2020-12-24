@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical">
+    <com.box.common.core.widget.CoreSimpleDraweeView
+        android:id="@+id/item_gif_avatar_sdv"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginRight="13dp"
+        app:roundAsCircle="true"
+        app:placeholderImageScaleType="fitCenter"
+        app:actualImageScaleType="fitCenter"
+        app:placeholderImage="@drawable/feedback_default_avatar"
+        app:roundingBorderWidth="1dp"
+        app:roundingBorderColor="@color/color_6">
+    </com.box.common.core.widget.CoreSimpleDraweeView>
+    <TextView
+        android:id="@+id/item_gif_author_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="3dp"
+        android:textSize="10sp"
+        android:maxEms="2"
+        android:ellipsize="end"/>
+</LinearLayout>

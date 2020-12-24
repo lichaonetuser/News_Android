@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.box.common.core.widget.CoreConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/no_img_layout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingLeft="19dp"
+    android:paddingRight="15dp"
+    tools:background="@color/color_1">
+
+    <com.box.common.core.widget.CoreTextView
+        android:id="@+id/push_content"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:ellipsize="end"
+        android:maxLines="4"
+        android:lineSpacingExtra="5dp"
+        android:textStyle="bold"
+        android:textSize="16sp"
+        android:layout_marginTop="8dp"
+        android:textColor="@color/color_1"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="新闻标题闻标题闻标题闻标题闻标题闻标题闻标题闻标题新闻标题新闻标题闻标题闻标题新闻标题新闻标题新闻标题新闻标题新闻标题新闻标题新闻标题新闻标题新闻标题新闻标题"
+        tools:textSize="17sp"/>
+
+</com.box.common.core.widget.CoreConstraintLayout>

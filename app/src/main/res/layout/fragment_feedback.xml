@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    style="@style/Core.Widget.Layout.Parent.Layer"
+    tools:context=".page.activity.MainActivity">
+
+    <com.box.common.extension.widget.bar.status.StatusBar
+        android:id="@id/status_bar"
+        style="@style/Core.Widget.StatusBar"
+        android:background="@color/color_status_bar"/>
+
+    <com.box.common.extension.widget.bar.title.TitleBar
+        android:id="@id/title_bar"
+        style="@style/Core.Widget.TitleBar"
+        app:title="@string/Setting_Feedback"/>
+
+    <com.box.common.extension.widget.layout.loading.LoadingLayout
+        android:id="@id/loading_layout"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@color/color_8"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/line"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/title_bar">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@id/common_content_rv"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+
+    </com.box.common.extension.widget.layout.loading.LoadingLayout>
+
+    <View
+        android:id="@+id/line"
+        style="@style/Core.Widget.Line.Horizontal"
+        android:layout_marginBottom="49dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"/>
+
+    <com.box.common.core.widget.CoreTextView
+        android:id="@+id/feedback_btn"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="7dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="7dp"
+        android:background="@drawable/feedback_btn"
+        android:gravity="start|center_vertical"
+        android:paddingLeft="12dp"
+        android:paddingRight="12dp"
+        android:text="@string/Setting_TapToEnter"
+        android:textColor="@color/color_4"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/line"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

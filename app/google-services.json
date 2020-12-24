@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "153073007204",
+    "firebase_url": "https://sample-e4b72.firebaseio.com",
+    "project_id": "sample-e4b72",
+    "storage_bucket": "sample-e4b72.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:153073007204:android:04d1765f637847b8f23d71",
+        "android_client_info": {
+          "package_name": "com.box.app.news"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "153073007204-a1h0gi9j4cvdgn1spv9gv8k8ko1trpcs.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD0M1stSHM8cVpws9aUDJd-Gea0zJJcokQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "153073007204-a1h0gi9j4cvdgn1spv9gv8k8ko1trpcs.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

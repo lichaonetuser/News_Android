@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.box.common.core.widget.CoreLinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center"
+    android:orientation="vertical">
+
+    <com.box.common.core.widget.CoreTextView
+        android:id="@+id/more_txt"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_centerInParent="true"
+        android:gravity="center"
+        android:textColor="@color/blue"
+        android:textSize="18sp"
+        app:useCommonPressedEffect="true"
+        tools:text="TEXT"/>
+
+</com.box.common.core.widget.CoreLinearLayout>

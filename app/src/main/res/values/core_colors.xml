@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="red">#ff0000</color>
+    <color name="red_50">#7fff0000</color>
+    <color name="blue">#3267dd</color>
+    <color name="blue_50">#7f3267dd</color>
+    <color name="white">#ffffff</color>
+    <color name="white_50">#7fffffff</color>
+    <color name="black">#000000</color>
+    <color name="black_50">#7f000000</color>
+    <color name="black_20">#33000000</color>
+    <color name="transparent">#00000000</color>
+
+    <color name="core_tools_design_img">#80b6c001</color>
+    <color name="core_tools_design_txt">#80f90800</color>
+    <color name="core_tools_design_bar">#80122eb8</color>
+    <color name="core_tools_design_container">#803ec518</color>
+    <color name="core_tools_design_view">#8071007e</color>
+
+    <!-- 提取核心库时取消注释<color name="core_line_color">@color/black</color>-->
+    <!-- 提取核心库时取消注释<color name="core_list_divider_color">@color/transparent</color>-->
+    <color name="core_colorPrimary">#3F51B5</color>
+    <color name="core_colorPrimaryDark">#303F9F</color>
+    <color name="core_colorAccent">#FF4081</color>
+    <color name="select_color">#2e2e32</color>
+
+</resources>

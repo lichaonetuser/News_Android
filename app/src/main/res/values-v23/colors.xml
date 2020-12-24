@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="color_status_bar">@color/transparent</color>  <!-- color_status_bar适配6.0以下 -->
+
+</resources>

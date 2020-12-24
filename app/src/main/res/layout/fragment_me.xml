@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    style="@style/Core.Widget.Layout.Parent.Layer"
+    android:background="@color/transparent"
+    tools:context=".page.activity.MainActivity">
+
+    <ScrollView
+        android:id="@id/container_layout"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:overScrollMode="never"
+        android:scrollbars="none"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:background="@color/color_8"
+        >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <com.box.common.core.widget.CoreImageView
+                android:id="@+id/profile_bg"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_alignBottom="@+id/container_layout_profile"
+                android:layout_alignTop="@+id/container_layout_profile"
+                android:scaleType="centerCrop"
+                android:src="@drawable/me_login_bg"/>
+
+            <FrameLayout
+                android:id="@+id/container_layout_profile"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"/>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/container_layout_user"
+                android:layout_width="match_parent"
+                android:layout_height="88dp"
+                android:paddingLeft="26dp"
+                android:paddingRight="26dp"
+                android:background="@color/white"
+                android:layout_below="@+id/container_layout_profile">
+
+                <com.box.common.core.widget.CoreTextView
+                    android:id="@+id/favorite_btn"
+                    android:layout_width="84dp"
+                    android:layout_height="0dp"
+                    android:drawablePadding="5dp"
+                    android:gravity="center"
+                    android:text="@string/Common_Favorite"
+                    android:textColor="@color/color_4"
+                    android:textSize="12sp"
+                    app:centerDrawableTop="@drawable/me_collection"
+                    app:centerDrawableTopHeight="25dp"
+                    app:centerDrawableTopWidth="25dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@+id/my_comment_btn"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintHorizontal_chainStyle="spread_inside"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:useCenterDrawable="true"
+                    tools:ignore="RtlHardcoded"/>
+
+                <com.box.common.core.widget.CoreTextView
+                    android:id="@+id/my_comment_btn"
+                    android:layout_width="84dp"
+                    android:layout_height="0dp"
+                    android:drawablePadding="5dp"
+                    android:gravity="center"
+                    android:text="@string/Setting_NewsComment"
+                    android:textColor="@color/color_4"
+                    android:textSize="12sp"
+                    app:centerDrawableTop="@drawable/me_comment"
+                    app:centerDrawableTopHeight="25dp"
+                    app:centerDrawableTopWidth="25dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@+id/message_btn"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintHorizontal_chainStyle="spread_inside"
+                    app:layout_constraintStart_toEndOf="@+id/favorite_btn"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:useCenterDrawable="true"
+                    tools:ignore="RtlHardcoded"/>
+
+                <com.box.common.core.widget.CoreTextView
+                    android:id="@+id/message_btn"
+                    android:layout_width="84dp"
+                    android:layout_height="0dp"
+                    android:drawablePadding="5dp"
+                    android:gravity="center"
+                    android:text="@string/Common_Message"
+                    android:textColor="@color/color_4"
+                    android:textSize="12sp"
+                    app:centerDrawableTop="@drawable/me_information"
+                    app:centerDrawableTopHeight="25dp"
+                    app:centerDrawableTopWidth="25dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintHorizontal_chainStyle="spread_inside"
+                    app:layout_constraintStart_toEndOf="@+id/my_comment_btn"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:useCenterDrawable="true"
+                    tools:ignore="RtlHardcoded"
+                    tools:layout_editor_absoluteY="0dp"/>
+
+                <ImageView
+                    android:id="@+id/message_remind_ic"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="26dp"
+                    android:layout_marginRight="26dp"
+                    android:layout_marginTop="19dp"
+                    android:contentDescription="@null"
+                    android:src="@drawable/core_settting_bar_remind"
+                    android:visibility="gone"
+                    app:layout_constraintRight_toRightOf="@+id/message_btn"
+                    app:layout_constraintTop_toTopOf="@+id/message_btn"
+                    tools:visibility="visible"/>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <View
+                android:id="@+id/line"
+                style="@style/AppTheme.Core.Widget.Line.Horizontal"
+                android:layout_height="6dp"
+                android:layout_below="@+id/container_layout_user"
+                android:background="@color/color_8" />
+
+            <FrameLayout
+                android:background="@color/color_8"
+                android:id="@+id/container_layout_setting"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/line"/>
+
+        </RelativeLayout>
+
+    </ScrollView>
+
+    <View
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@color/color_9"
+        app:layout_constraintBottom_toBottomOf="@+id/status_bar"
+        app:layout_constraintLeft_toLeftOf="@+id/status_bar"
+        app:layout_constraintRight_toRightOf="@+id/status_bar"
+        app:layout_constraintTop_toTopOf="@+id/status_bar"/>
+
+    <com.box.common.extension.widget.bar.status.StatusBar
+        android:id="@id/status_bar"
+        style="@style/Core.Widget.StatusBar"
+        android:background="@color/color_status_bar"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

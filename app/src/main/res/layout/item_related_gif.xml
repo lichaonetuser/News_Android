@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.box.common.core.widget.CoreConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/root_layout"
+    style="@style/AppTheme.NewsItem.RootLayout"
+    android:paddingTop="12dp"
+    android:paddingBottom="12dp"
+    android:paddingLeft="11dp"
+    android:paddingRight="11dp"
+    android:background="@color/color_8"
+    tools:context=".page.activity.MainActivity"
+    tools:ignore="RtlHardcoded,RtlSymmetry">
+
+    <com.box.common.core.widget.CoreSimpleDraweeView
+        android:id="@+id/gif_img"
+        style="@style/AppTheme.Widget.DraweeView.Cover"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:placeholderImage="@drawable/default_news_pic_img"
+        app:viewAspectRatio="2.5"
+        app:roundedCornerRadius="0dp"/>
+    <ImageView
+        android:id="@+id/gif_play_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/gif"
+        app:layout_constraintLeft_toLeftOf="@id/gif_img"
+        app:layout_constraintRight_toRightOf="@id/gif_img"
+        app:layout_constraintTop_toTopOf="@id/gif_img"
+        app:layout_constraintBottom_toBottomOf="@id/gif_img"/>
+
+    <com.box.app.news.widget.FontTextView
+        android:id="@+id/news_title_txt"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:paddingTop="8dp"
+        android:ellipsize="end"
+        android:maxLines="3"
+        android:textColor="@color/color_1"
+        android:textStyle="normal"
+        android:textSize="16sp"
+        android:lineSpacingExtra="5dp"
+        android:includeFontPadding="false"
+        app:layout_constraintTop_toBottomOf="@id/gif_img"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:subscribeTextSizeChangeEvent="false"
+        app:updateFontSizeWhenInit="false"
+        tools:lineSpacingExtra="5dp"
+        tools:text="新闻标题行1\n新闻标题行2\n新闻标题行3\n新闻标题行4\n"
+        tools:textSize="14sp"/>
+
+    <com.box.common.core.widget.CoreTextView
+        android:id="@+id/news_source_txt"
+        style="@style/AppTheme.NewsItem.Source"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:paddingTop="10dp"
+        android:singleLine="true"
+        android:ellipsize="end"
+        android:textColor="@color/color_3"
+        android:textSize="10sp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/news_title_txt"
+        tools:ignore="SmallSp" />
+
+</com.box.common.core.widget.CoreConstraintLayout>

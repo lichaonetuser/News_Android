@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    style="@style/Core.Widget.Layout.Parent.Layer"
+    android:layout_height="wrap_content"
+    android:background="@color/transparent"
+    tools:context=".page.activity.MainActivity">
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="13dp"
+        android:layout_marginRight="13dp"
+        android:orientation="vertical"
+        android:background="@drawable/core_ios_dialog_sheet_bg_static"
+        android:layout_marginBottom="6dp"
+        app:layout_constraintBottom_toTopOf="@+id/back_layout"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent">
+
+        <TextView
+            android:id="@+id/select_sex_male_text"
+            android:layout_width="match_parent"
+            android:text="@string/UserInfoCollection_GenderMale"
+            android:gravity="center"
+            android:textSize="18sp"
+            android:textColor="@color/color_45"
+            android:layout_height="57dp" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:background="@color/color_6"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"/>
+
+        <TextView
+            android:id="@+id/select_sex_female_text"
+            android:layout_width="match_parent"
+            android:text="@string/UserInfoCollection_GenderFemale"
+            android:gravity="center"
+            android:textSize="18sp"
+            android:textColor="@color/color_45"
+            android:layout_height="57dp" />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/back_layout"
+        android:layout_width="0dp"
+        android:layout_height="57dp"
+        android:layout_marginBottom="10dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:background="@drawable/core_ios_dialog_sheet_bg_static"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent">
+
+        <com.box.common.core.widget.CoreTextView
+            android:id="@+id/back_btn"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:text="@string/Common_Cancel"
+            android:textColor="@color/blue"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:useCommonPressedEffect="true"/>
+
+    </RelativeLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="224dp"
+    android:layout_height="wrap_content"
+    android:background="@drawable/update_channel_backdround"
+    android:paddingBottom="22dp"
+    android:paddingLeft="19dp"
+    android:paddingRight="19dp"
+    android:paddingTop="22dp"
+    tools:ignore="SpUsage">
+
+    <TextView
+        android:id="@+id/update_channel_description"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:lineSpacingExtra="7dp"
+        android:text="@string/UserInfoCollection_AlertMessage"
+        android:textColor="@color/color_1"
+        android:textSize="15sp"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="PxUsage" />
+
+    <TextView
+        android:id="@+id/update_channel_cancel"
+        android:layout_width="75dp"
+        android:layout_height="28dp"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/update_channel_button_cancel"
+        android:gravity="center"
+        android:text="@string/Common_Cancel"
+        android:textColor="@color/color_3"
+        android:textSize="10dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@+id/update_channel_ok"
+        app:layout_constraintTop_toBottomOf="@+id/update_channel_description" />
+
+    <TextView
+        android:id="@+id/update_channel_ok"
+        android:layout_width="75dp"
+        android:layout_height="28dp"
+        android:layout_marginLeft="28dp"
+        android:layout_marginStart="28dp"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/update_channel_button_ok"
+        android:gravity="center"
+        android:text="@string/Common_OK"
+        android:textColor="@color/color_11"
+        android:textSize="10dp"
+        app:layout_constraintLeft_toRightOf="@+id/update_channel_cancel"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/update_channel_description" />
+</androidx.constraintlayout.widget.ConstraintLayout>

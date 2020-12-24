@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    style="@style/Core.Widget.Layout.Parent.Layer"
+    android:layout_height="244dp"
+    android:paddingTop="@dimen/title_bar_height">
+
+    <TextView
+        android:id="@+id/login_txt"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="6dp"
+        android:text="@string/Common_Login"
+        android:textColor="@color/color_14"
+        android:textSize="31sp"
+        android:textStyle="bold"
+        app:layout_constraintLeft_toLeftOf="@+id/login_facebook_btn"
+        app:layout_constraintRight_toRightOf="@+id/login_google_btn"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/agreement_txt"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="3dp"
+        android:lineSpacingExtra="7dp"
+        android:paddingLeft="3.5dp"
+        android:paddingRight="0dp"
+        android:textColor="@color/color_44"
+        android:textSize="12sp"
+        app:layout_constraintLeft_toLeftOf="@+id/login_facebook_btn"
+        app:layout_constraintRight_toRightOf="@+id/login_google_btn"
+        app:layout_constraintTop_toBottomOf="@+id/login_txt"
+        tools:ignore="RtlHardcoded"
+        tools:text="@string/Setting_LoginEnjoyRecom" />
+
+    <com.box.common.core.widget.CoreImageView
+        android:id="@+id/login_facebook_btn"
+        android:layout_width="84dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="26dp"
+        android:layout_marginLeft="26dp"
+        android:layout_marginTop="21dp"
+        android:scaleType="centerInside"
+        android:src="@drawable/login_facebook_btn"
+        app:layout_constraintEnd_toStartOf="@+id/login_twitter_btn"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_chainStyle="spread_inside"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/agreement_txt" />
+
+    <com.box.common.core.widget.CoreImageView
+        android:id="@+id/login_twitter_btn"
+        android:layout_width="84dp"
+        android:layout_height="wrap_content"
+        android:scaleType="centerInside"
+        android:src="@drawable/login_twitter_btn"
+        app:layout_constraintEnd_toStartOf="@+id/login_google_btn"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_chainStyle="spread_inside"
+        app:layout_constraintStart_toEndOf="@+id/login_facebook_btn"
+        app:layout_constraintTop_toTopOf="@+id/login_facebook_btn" />
+
+    <com.box.common.core.widget.CoreImageView
+        android:id="@+id/login_google_btn"
+        android:layout_width="84dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="28dp"
+        android:layout_marginRight="26dp"
+        android:scaleType="centerInside"
+        android:src="@drawable/login_google_btn"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_chainStyle="spread_inside"
+        app:layout_constraintStart_toEndOf="@+id/login_twitter_btn"
+        app:layout_constraintTop_toTopOf="@+id/login_facebook_btn" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

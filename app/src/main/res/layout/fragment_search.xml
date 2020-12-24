@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    style="@style/Core.Widget.Layout.Parent.Layer"
+    android:background="@color/color_9"
+    tools:context=".page.activity.MainActivity">
+
+    <com.box.common.extension.widget.bar.status.StatusBar
+        android:id="@id/status_bar"
+        style="@style/Core.Widget.StatusBar"
+        android:background="@color/transparent" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/search_bar_layout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="14dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="14dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/main_titlebar_search_style"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:orientation="horizontal"
+        android:paddingLeft="5dp"
+        android:paddingStart="5dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@+id/cancel_txt"
+        app:layout_constraintTop_toBottomOf="@+id/status_bar"
+        tools:ignore="RtlSymmetry">
+
+        <com.box.common.core.widget.CoreImageView
+            android:id="@+id/search_bar_icon_img"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/main_titlebar_search_icon"
+            app:layout_constraintBottom_toTopOf="parent"
+            app:layout_constraintTop_toBottomOf="parent" />
+
+        <com.box.common.core.widget.CoreEditText
+            android:id="@+id/search_input_et"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:background="@color/transparent"
+            android:ellipsize="end"
+            android:gravity="left"
+            android:hint="@string/Query_TypeInSearchKeyword"
+            android:imeOptions="actionSearch"
+            android:padding="5dp"
+            android:singleLine="true"
+            android:textColorHint="@color/color_41"
+            android:textSize="14sp"
+            app:layout_constraintBottom_toTopOf="parent"
+            app:layout_constraintLeft_toRightOf="@+id/search_bar_icon_img"
+            app:layout_constraintRight_toLeftOf="@+id/search_input_clear_img"
+            app:layout_constraintTop_toBottomOf="parent"
+            tools:ignore="RtlHardcoded" />
+
+        <com.box.common.core.widget.CoreImageView
+            android:id="@+id/search_input_clear_img"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginEnd="7dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="7dp"
+            android:layout_marginStart="15dp"
+            android:padding="5dp"
+            android:src="@drawable/search_input_clear_btn"
+            android:visibility="gone"
+            app:commonPressedEffectAlpha="0.5"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toRightOf="@+id/search_input_et"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:useCommonPressedEffect="true" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <com.box.common.core.widget.CoreTextView
+        android:id="@+id/cancel_txt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="14dp"
+        android:layout_marginRight="14dp"
+        android:layout_marginTop="15dp"
+        android:gravity="right"
+        android:text="@string/Common_Cancel"
+        android:textColor="@color/color_1"
+        android:textStyle="bold"
+        app:layout_constraintLeft_toRightOf="@+id/search_bar_layout"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/status_bar"
+        app:useCommonPressedEffect="true"
+        tools:ignore="RtlHardcoded" />
+
+    <com.box.common.core.widget.CoreRecyclerView
+        android:id="@id/common_content_rv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:overScrollMode="never"
+        app:layout_constraintTop_toBottomOf="@+id/search_bar_layout" />
+
+    <FrameLayout
+        android:id="@+id/search_result_webview_layout"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:paddingTop="10dp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/search_bar_layout">
+
+    </FrameLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

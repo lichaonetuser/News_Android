@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <dimen name="title_bar_height">44.5dp</dimen>
+
+    <declare-styleable name="TitleBar">
+        <attr name="showBack" format="boolean"/>
+        <attr name="showTitle" format="boolean"/>
+        <attr name="showLine" format="boolean"/>
+        <attr name="backTintColor" format="color"/>
+        <attr name="title"/>
+    </declare-styleable>
+
+</resources>

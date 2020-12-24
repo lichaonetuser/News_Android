@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    style="@style/Core.Widget.Layout.Parent.Layer"
+    android:layout_height="149dp"
+    android:background="@color/color_9"
+    android:paddingTop="@dimen/title_bar_height">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/profile_layout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="14dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent">
+
+        <com.box.common.core.widget.CoreSimpleDraweeView
+            android:id="@+id/user_cover_img"
+            style="@style/AppTheme.Widget.DraweeView.Cover"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_marginRight="25dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:roundAsCircle="true"
+            app:roundingBorderColor="@color/color_8"
+            app:roundingBorderWidth="0.5dp" />
+
+        <com.box.common.core.widget.CoreSimpleDraweeView
+            android:id="@+id/platform_img"
+            style="@style/AppTheme.Widget.DraweeView.Cover"
+            android:layout_width="21dp"
+            android:layout_height="21dp"
+            android:layout_marginBottom="5dp"
+            app:layout_constraintBottom_toBottomOf="@+id/user_cover_img"
+            app:layout_constraintLeft_toLeftOf="@+id/user_cover_img"
+            app:roundAsCircle="true" />
+
+        <com.box.common.core.widget.CoreTextView
+            android:id="@+id/user_name_txt"
+            style="@style/AppTheme.Widget.DraweeView.Cover"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:ellipsize="end"
+            android:gravity="start|center_vertical"
+            android:maxLines="1"
+            android:paddingLeft="26dp"
+            android:paddingRight="10dp"
+            android:textColor="@color/color_14"
+            android:textSize="31sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@+id/user_cover_img"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toLeftOf="@+id/user_cover_img"
+            app:layout_constraintTop_toTopOf="parent"
+            app:roundAsCircle="true"
+            tools:text="用户名称" />
+
+        <!--<com.box.common.core.widget.CoreImageView-->
+        <!--android:id="@+id/arrow_ic"-->
+        <!--android:layout_width="14dp"-->
+        <!--android:layout_height="0dp"-->
+        <!--android:layout_marginEnd="13dp"-->
+        <!--android:layout_marginRight="13dp"-->
+        <!--android:scaleType="center"-->
+        <!--android:src="@drawable/core_setting_list_arrow_ic"-->
+        <!--android:visibility="visible"-->
+        <!--app:layout_constraintBottom_toBottomOf="@+id/user_cover_img"-->
+        <!--app:layout_constraintRight_toRightOf="parent"-->
+        <!--app:layout_constraintTop_toTopOf="@+id/user_cover_img"/>-->
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

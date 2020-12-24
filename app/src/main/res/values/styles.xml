@@ -1,0 +1,205 @@
+<resources>
+
+    <!-- 基本风格 -->
+
+    <style name="AppTheme" parent="Core.App" />
+
+    <style name="AppTheme.Core.Activity" parent="Core.Activity">
+        <item name="android:windowBackground">@color/color_9</item>
+    </style>
+
+    <style name="AppTheme.Activity.Ad" parent="Core.Activity">
+        <item name="android:windowBackground">@color/black</item>
+    </style>
+
+    <style name="AppTheme.Core.Widget.Line.Vertical" parent="Core.Widget.Line.Vertical">
+        <item name="android:background">@color/color_6</item>
+    </style>
+
+    <style name="AppTheme.Core.Widget.Line.Horizontal" parent="Core.Widget.Line.Horizontal">
+        <item name="android:background">@color/color_6</item>
+    </style>
+
+    <!-- 以下为具体case -->
+    <!-- TitleBar -->
+
+    <style name="AppTheme.TitleBar.Btn" parent="AppTheme">
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:gravity">center</item>
+    </style>
+
+    <!-- NewsItem -->
+
+    <style name="AppTheme.NewsItem.RootLayout" parent="Core.Widget.Layout">
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:paddingLeft">11dp</item>
+        <item name="android:paddingRight">11dp</item>
+        <item name="android:paddingTop">12dp</item>
+        <item name="android:paddingBottom">0dp</item>
+        <item name="android:clipChildren">false</item>
+        <item name="android:clipToPadding">false</item>
+    </style>
+
+    <style name="AppTheme.NewsItem.Padding" parent="Core.Widget.Layout">
+        <item name="android:paddingLeft">11dp</item>
+        <item name="android:paddingRight">11dp</item>
+        <item name="android:paddingBottom">0dp</item>
+    </style>
+
+    <style name="AppTheme.NewsItem.Image" parent="AppTheme">
+        <item name="android:layout_height">80dp</item>
+        <item name="android:layout_width">137dp</item>
+        <item name="android:clickable">false</item>
+        <item name="roundedCornerRadius">0dp</item>
+        <item name="placeholderImage">@drawable/default_news_pic_img</item>
+        <item name="placeholderImageScaleType">fitXY</item>
+        <item name="actualImageScaleType">centerCrop</item>
+    </style>
+
+    <style name="AppTheme.NewsItem.Title" parent="AppTheme">
+        <item name="android:textAllCaps">false</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_width">0dp</item>
+        <item name="android:textColor">@color/color_1</item>
+        <item name="android:ellipsize">end</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="AppTheme.NewsItem.Source" parent="AppTheme">
+        <item name="android:textAllCaps">false</item>
+        <item name="android:gravity">top</item>
+        <item name="android:paddingTop">6dp</item>
+        <item name="android:layout_height">34dp</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:ellipsize">end</item>
+        <item name="android:maxLines">1</item>
+        <item name="android:maxEms">8</item>
+        <item name="android:textSize">9sp</item>
+        <item name="android:textColor">@color/color_3</item>
+    </style>
+
+    <style name="AppTheme.NewsItem.Time" parent="AppTheme.NewsItem.Source">
+        <item name="android:layout_width">0dp</item>
+    </style>
+
+    <style name="AppTheme.NewsItem.Remove" parent="AppTheme">
+        <item name="android:layout_height">34dp</item>
+        <item name="android:layout_width">34dp</item>
+        <item name="android:paddingBottom">9dp</item>
+        <item name="android:contentDescription">null</item>
+        <item name="android:src">@drawable/news_list_delete_btn</item>
+        <item name="android:scaleType">centerInside</item>
+    </style>
+
+    <style name="AppTheme.NewsItem.Select" parent="AppTheme">
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:paddingLeft">5dp</item>
+        <item name="android:paddingRight">5dp</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:contentDescription">null</item>
+        <item name="android:src">@drawable/list_select_selector</item>
+        <item name="android:scaleType">centerInside</item>
+    </style>
+
+    <style name="AppTheme.NewsItem.Avatar" parent="AppTheme">
+        <item name="android:layout_width">40dp</item>
+        <item name="android:layout_height">40dp</item>
+        <item name="placeholderImage">@drawable/user_headshot_img</item>
+        <item name="placeholderImageScaleType">centerCrop</item>
+        <item name="actualImageScaleType">centerCrop</item>
+        <item name="roundAsCircle">true</item>
+    </style>
+
+    <!-- Feedback -->
+
+    <style name="AppTheme.FeedbackItem.RootLayout" parent="Core.Widget.Layout">
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:paddingLeft">12dp</item>
+        <item name="android:paddingRight">12dp</item>
+        <item name="android:paddingTop">16dp</item>
+        <item name="android:paddingBottom">16dp</item>
+    </style>
+
+    <style name="AppTheme.FeedbackItem.Avatar" parent="AppTheme">
+        <item name="android:layout_width">40dp</item>
+        <item name="android:layout_height">40dp</item>
+        <item name="placeholderImage">@drawable/user_headshot_img</item>
+        <item name="placeholderImageScaleType">centerCrop</item>
+        <item name="actualImageScaleType">centerCrop</item>
+        <item name="roundAsCircle">true</item>
+    </style>
+
+    <style name="AppTheme.FeedbackItem.Text" parent="AppTheme">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">13sp</item>
+        <item name="android:textColor">@color/color_1</item>
+        <item name="android:lineSpacingExtra">1dp</item>
+        <item name="android:padding">8dp</item>
+    </style>
+
+    <style name="AppTheme.FeedbackItem.Picture" parent="AppTheme">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:visibility">gone</item>
+        <item name="actualImageScaleType">centerCrop</item>
+        <item name="progressBarImageScaleType">centerInside</item>
+        <item name="placeholderImage">@color/black_50</item>
+        <item name="contentDescription">@null</item>
+        <item name="viewAspectRatio">1</item>
+    </style>
+
+    <style name="AppTheme.FeedbackItem.Time" parent="AppTheme">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:textSize">10sp</item>
+        <item name="android:textColor">@color/color_4</item>
+        <item name="android:gravity">center</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+
+    <!-- Cover -->
+
+    <style name="AppTheme.Widget" parent="AppTheme" />
+
+    <style name="AppTheme.Widget.DraweeView.Cover" parent="AppTheme.Widget">
+        <item name="android:layout_width">47dp</item>
+        <item name="android:layout_height">47dp</item>
+        <item name="actualImageScaleType">centerCrop</item>
+        <item name="placeholderImage">@drawable/user_headshot_img</item>
+        <item name="placeholderImageScaleType">centerCrop</item>
+        <item name="viewAspectRatio">1</item>
+    </style>
+
+    <!-- Setting -->
+
+    <style name="AppTheme.Widget.Line.Horizontal.Setting" parent="AppTheme.Core.Widget.Line.Horizontal">
+        <item name="android:background">@color/color_8</item>
+        <item name="android:layout_marginLeft">18dp</item>
+        <item name="android:layout_marginRight">13dp</item>
+    </style>
+
+    <style name="AppTheme.Widget.SettingBar.Setting" parent="AppTheme">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">50dp</item>
+        <item name="android:background">@color/transparent</item>
+        <item name="titleColor">@color/color_1</item>
+        <item name="valueColor">@color/color_4</item>
+    </style>
+
+    <!-- LockScreenDialogActivity -->
+
+    <style name="AppTheme.LockScreenDialogActivity" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowShowWallpaper">true</item>
+        <item name="android:windowFullscreen">false</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+</resources>

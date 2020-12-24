@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    style="@style/Core.Widget.Layout.Parent.Layer"
+    tools:context=".page.activity.MainActivity">
+
+    <com.box.common.extension.widget.bar.status.StatusBar
+        android:id="@id/status_bar"
+        style="@style/Core.Widget.StatusBar"
+        android:background="@color/color_status_bar"/>
+
+    <com.box.common.extension.widget.bar.title.TitleBar
+        android:id="@id/title_bar"
+        style="@style/Core.Widget.TitleBar"
+        app:title="@string/Push_Setting"/>
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/title_bar">
+
+        <com.box.common.extension.widget.bar.setting.SettingBar
+            android:id="@+id/push_use_sound_bar"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            app:showArrow="false"
+            app:title="@string/Setting_SwitchOfPushRing"
+            app:titleColor="@color/color_1"
+            app:valueColor="@color/color_4">
+
+            <CheckBox
+                android:id="@+id/push_use_sound_check"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="16dp"
+                android:layout_marginRight="16dp"/>
+
+        </com.box.common.extension.widget.bar.setting.SettingBar>
+
+        <View
+            style="@style/AppTheme.Core.Widget.Line.Horizontal"/>
+
+        <com.box.common.extension.widget.bar.setting.SettingBar
+            android:id="@+id/push_show_dialog_when_lock_bar"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            app:showArrow="false"
+            app:title="@string/Setting_SwitchOfPushOnLockedScreen"
+            app:titleColor="@color/color_1"
+            app:valueColor="@color/color_4">
+
+            <CheckBox
+                android:id="@+id/push_show_dialog_when_lock_check"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="16dp"
+                android:layout_marginRight="16dp"/>
+
+        </com.box.common.extension.widget.bar.setting.SettingBar>
+
+        <View
+            style="@style/AppTheme.Core.Widget.Line.Horizontal"/>
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+
+    <attr name="useCommonPressedEffect" format="boolean"/>
+    <attr name="commonPressedEffectAlpha" format="float"/>
+
+    <attr name="useCenterDrawable" format="boolean"/>
+    <attr name="centerDrawableLeft" format="reference|color"/>
+    <attr name="centerDrawableRight" format="reference|color"/>
+    <attr name="centerDrawableTop" format="reference|color"/>
+    <attr name="centerDrawableBottom" format="reference|color"/>
+    <attr name="centerDrawableLeftWidth" format="reference|dimension"/>
+    <attr name="centerDrawableRightWidth" format="reference|dimension"/>
+    <attr name="centerDrawableTopWidth" format="reference|dimension"/>
+    <attr name="centerDrawableBottomWidth" format="reference|dimension"/>
+    <attr name="centerDrawableLeftHeight" format="reference|dimension"/>
+    <attr name="centerDrawableRightHeight" format="reference|dimension"/>
+    <attr name="centerDrawableTopHeight" format="reference|dimension"/>
+    <attr name="centerDrawableBottomHeight" format="reference|dimension"/>
+
+    <attr name="edgeColor" format="color"/>
+
+    <declare-styleable name="CoreCommonPressed">
+        <attr name="useCommonPressedEffect"/>
+        <attr name="commonPressedEffectAlpha"/>
+    </declare-styleable>
+
+    <declare-styleable name="CoreEdgeColor">
+        <attr name="edgeColor"/>
+    </declare-styleable>
+
+    <declare-styleable name="CoreCenterDrawable">
+        <attr name="useCenterDrawable"/>
+        <attr name="centerDrawableLeft"/>
+        <attr name="centerDrawableRight"/>
+        <attr name="centerDrawableTop"/>
+        <attr name="centerDrawableBottom"/>
+        <attr name="centerDrawableLeftWidth"/>
+        <attr name="centerDrawableRightWidth"/>
+        <attr name="centerDrawableTopWidth"/>
+        <attr name="centerDrawableBottomWidth"/>
+        <attr name="centerDrawableLeftHeight"/>
+        <attr name="centerDrawableRightHeight"/>
+        <attr name="centerDrawableTopHeight"/>
+        <attr name="centerDrawableBottomHeight"/>
+    </declare-styleable>
+
+    <declare-styleable name="CoreButton">
+        <attr name="useCommonPressedEffect"/>
+        <attr name="commonPressedEffectAlpha"/>
+        <attr name="useCenterDrawable"/>
+        <attr name="centerDrawableLeft"/>
+        <attr name="centerDrawableRight"/>
+        <attr name="centerDrawableTop"/>
+        <attr name="centerDrawableBottom"/>
+        <attr name="centerDrawableLeftWidth"/>
+        <attr name="centerDrawableRightWidth"/>
+        <attr name="centerDrawableTopWidth"/>
+        <attr name="centerDrawableBottomWidth"/>
+        <attr name="centerDrawableLeftHeight"/>
+        <attr name="centerDrawableRightHeight"/>
+        <attr name="centerDrawableTopHeight"/>
+        <attr name="centerDrawableBottomHeight"/>
+    </declare-styleable>
+
+    <declare-styleable name="CoreConstraintLayout">
+        <attr name="useCommonPressedEffect"/>
+        <attr name="commonPressedEffectAlpha"/>
+    </declare-styleable>
+
+    <declare-styleable name="CoreEditText">
+    </declare-styleable>
+
+    <declare-styleable name="CoreImageButton">
+        <attr name="useCommonPressedEffect"/>
+        <attr name="commonPressedEffectAlpha"/>
+    </declare-styleable>
+
+    <declare-styleable name="CoreImageView">
+        <attr name="useCommonPressedEffect"/>
+        <attr name="commonPressedEffectAlpha"/>
+    </declare-styleable>
+
+    <declare-styleable name="CoreLinearLayout">
+        <attr name="useCommonPressedEffect"/>
+        <attr name="commonPressedEffectAlpha"/>
+    </declare-styleable>
+
+    <declare-styleable name="CoreRecyclerView">
+    </declare-styleable>
+
+    <declare-styleable name="CoreRelativeLayout">
+        <attr name="useCommonPressedEffect"/>
+        <attr name="commonPressedEffectAlpha"/>
+    </declare-styleable>
+
+    <declare-styleable name="CoreScrollView">
+        <attr name="edgeColor"/>
+    </declare-styleable>
+
+    <declare-styleable name="CoreSimpleDraweeView">
+        <attr name="useCommonPressedEffect"/>
+        <attr name="commonPressedEffectAlpha"/>
+    </declare-styleable>
+
+    <declare-styleable name="CoreSwitch">
+        <attr name="useAllMeasureMode" format="boolean"/>
+    </declare-styleable>
+
+    <declare-styleable name="CoreTextView">
+        <attr name="useCommonPressedEffect"/>
+        <attr name="commonPressedEffectAlpha"/>
+        <attr name="useStroke" format="boolean"/>
+        <attr name="strokeColor" format="color"/>
+        <attr name="strokeWidth" format="dimension"/>
+        <attr name="useCenterDrawable"/>
+        <attr name="centerDrawableLeft"/>
+        <attr name="centerDrawableRight"/>
+        <attr name="centerDrawableTop"/>
+        <attr name="centerDrawableBottom"/>
+        <attr name="centerDrawableLeftWidth"/>
+        <attr name="centerDrawableRightWidth"/>
+        <attr name="centerDrawableTopWidth"/>
+        <attr name="centerDrawableBottomWidth"/>
+        <attr name="centerDrawableLeftHeight"/>
+        <attr name="centerDrawableRightHeight"/>
+        <attr name="centerDrawableTopHeight"/>
+        <attr name="centerDrawableBottomHeight"/>
+    </declare-styleable>
+
+    <declare-styleable name="CoreViewPager">
+        <attr name="edgeColor"/>
+        <!-- Child view inside a page to match the page size against. -->
+        <attr name="matchChildWidth" format="reference" />
+        <!-- Maximum size. -->
+        <attr name="android:maxWidth" />
+        <!-- Maximum size. -->
+        <attr name="android:maxHeight" />
+
+        <attr name="useVerticalPageTransformer" format="boolean" />
+        <attr name="useWrapContent" format="boolean" />
+    </declare-styleable>
+
+    <attr name="title" format="string"/>
+
+</resources>

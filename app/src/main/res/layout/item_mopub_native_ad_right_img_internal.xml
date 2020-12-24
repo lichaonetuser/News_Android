@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/ad_layout_internal"
+    style="@style/AppTheme.NewsItem.RootLayout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingLeft="10dp"
+    android:paddingTop="12dp"
+    android:paddingRight="10dp"
+    android:paddingBottom="12dp">
+
+    <com.box.common.core.widget.CoreConstraintLayout xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/ad_content_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:context=".page.activity.MainActivity"
+        tools:ignore="RtlHardcoded,RtlSymmetry">
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginEnd="9dp"
+            android:layout_marginRight="9dp"
+            android:gravity="top|start"
+            app:layout_constraintBottom_toBottomOf="@+id/ad_primary_img"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toLeftOf="@+id/ad_primary_img"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <com.box.common.core.widget.CoreTextView
+                android:id="@+id/ad_headline_txt"
+                style="@style/AppTheme.NewsItem.Title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentLeft="true"
+                android:layout_gravity="start|top"
+                android:textColor="@color/color_3"
+                android:ellipsize="end"
+                android:lineSpacingExtra="5dp"
+                app:title_max_lines="3"
+                app:title_text_size="16"
+                android:text="@string/Common_Loading"
+                tools:textSize="14sp" />
+
+        </RelativeLayout>
+
+        <com.box.common.core.widget.CoreSimpleDraweeView
+            android:id="@+id/ad_primary_img"
+            style="@style/AppTheme.NewsItem.Image"
+            android:layout_width="137dp"
+            android:layout_height="93dp"
+            android:background="@drawable/default_news_pic_img"
+            app:actualImageScaleType="fitCenter"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.box.common.core.widget.CoreImageView
+            android:id="@+id/ad_privacy_information_icon_img"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:contentDescription="@null"
+            android:padding="2dp"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="RtlSymmetry" />
+
+        <com.box.common.core.widget.CoreImageView
+            android:id="@+id/ad_logo_img"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/admob_native_ad_img"
+            app:layout_constraintBottom_toBottomOf="@+id/ad_primary_img"
+            app:layout_constraintLeft_toLeftOf="parent" />
+
+        <com.box.common.core.widget.CoreButton
+            android:id="@+id/ad_action_btn"
+            android:layout_width="0dp"
+            android:layout_height="30dp"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/ad_action_btn"
+            android:text="@string/Common_Loading"
+            android:textColor="@color/color_15"
+            android:textSize="15sp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/ad_logo_img" />
+
+    </com.box.common.core.widget.CoreConstraintLayout>
+
+</FrameLayout>

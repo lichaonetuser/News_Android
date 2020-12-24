@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/match_head_view"
+    android:layout_width="match_parent"
+    android:layout_height="210dp"
+    android:background="@drawable/match_headview_bg">
+
+    <com.box.common.core.widget.CoreSimpleDraweeView
+        android:id="@+id/player_home_image"
+        android:layout_width="69dp"
+        android:layout_height="44dp"
+        android:layout_marginTop="91dp"
+        android:scaleType="fitXY"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@+id/match_reserve"
+        app:layout_constraintTop_toTopOf="parent"
+        app:placeholderImage="@drawable/nationalflag_default"/>
+
+    <com.box.common.core.widget.CoreTextView
+        android:id="@+id/player_home_title"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="14dp"
+        android:layout_marginRight="14dp"
+        android:layout_marginTop="20dp"
+        android:gravity="center"
+        android:maxLines="2"
+        android:textColor="@color/color_9"
+        android:textSize="12sp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@+id/match_reserve"
+        app:layout_constraintTop_toBottomOf="@+id/player_home_image"/>
+
+    <com.box.common.core.widget.CoreSimpleDraweeView
+        android:id="@+id/player_away_image"
+        android:layout_width="69dp"
+        android:layout_height="44dp"
+        android:layout_marginTop="91dp"
+        android:scaleType="fitXY"
+        app:layout_constraintLeft_toRightOf="@+id/match_reserve"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:placeholderImage="@drawable/nationalflag_default"/>
+
+    <com.box.common.core.widget.CoreTextView
+        android:id="@+id/player_away_title"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="14dp"
+        android:layout_marginRight="14dp"
+        android:gravity="center"
+        android:maxLines="2"
+        android:textColor="@color/color_9"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toBottomOf="@+id/match_reserve"
+        app:layout_constraintLeft_toRightOf="@+id/match_reserve"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/match_reserve"/>
+
+    <com.box.common.core.widget.CoreTextView
+        android:id="@+id/match_desc"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="9dp"
+        android:ellipsize="end"
+        android:gravity="center_horizontal"
+        android:singleLine="true"
+        android:textColor="@color/color_9"
+        android:textSize="11sp"
+        app:layout_constraintBottom_toTopOf="@+id/player_home_image"
+        app:layout_constraintLeft_toLeftOf="@+id/player_home_image"
+        app:layout_constraintRight_toRightOf="@+id/player_away_image"/>
+
+    <com.box.common.core.widget.CoreTextView
+        android:id="@+id/match_vs"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/color_9"
+        android:textSize="20sp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="@+id/player_home_image"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/player_home_image"/>
+
+    <View
+        android:id="@+id/title_line"
+        style="@style/AppTheme.Core.Widget.Line.Horizontal"
+        android:layout_width="12dp"
+        android:layout_height="2dp"
+        android:background="@color/color_9"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <com.box.common.core.widget.CoreTextView
+        android:id="@+id/home_score"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="20dp"
+        android:textColor="@color/color_9"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintRight_toLeftOf="@+id/title_line"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <com.box.common.core.widget.CoreTextView
+        android:id="@+id/away_score"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:textColor="@color/color_9"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toRightOf="@+id/title_line"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <com.box.common.core.widget.CoreTextView
+        android:id="@+id/point_sphere_txt"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:textColor="@color/color_9"
+        app:layout_constraintBottom_toTopOf="@+id/match_reserve"
+        app:layout_constraintLeft_toLeftOf="@+id/match_reserve"
+        app:layout_constraintRight_toRightOf="@+id/match_reserve"
+        tools:text="2 (PK) 4"/>
+
+    <com.box.common.core.widget.CoreTextView
+        android:id="@+id/match_reserve"
+        android:layout_width="60dp"
+        android:layout_height="26dp"
+        android:background="@drawable/team_reserve_text_bg_selector"
+        android:gravity="center"
+        android:textColor="@color/color_9"
+        android:textSize="12sp"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="@+id/player_home_title"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/player_home_title"
+        tools:text="@string/Match_Reserve"/>
+
+    <com.box.common.core.widget.CoreTextView
+        android:id="@+id/match_end"
+        android:layout_width="60dp"
+        android:layout_height="20dp"
+        android:background="@drawable/team_end_bg"
+        android:gravity="center"
+        android:text="@string/WorldCup2018_Match_End"
+        android:textColor="@color/color_9"
+        android:textSize="11sp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="@+id/player_home_title"
+        app:layout_constraintLeft_toRightOf="@+id/player_home_image"
+        app:layout_constraintRight_toLeftOf="@+id/player_away_image"
+        app:layout_constraintTop_toTopOf="@+id/player_home_title"/>
+
+    <com.box.common.core.widget.CoreTextView
+        android:id="@+id/match_ongoing"
+        android:layout_width="50dp"
+        android:layout_height="20dp"
+        android:background="@drawable/team_end_bg"
+        android:gravity="center"
+        android:text="@string/WorldCup2018_Match_Ongoing"
+        android:textColor="@color/color_9"
+        android:textSize="11sp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="@+id/player_home_title"
+        app:layout_constraintLeft_toRightOf="@+id/player_home_image"
+        app:layout_constraintRight_toLeftOf="@+id/player_away_image"
+        app:layout_constraintTop_toTopOf="@+id/player_home_title"/>
+
+
+    <com.box.common.core.widget.CoreImageView
+        android:id="@+id/like_home_team"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="6dp"
+        android:layout_marginLeft="6dp"
+        android:paddingRight="20dp"
+        android:paddingTop="20dp"
+        android:src="@drawable/team_not_dig"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"/>
+
+    <com.box.common.core.widget.CoreImageView
+        android:id="@+id/like_away_team"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="6dp"
+        android:layout_marginRight="6dp"
+        android:paddingLeft="20dp"
+        android:paddingTop="20dp"
+        android:src="@drawable/team_reverse_not_dig"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintRight_toRightOf="parent"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/player_head_view"
+    android:layout_width="match_parent"
+    android:layout_height="186dp">
+
+    <com.box.common.core.widget.CoreImageView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/player_headview_bg"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <com.box.common.core.widget.CoreSimpleDraweeView
+        android:id="@+id/player_image"
+        android:layout_width="64dp"
+        android:layout_height="64dp"
+        android:layout_marginBottom="29dp"
+        android:layout_marginLeft="18dp"
+        android:layout_marginRight="14dp"
+        android:scaleType="fitXY"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:placeholderImage="@drawable/user_headshot_img"
+        app:roundedCornerRadius="2dp"/>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/player_info"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginLeft="14dp"
+        android:layout_marginRight="12dp"
+        app:layout_constraintBottom_toBottomOf="@id/player_image"
+        app:layout_constraintLeft_toRightOf="@id/player_image"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="@id/player_image">
+
+        <!--<com.box.app.news.widget.DraweeTextView-->
+        <!--android:id="@+id/player_title_japan"-->
+        <!--android:layout_width="0dp"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:textStyle="bold"-->
+        <!--android:textColor="@color/color_4"-->
+        <!--android:maxLines="1"-->
+        <!--android:textSize="17sp"-->
+        <!--android:gravity="start"-->
+        <!--app:autoSizeMaxTextSize="17sp"-->
+        <!--app:autoSizeMinTextSize="1sp"-->
+        <!--app:autoSizeStepGranularity="1sp"-->
+        <!--app:autoSizeTextType="uniform"-->
+        <!--app:layout_constraintTop_toTopOf="parent"-->
+        <!--app:layout_constraintStart_toStartOf="parent"-->
+        <!--app:layout_constraintEnd_toEndOf="parent"/>-->
+        <com.box.common.core.widget.CoreTextView
+            android:id="@+id/player_title_japan"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="start"
+            android:maxLines="1"
+            android:textColor="@color/color_9"
+            android:textSize="17sp"
+            android:textStyle="bold"
+            app:autoSizeMaxTextSize="17sp"
+            app:autoSizeMinTextSize="5sp"
+            app:autoSizeStepGranularity="0.1sp"
+            app:autoSizeTextType="uniform"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toLeftOf="@+id/star"
+            app:layout_constraintTop_toTopOf="parent"
+            />
+
+        <com.box.common.core.widget.CoreImageView
+            android:id="@+id/star"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="1dp"
+            android:src="@drawable/worldcup_player_star_img"
+            android:visibility="invisible"
+            app:layout_constraintBottom_toBottomOf="@+id/player_title_japan"
+            app:layout_constraintLeft_toRightOf="@+id/player_title_japan"
+            app:layout_constraintTop_toTopOf="@+id/player_title_japan"/>
+
+        <com.box.common.core.widget.CoreSimpleDraweeView
+            android:id="@+id/flag"
+            android:layout_width="18dp"
+            android:layout_height="12dp"
+            android:paddingBottom="1dp"
+            android:paddingLeft="2dp"
+            android:paddingRight="2dp"
+            android:paddingTop="1dp"
+            android:scaleType="fitXY"
+            app:layout_constraintBottom_toBottomOf="@+id/player_title_japan"
+            app:layout_constraintLeft_toRightOf="@+id/star"
+            app:layout_constraintTop_toTopOf="@+id/player_title_japan"/>
+
+        <com.box.common.core.widget.CoreTextView
+            android:id="@+id/player_title_eng"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:textColor="@color/color_4"
+            android:textSize="11sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+        <com.box.common.core.widget.CoreTextView
+            android:id="@+id/player_other"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:textColor="@color/color_4"
+            android:textSize="11sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

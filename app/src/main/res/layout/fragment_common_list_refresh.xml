@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.box.common.extension.widget.layout.loading.LoadingLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@id/loading_layout"
+    style="@style/Core.Widget.Layout.Parent.Layer"
+    android:background="@color/transparent">
+
+    <com.scwang.smartrefresh.layout.SmartRefreshLayout
+        android:id="@+id/refresh_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:overScrollMode="never"
+        app:srlEnablePreviewInEditMode="true">
+
+        <com.box.app.news.widget.ArticleRefreshHeader
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@id/common_content_rv"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:overScrollMode="never"/>
+
+    </com.scwang.smartrefresh.layout.SmartRefreshLayout>
+
+</com.box.common.extension.widget.layout.loading.LoadingLayout>

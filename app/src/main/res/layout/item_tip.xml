@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    style="@style/Core.Widget.Layout.Item"
+    android:layout_height="55dp"
+    android:paddingBottom="10dp"
+    android:gravity="bottom"
+    android:orientation="horizontal"
+    tools:context=".page.activity.MainActivity">
+
+    <View
+        android:id="@+id/anim_view"
+        android:layout_width="190dp"
+        android:layout_height="25dp"
+        android:layout_centerInParent="true"
+        android:background="@drawable/shape_round_rec_blue"/>
+
+    <TextView
+        android:id="@+id/tip_txt"
+        android:layout_width="match_parent"
+        android:layout_height="25dp"
+        android:layout_centerInParent="true"
+        android:ellipsize="end"
+        android:gravity="center"
+        android:maxLines="1"
+        android:textColor="@color/color_25"
+        android:textSize="12sp"
+        tools:text="12345"/>
+
+</RelativeLayout>

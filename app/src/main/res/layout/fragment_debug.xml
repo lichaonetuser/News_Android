@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    style="@style/Core.Widget.Layout.Parent.Layer"
+    android:background="@color/color_9"
+    tools:context=".page.activity.MainActivity">
+
+    <com.box.common.extension.widget.bar.status.StatusBar
+        android:id="@id/status_bar"
+        style="@style/Core.Widget.StatusBar"
+        android:background="@color/color_status_bar"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.box.common.extension.widget.bar.title.TitleBar
+        android:id="@id/title_bar"
+        style="@style/Core.Widget.TitleBar"
+        app:showBack="true"
+        app:showLine="true"
+        app:showTitle="true"
+        app:title="调试功能(重启生效)" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/title_bar"
+        tools:context=".page.activity.MainActivity">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <com.box.common.core.widget.CoreCheckedTextView
+                android:id="@+id/debug_setting_translate"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawableStart="@drawable/common_check"
+                android:drawableLeft="@drawable/common_check"
+                android:drawablePadding="7dp"
+                android:gravity="center_vertical"
+                android:padding="12dp"
+                android:text="启用中文翻译"
+                android:textColor="@color/color_1"
+                tools:ignore="HardcodedText" />
+
+            <View style="@style/AppTheme.Core.Widget.Line.Horizontal" />
+
+            <com.box.common.core.widget.CoreCheckedTextView
+                android:id="@+id/debug_setting_show_refer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawableStart="@drawable/common_check"
+                android:drawableLeft="@drawable/common_check"
+                android:drawablePadding="7dp"
+                android:gravity="center_vertical"
+                android:padding="12dp"
+                android:text="展示列表页面refer"
+                android:textColor="@color/color_1"
+                tools:ignore="HardcodedText" />
+
+            <View style="@style/AppTheme.Core.Widget.Line.Horizontal" />
+
+            <com.box.common.core.widget.CoreCheckedTextView
+                android:id="@+id/debug_setting_switch_base_url"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawableStart="@drawable/common_check"
+                android:drawableLeft="@drawable/common_check"
+                android:drawablePadding="7dp"
+                android:gravity="center_vertical"
+                android:padding="12dp"
+                android:text="切换到release环境"
+                android:textColor="@color/color_1"
+                tools:ignore="HardcodedText" />
+
+            <View style="@style/AppTheme.Core.Widget.Line.Horizontal" />
+
+            <com.box.common.core.widget.CoreCheckedTextView
+                android:id="@+id/debug_setting_ad_test"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawableStart="@drawable/common_check"
+                android:drawableLeft="@drawable/common_check"
+                android:drawablePadding="7dp"
+                android:gravity="center_vertical"
+                android:padding="12dp"
+                android:text="将当前设备设置为广告测试设备（默认设置）"
+                android:textColor="@color/color_1"
+                tools:ignore="HardcodedText" />
+
+            <View style="@style/AppTheme.Core.Widget.Line.Horizontal" />
+
+            <com.box.common.core.widget.CoreCheckedTextView
+                android:id="@+id/debug_setting_ad_test_2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawableStart="@drawable/common_check"
+                android:drawableLeft="@drawable/common_check"
+                android:drawablePadding="7dp"
+                android:gravity="center_vertical"
+                android:padding="12dp"
+                android:text="广告加载时显示使用的广告ID，失败时显示原因"
+                android:textColor="@color/color_1"
+                tools:ignore="HardcodedText" />
+
+            <View style="@style/AppTheme.Core.Widget.Line.Horizontal" />
+
+            <com.box.common.core.widget.CoreCheckedTextView
+                android:id="@+id/debug_setting_list_ad_test"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawableStart="@drawable/common_check"
+                android:drawableLeft="@drawable/common_check"
+                android:drawablePadding="7dp"
+                android:gravity="center_vertical"
+                android:padding="12dp"
+                android:text="展示列表广告的信息"
+                android:textColor="@color/color_1"
+                tools:ignore="HardcodedText" />
+
+            <View style="@style/AppTheme.Core.Widget.Line.Horizontal" />
+
+            <com.box.common.core.widget.CoreTextView
+                android:id="@+id/debug_setting_feedback"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:padding="12dp"
+                android:text="打开测试用反馈界面 >>"
+                android:textColor="@color/color_1"
+                tools:ignore="HardcodedText" />
+
+            <View style="@style/AppTheme.Core.Widget.Line.Horizontal" />
+
+            <View style="@style/AppTheme.Core.Widget.Line.Horizontal" />
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+

@@ -1,0 +1,93 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+    <style name="Core" parent="Theme.AppCompat.Light.NoActionBar"/>
+
+    <style name="Core.App" parent="Core">
+        <item name="colorPrimary">@color/core_colorPrimary</item>
+        <item name="colorPrimaryDark">@color/core_colorPrimaryDark</item>
+        <item name="colorAccent">@color/core_colorAccent</item>
+        <item name="android:fitsSystemWindows">false</item>
+        <item name="android:hardwareAccelerated">true</item>
+        <item name="android:windowTranslucentStatus" tools:targetApi="kitkat">true</item>
+    </style>
+
+    <style name="Core.Activity" parent="Core">
+        <item name="android:windowBackground">@color/white</item>
+    </style>
+
+    <style name="Core.Activity.Splash" parent="Core.Activity">
+        <item name="android:windowBackground">@drawable/splash</item>
+        <item name="android:windowFullscreen">true</item>
+        <item name="android:windowSoftInputMode">stateAlwaysHidden</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:immersive">true</item>
+    </style>
+
+    <style name="Core.Widget.Layout" parent="AppTheme">
+        <item name="android:splitMotionEvents">false</item>
+    </style>
+
+    <style name="Core.Widget.Layout.Parent" parent="Core.Widget.Layout">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+    </style>
+
+    <style name="Core.Widget.Layout.Parent.Layer" parent="Core.Widget.Layout.Parent">
+        <item name="android:clickable">true</item>
+        <item name="android:background">@color/color_9</item>
+    </style>
+
+    <style name="Core.Widget.Layout.Item" parent="Core.Widget.Layout">
+        <item name="android:layout_height">50dp</item>
+        <item name="android:layout_width">match_parent</item>
+    </style>
+
+    <style name="Core.Widget.StatusBar" parent="Core">
+        <item name="android:id">@id/status_bar</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:background">@color/core_colorPrimary</item>
+        <item name="layout_constraintTop_toTopOf">parent</item>
+        <item name="android:layout_alignParentTop">true</item>
+        <item name="android:layout_gravity">top</item>
+    </style>
+
+    <style name="Core.Widget.TitleBar" parent="Core">
+        <item name="android:id">@id/title_bar</item>
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">@dimen/title_bar_height</item>
+        <item name="layout_constraintLeft_toLeftOf">parent</item>
+        <item name="layout_constraintRight_toRightOf">parent</item>
+        <item name="layout_constraintTop_toBottomOf">@id/status_bar</item>
+    </style>
+
+    <style name="Core.Widget.Line.Vertical" parent="AppTheme">
+        <item name="android:layout_width">@dimen/core_line_size</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:background">@color/core_line_color</item>
+        <item name="android:clickable">false</item>
+        <item name="android:focusable">false</item>
+        <item name="android:focusableInTouchMode">false</item>
+    </style>
+
+    <style name="Core.Widget.Line.Horizontal" parent="AppTheme">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">@dimen/core_line_size</item>
+        <item name="android:background">@color/core_line_color</item>
+        <item name="android:clickable">false</item>
+        <item name="android:focusable">false</item>
+        <item name="android:focusableInTouchMode">false</item>
+    </style>
+
+    <style name="actionActivity" parent="@android:style/Theme.Translucent.NoTitleBar">
+        <item name="android:statusBarColor" tools:targetApi="lollipop">@android:color/transparent</item>
+    </style>
+
+    <style name="Core.Activity.FullScreenActivity" parent="Core.Activity">
+        <item name="android:windowFullscreen">true</item>
+        <item name="android:windowSoftInputMode">stateAlwaysHidden</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:immersive">true</item>
+    </style>
+
+</resources>

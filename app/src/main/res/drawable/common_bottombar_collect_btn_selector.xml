@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:drawable="@drawable/comment_bottombar_collect_btn_activated" android:state_activated="true" android:state_enabled="true"/>
+    <item android:drawable="@drawable/comment_bottombar_collect_btn_normal" android:state_activated="false" android:state_enabled="true"/>
+    <item android:drawable="@drawable/comment_bottombar_collect_btn_disabled" android:state_activated="false" android:state_enabled="false"/>
+</selector>

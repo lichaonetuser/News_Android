@@ -1,0 +1,302 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    style="@style/Core.Widget.Layout.Parent.Layer"
+    tools:context=".page.activity.MainActivity">
+
+    <com.box.common.extension.widget.bar.status.StatusBar
+        android:id="@id/status_bar"
+        style="@style/Core.Widget.StatusBar"
+        android:background="@color/color_status_bar"/>
+
+    <com.box.common.extension.widget.bar.title.TitleBar
+        android:id="@id/title_bar"
+        style="@style/Core.Widget.TitleBar">
+
+    </com.box.common.extension.widget.bar.title.TitleBar>
+
+    <com.box.common.extension.widget.layout.loading.LoadingLayout
+        android:id="@id/loading_layout"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:descendantFocusability="blocksDescendants"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/bottom_bar"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/title_bar">
+
+        <com.box.app.news.widget.nested.NestedParentScrollView
+            android:id="@+id/scroll_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:descendantFocusability="blocksDescendants">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/scroll_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:descendantFocusability="blocksDescendants"
+                    android:orientation="vertical"
+                    android:paddingBottom="14dp"
+                    android:paddingLeft="14dp"
+                    android:paddingRight="14dp"
+                    android:paddingTop="17dp"
+                    tools:ignore="ScrollViewSize">
+
+                    <com.box.app.news.widget.FontTextView
+                        android:id="@+id/gif_title_txt"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:maxLines="4"
+                        android:textColor="@color/color_1"
+                        android:textStyle="bold"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintRight_toRightOf="parent"/>
+
+                    <com.box.common.core.widget.CoreSimpleDraweeView
+                        android:id="@+id/gif_user_img"
+                        style="@style/AppTheme.Widget.DraweeView.Cover"
+                        android:layout_width="38dp"
+                        android:layout_height="38dp"
+                        android:layout_marginTop="11dp"
+                        android:paddingTop="4dp"
+                        android:paddingBottom="4dp"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/gif_title_txt"
+                        app:layout_goneMarginTop="0dp"
+                        app:roundAsCircle="true" />
+
+                    <com.box.common.core.widget.CoreTextView
+                        android:id="@+id/gif_user_name_txt"
+                        android:layout_width="0dp"
+                        android:layout_height="38dp"
+                        android:layout_marginLeft="6dp"
+                        android:layout_marginStart="6dp"
+                        android:ellipsize="end"
+                        android:gravity="start|center_vertical"
+                        android:maxLines="1"
+                        android:textColor="@color/color_2"
+                        android:textSize="10sp"
+                        app:layout_constraintTop_toTopOf="@+id/gif_user_img"
+                        app:layout_constraintBottom_toBottomOf="@+id/gif_user_img"
+                        app:layout_constraintLeft_toRightOf="@+id/gif_user_img"
+                        app:layout_constraintRight_toRightOf="parent" />
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/gif_detail_item"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        app:layout_constraintTop_toBottomOf="@id/gif_user_img">
+                        <com.google.android.exoplayer2.ui.SimpleExoPlayerView
+                            android:id="@+id/gif_video_player"
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            app:layout_constraintDimensionRatio="h,16:9" />
+                        <com.box.common.core.widget.CoreSimpleDraweeView
+                            android:id="@+id/gif_img"
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            app:layout_constraintDimensionRatio="h,16:9" />
+                        <ProgressBar
+                            android:id="@+id/gif_loading_pb"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:visibility="gone"
+                            app:layout_constraintLeft_toLeftOf="parent"
+                            app:layout_constraintRight_toRightOf="parent"
+                            app:layout_constraintTop_toTopOf="@id/gif_video_player"
+                            app:layout_constraintBottom_toBottomOf="@id/gif_video_player" />
+                        <ImageView
+                            android:id="@+id/gif_play_btn"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/gif"
+                            app:layout_constraintLeft_toLeftOf="parent"
+                            app:layout_constraintRight_toRightOf="parent"
+                            app:layout_constraintTop_toTopOf="@id/gif_video_player"
+                            app:layout_constraintBottom_toBottomOf="@id/gif_video_player" />
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    <LinearLayout
+                        android:id="@+id/gif_detail_author"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:visibility="gone"
+                        android:layout_marginTop="25dp"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/gif_detail_item"
+                        android:gravity="center_vertical">
+                        <View
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:layout_height="1dp"
+                            android:background="@color/color_6"/>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginRight="10dp"
+                            android:textColor="@color/color_3"
+                            android:textSize="18sp"/>
+                        <View
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:layout_height="1dp"
+                            android:background="@color/color_6"/>
+                    </LinearLayout>
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/gif_detail_avatar_rv"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="12dp"
+                        android:layout_marginBottom="40dp"
+                        android:visibility="gone"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/gif_detail_author">
+                    </androidx.recyclerview.widget.RecyclerView>
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <FrameLayout
+                    android:id="@+id/container_dig_bury_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="14dp"
+                    android:layout_marginTop="40dp"
+                    android:paddingLeft="14dp"
+                    android:paddingRight="14dp"
+                    tools:background="@color/core_tools_design_container"
+                    tools:layout_height="200dp"/>
+
+                <FrameLayout
+                    android:id="@+id/container_related_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="55dp"
+                    android:paddingLeft="14dp"
+                    android:paddingRight="14dp"
+                    tools:background="@color/core_tools_design_container"
+                    tools:layout_height="200dp"/>
+
+                <FrameLayout
+                    android:id="@+id/container_comment_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="55dp"
+                    tools:background="@color/core_tools_design_container"
+                    tools:layout_height="200dp"/>
+
+            </LinearLayout>
+
+        </com.box.app.news.widget.nested.NestedParentScrollView>
+
+    </com.box.common.extension.widget.layout.loading.LoadingLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/bottom_bar"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@color/color_9"
+        android:paddingBottom="2dp"
+        android:paddingTop="1dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent">
+
+        <View style="@style/AppTheme.Core.Widget.Line.Horizontal"/>
+
+        <com.box.common.core.widget.CoreTextView
+            android:id="@+id/write_comment_btn"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginBottom="6dp"
+            android:layout_marginLeft="14dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginTop="6dp"
+            android:background="@drawable/user_input_bg"
+            android:enabled="true"
+            android:gravity="center_vertical"
+            android:paddingLeft="12dp"
+            android:paddingRight="12dp"
+            android:text="@string/Tip_WriteAComment"
+            android:textColor="@color/user_input_comment_text_selector"
+            android:textSize="12sp"
+            app:layout_constraintBottom_toBottomOf="@+id/share_btn"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toLeftOf="@+id/comment_btn"
+            app:layout_constraintTop_toTopOf="@+id/share_btn"
+            tools:ignore="RtlHardcoded"/>
+
+        <com.box.common.core.widget.CoreImageView
+            android:id="@+id/comment_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:padding="6dp"
+            android:src="@drawable/user_comment_btn"
+            app:layout_constraintBottom_toBottomOf="@+id/share_btn"
+            app:layout_constraintRight_toLeftOf="@+id/collect_btn"
+            app:layout_constraintTop_toTopOf="@+id/share_btn"/>
+
+        <com.box.common.core.widget.CoreTextView
+            android:id="@+id/comment_count_txt"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_marginRight="3dp"
+            android:layout_marginTop="9dp"
+            android:background="@drawable/user_input_comment_count_bg"
+            android:gravity="center"
+            android:paddingLeft="3dp"
+            android:paddingRight="3dp"
+            android:textColor="@color/color_9"
+            android:textSize="8sp"
+            android:visibility="gone"
+            app:layout_constraintRight_toRightOf="@+id/comment_btn"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="RtlHardcoded,SmallSp"
+            tools:text="994"
+            tools:visibility="visible"/>
+
+        <!--<com.box.common.core.widget.CoreImageView
+            android:id="@+id/collect_btn_star_bg"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            app:layout_constraintBottom_toBottomOf="@+id/collect_btn"
+            app:layout_constraintRight_toRightOf="@+id/collect_btn"
+            app:layout_constraintTop_toTopOf="@+id/collect_btn"
+            app:layout_constraintLeft_toLeftOf="@id/collect_btn"/>-->
+
+        <com.box.app.news.widget.CollectView
+            android:id="@+id/collect_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:padding="6dp"
+            android:src="@drawable/user_collect_btn"
+            app:layout_constraintBottom_toBottomOf="@+id/share_btn"
+            app:layout_constraintRight_toLeftOf="@+id/share_btn"
+            app:layout_constraintTop_toTopOf="@+id/share_btn"/>
+
+        <com.box.common.core.widget.CoreImageView
+            android:id="@+id/share_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="8dp"
+            android:padding="6dp"
+            android:src="@drawable/user_share_btn"
+            app:layout_constraintRight_toRightOf="parent"
+            app:useCommonPressedEffect="true"
+            tools:ignore="RtlHardcoded"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

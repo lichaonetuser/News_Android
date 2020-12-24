@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    style="@style/Core.Widget.Layout.Parent.Layer">
+
+    <com.box.common.extension.widget.bar.status.StatusBar
+        android:id="@id/status_bar"
+        style="@style/Core.Widget.StatusBar"
+        android:background="@color/color_status_bar"/>
+
+    <com.box.common.extension.widget.bar.title.TitleBar
+        android:id="@id/title_bar"
+        style="@style/Core.Widget.TitleBar"
+        app:showLine="false"
+        app:title="@string/Common_Message"/>
+
+    <com.box.common.extension.widget.bar.indicator.IndicatorBar
+        android:id="@+id/container_indicator"
+        android:layout_width="0dp"
+        android:layout_height="36dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/title_bar"/>
+
+    <View
+        android:id="@+id/line"
+        style="@style/AppTheme.Core.Widget.Line.Horizontal"
+        app:layout_constraintTop_toBottomOf="@+id/container_indicator"/>
+
+    <com.box.common.core.widget.CoreViewPager
+        android:id="@+id/container_vp"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:overScrollMode="never"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/line"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
