@@ -5,7 +5,7 @@ import android.os.Bundle
 import android.text.Editable
 import android.text.TextWatcher
 import android.view.View
-import android.view.ViewTreeObserver.OnGlobalLayoutListener
+import android.view.ViewTreeObserver
 import android.widget.EditText
 import com.box.app.news.R
 import com.box.common.core.app.activity.CoreBaseActivity
@@ -23,7 +23,8 @@ class InputCommentDialogFragment : MVPDialogFragment<InputCommentDialogContract.
     companion object {
         private val MAX_COMMENT_LIMIT = 140
     }
-
+    var usableHeightPrevious = 0
+    var comment_input_softkey = true
     override val mPresenter = InputCommentDialogPresenter()
     override val mLayoutRes = R.layout.fragment_dialog_input_comment
     override var mEnterType = MVPDialogFragment.Companion.EnterType.CENTER
@@ -31,7 +32,8 @@ class InputCommentDialogFragment : MVPDialogFragment<InputCommentDialogContract.
 
     override fun initView(view: View?, savedInstanceState: Bundle?) {
         (_mActivity as? CoreBaseActivity)?.autoHideSoftInput = false
-
+        usableHeightPrevious = 0
+        comment_input_softkey = true
         limit_txt.text = MAX_COMMENT_LIMIT.toString()
         comment_input_etxt.setMaxLength(MAX_COMMENT_LIMIT)
 
@@ -70,19 +72,38 @@ class InputCommentDialogFragment : MVPDialogFragment<InputCommentDialogContract.
             override fun onTextChanged(s: CharSequence?, start: Int, before: Int, count: Int) {
             }
         })
-        comment_input_etxt.getViewTreeObserver()
-            .addOnGlobalLayoutListener(OnGlobalLayoutListener
-            {
-                val rect = Rect()
-                activity!!.window.decorView.getWindowVisibleDisplayFrame(rect)
-                val screenHeight =
-                    activity!!.window.decorView.rootView.height
-                val heightDifference: Int = screenHeight - rect.bottom
-                val visible = heightDifference > screenHeight / 3
-                if (!visible) {
-
+        view?.viewTreeObserver?.addOnGlobalLayoutListener(object : ViewTreeObserver.OnGlobalLayoutListener {
+            override fun onGlobalLayout() {
+                if (!comment_input_softkey){
+                    comment_input_softkey = true
+                    usableHeightPrevious = 0
+                    return
                 }
-            })
+                val usableHeightNow = computeUsableHeight(view)
+                if (usableHeightPrevious == 0){
+                    usableHeightPrevious = usableHeightNow
+                    return
+                }
+                if (usableHeightPrevious == usableHeightNow){
+                    return
+                }
+                if (usableHeightPrevious - usableHeightNow > 200){
+                    usableHeightPrevious = usableHeightNow
+                    return
+                }
+                if (usableHeightNow - usableHeightPrevious  > 200){
+                    back()
+                    usableHeightPrevious = usableHeightNow
+                    return
+                }
+            }
+        })
+    }
+
+    private fun computeUsableHeight(rootView: View): Int {
+        val r = Rect()
+        rootView.getWindowVisibleDisplayFrame(r)
+        return (r.height());
     }
 
     override fun toggleAnonymousCheck() {
@@ -103,6 +124,7 @@ class InputCommentDialogFragment : MVPDialogFragment<InputCommentDialogContract.
      */
     override fun onShowInput() {
         super.onShowInput()
+        comment_input_softkey = false
         comment_input_etxt.hintTextColor = ResUtils.getColor(R.color.color_5)
         comment_input_etxt.hint = mPresenter.getHint()?:ResUtils.getString(R.string.Tip_CommentPlaceHolder)
     }
@@ -112,6 +134,7 @@ class InputCommentDialogFragment : MVPDialogFragment<InputCommentDialogContract.
      */
     override fun onHideInput() {
         super.onHideInput()
+        comment_input_softkey = false
         comment_input_etxt.hintTextColor = ResUtils.getColor(R.color.color_1)
         comment_input_etxt.hint = ResUtils.getString(R.string.Tip_WriteAComment)
     }
