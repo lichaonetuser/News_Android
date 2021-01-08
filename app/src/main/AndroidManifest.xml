@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    package="com.box.app.news">
+    package="com.mynews.app.news">
 
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
@@ -18,7 +18,7 @@
     <uses-permission android:name="com.android.vending.BILLING" />
     <uses-sdk android:minSdkVersion="16" />
     <application
-        android:name=".App"
+        android:name="com.mynews.app.news.App"
         android:allowBackup="true"
         android:fullBackupContent="false"
         android:icon="@mipmap/ic_launcher"
@@ -37,7 +37,7 @@
             android:required="false" />
 
         <activity
-            android:name=".page.activity.SplashActivity"
+            android:name="com.mynews.app.news.page.activity.SplashActivity"
             android:configChanges="orientation|screenSize|keyboardHidden|layoutDirection"
             android:launchMode="singleTop"
             android:screenOrientation="portrait"
@@ -50,14 +50,14 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".page.activity.InterestActivity"
+            android:name="com.mynews.app.news.page.activity.InterestActivity"
             android:configChanges="orientation|screenSize|keyboardHidden|layoutDirection"
             android:launchMode="singleTask"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme.Core.Activity" />
 
         <activity
-            android:name=".page.activity.GenderAgeChooseActivity"
+            android:name="com.mynews.app.news.page.activity.GenderAgeChooseActivity"
             android:configChanges="orientation|screenSize|keyboardHidden|layoutDirection"
             android:launchMode="singleTask"
             android:screenOrientation="portrait"
@@ -65,7 +65,7 @@
             android:windowSoftInputMode="stateAlwaysHidden" />
 
         <activity
-            android:name=".page.activity.SelectChannelActivity"
+            android:name="com.mynews.app.news.page.activity.SelectChannelActivity"
             android:configChanges="orientation|screenSize|keyboardHidden|layoutDirection"
             android:launchMode="singleTask"
             android:screenOrientation="portrait"
@@ -73,13 +73,20 @@
             android:windowSoftInputMode="stateAlwaysHidden" />
 
         <activity
-            android:name=".page.activity.MainActivity"
+            android:name="com.mynews.app.news.page.activity.MainActivity"
             android:configChanges="orientation|screenSize|keyboardHidden|layoutDirection"
             android:launchMode="singleTask"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme.Core.Activity"
             android:windowSoftInputMode="adjustResize" />
-        <activity android:name=".page.activity.DeepLinkActivity">
+        <activity
+            android:name="com.mynews.app.news.page.activity.HomeActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden|layoutDirection"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.Core.Activity"
+            android:windowSoftInputMode="adjustResize" />
+        <activity android:name="com.mynews.app.news.page.activity.DeepLinkActivity">
             <intent-filter>
                 <action android:name="android.intent.action.VIEW" />
 
@@ -91,7 +98,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".page.activity.LockScreenDialogActivity"
+            android:name="com.mynews.app.news.page.activity.LockScreenDialogActivity"
             android:excludeFromRecents="true"
             android:launchMode="singleInstance"
             android:screenOrientation="portrait"
@@ -102,7 +109,7 @@
             android:theme="@style/activity.Theme"
             android:windowSoftInputMode="adjustPan" />
         <activity
-            android:name="com.box.common.core.browser.agent.ActionActivity"
+            android:name="com.mynews.common.core.browser.agent.ActionActivity"
             android:configChanges="keyboardHidden|orientation|screenSize"
             android:exported="false"
             android:launchMode="standard"
@@ -127,7 +134,7 @@
         </activity>
 
         <service
-            android:name=".push.fcm.FCMMessagingService"
+            android:name="com.mynews.app.news.push.fcm.FCMMessagingService"
             android:stopWithTask="false">
             <intent-filter>
                 <action android:name="com.google.firebase.MESSAGING_EVENT" />
@@ -141,13 +148,13 @@
                 <action android:name="com.android.vending.INSTALL_REFERRER" />
             </intent-filter>
         </receiver>
-        <receiver android:name="com.box.common.core.browser.agent.RealDownLoader$NotificationBroadcastReceiver" />
+        <receiver android:name="com.mynews.common.core.browser.agent.RealDownLoader$NotificationBroadcastReceiver" />
 
         <!--监听网络状态变化-->
-        <receiver android:name=".util.NetworkConnectChangedReceiver" />
+        <receiver android:name="com.mynews.app.news.util.NetworkConnectChangedReceiver" />
 
         <provider
-            android:name=".data.source.local.file.NewsFileProvider"
+            android:name="com.mynews.app.news.data.source.local.file.NewsFileProvider"
             android:authorities="${applicationId}.provider"
             android:exported="false"
             android:grantUriPermissions="true">
@@ -158,7 +165,7 @@
 
         <!-- 以下内容放进Core -->
         <provider
-            android:name="com.box.common.core.browser.agent.AgentWebFileProvider"
+            android:name="com.mynews.common.core.browser.agent.AgentWebFileProvider"
             android:authorities="${applicationId}.AgentWebFileProvider"
             android:exported="false"
             android:grantUriPermissions="true">

@@ -8,7 +8,7 @@
                                              android:background="@drawable/worldcup_video_bg"
                                              android:elevation="2dp">
 
-    <com.box.common.core.widget.CoreSimpleDraweeView
+    <com.mynews.common.core.widget.CoreSimpleDraweeView
         android:id="@+id/worldcup_video_image"
         android:layout_width="match_parent"
         android:layout_height="64dp"
@@ -23,7 +23,7 @@
         app:roundedCornerRadius="4dp"
         app:viewAspectRatio="1.778"/>
 
-    <com.box.common.core.widget.CoreTextView
+    <com.mynews.common.core.widget.CoreTextView
         android:id="@+id/duration_txt"
         android:layout_width="wrap_content"
         android:layout_height="17dp"
@@ -44,7 +44,7 @@
         app:layout_constraintBottom_toBottomOf="@+id/worldcup_video_image"
         app:layout_constraintRight_toRightOf="@+id/worldcup_video_image"/>
 
-    <com.box.common.core.widget.CoreTextView
+    <com.mynews.common.core.widget.CoreTextView
         android:id="@+id/worldcup_video_title"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
@@ -73,7 +73,7 @@
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent">
 
-        <com.box.common.core.widget.CoreTextView
+        <com.mynews.common.core.widget.CoreTextView
             android:id="@+id/video_tag"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -101,7 +101,7 @@
             app:layout_constraintLeft_toRightOf="@+id/video_tag"
             app:layout_constraintTop_toTopOf="parent"/>
 
-        <com.box.common.core.widget.CoreTextView
+        <com.mynews.common.core.widget.CoreTextView
             android:id="@+id/video_source"
             android:layout_width="0dp"
             android:layout_height="wrap_content"

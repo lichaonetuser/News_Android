@@ -6,7 +6,7 @@
     style="@style/Core.Widget.Layout.Parent.Layer"
     tools:context=".page.activity.MainActivity">
 
-    <com.box.app.news.widget.nested.NestedParentScrollView
+    <com.mynews.app.news.widget.nested.NestedParentScrollView
         android:id="@+id/scroll_view"
         android:layout_width="0dp"
         android:layout_height="0dp"
@@ -37,7 +37,7 @@
                 android:paddingLeft="14dp"
                 android:paddingRight="14dp">
 
-                <com.box.app.news.widget.FontTextView
+                <com.mynews.app.news.widget.FontTextView
                     android:id="@+id/video_title_txt"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
@@ -54,7 +54,7 @@
                     tools:text="视频标题行1\n视频标题行2"
                     tools:textSize="16sp"/>
 
-                <com.box.common.core.widget.CoreImageView
+                <com.mynews.common.core.widget.CoreImageView
                     android:id="@+id/desc_open_btn"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -64,7 +64,7 @@
                     android:focusableInTouchMode="true"
                     android:src="@drawable/video_detail_desc_open_btn"/>
 
-                <com.box.common.core.widget.CoreTextView
+                <com.mynews.common.core.widget.CoreTextView
                     android:id="@+id/desc_txt"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -79,7 +79,7 @@
                     tools:text="视频描述\n视频描述"
                     tools:visibility="visible"/>
 
-                <com.box.common.core.widget.CoreSimpleDraweeView
+                <com.mynews.common.core.widget.CoreSimpleDraweeView
                     android:id="@+id/user_img"
                     style="@style/AppTheme.Widget.DraweeView.Cover"
                     android:layout_width="24dp"
@@ -93,7 +93,7 @@
                     app:roundingBorderWidth="0.5dp"
                     tools:background="@color/core_tools_design_img"/>
 
-                <com.box.common.core.widget.CoreTextView
+                <com.mynews.common.core.widget.CoreTextView
                     android:id="@+id/user_name_txt"
                     android:layout_width="0dp"
                     android:layout_height="24dp"
@@ -113,7 +113,7 @@
                     tools:ignore="RtlHardcoded,RtlSymmetry"
                     tools:text="测试用户名"/>
 
-                <com.box.common.core.widget.CoreTextView
+                <com.mynews.common.core.widget.CoreTextView
                     android:id="@+id/origin_btn"
                     android:layout_width="wrap_content"
                     android:layout_height="24dp"
@@ -165,14 +165,14 @@
 
         </LinearLayout>
 
-    </com.box.app.news.widget.nested.NestedParentScrollView>
+    </com.mynews.app.news.widget.nested.NestedParentScrollView>
 
-    <com.box.common.extension.widget.bar.status.StatusBar
+    <com.mynews.common.extension.widget.bar.status.StatusBar
         android:id="@id/status_bar"
         style="@style/Core.Widget.StatusBar"
         android:background="@color/color_14"/>
 
-    <com.box.app.news.widget.NewsVideoView
+    <com.mynews.app.news.widget.NewsVideoView
         android:id="@+id/video_view"
         style="@style/AppTheme.NewsItem.Image"
         android:layout_width="0dp"
@@ -185,7 +185,7 @@
         app:roundedCornerRadius="0dp"
         tools:background="@drawable/default_news_pic_img"/>
 
-    <com.box.common.core.widget.CoreImageView
+    <com.mynews.common.core.widget.CoreImageView
         android:id="@+id/video_back_btn"
         android:layout_width="wrap_content"
         android:layout_height="@dimen/title_bar_height"
@@ -212,7 +212,7 @@
 
         <View style="@style/AppTheme.Core.Widget.Line.Horizontal"/>
 
-        <com.box.common.core.widget.CoreTextView
+        <com.mynews.common.core.widget.CoreTextView
             android:id="@+id/write_comment_btn"
             android:layout_width="0dp"
             android:layout_height="0dp"
@@ -234,7 +234,7 @@
             app:layout_constraintTop_toTopOf="@+id/share_btn"
             tools:ignore="RtlHardcoded"/>
 
-        <com.box.common.core.widget.CoreImageView
+        <com.mynews.common.core.widget.CoreImageView
             android:id="@+id/comment_btn"
             android:layout_width="wrap_content"
             android:layout_height="0dp"
@@ -244,7 +244,7 @@
             app:layout_constraintRight_toLeftOf="@+id/collect_btn"
             app:layout_constraintTop_toTopOf="@+id/share_btn"/>
 
-        <com.box.common.core.widget.CoreTextView
+        <com.mynews.common.core.widget.CoreTextView
             android:id="@+id/comment_count_txt"
             android:layout_width="wrap_content"
             android:layout_height="0dp"
@@ -263,7 +263,7 @@
             tools:text="994"
             tools:visibility="visible"/>
 
-        <com.box.app.news.widget.CollectView
+        <com.mynews.app.news.widget.CollectView
             android:id="@+id/collect_btn"
             android:layout_width="wrap_content"
             android:layout_height="0dp"
@@ -273,7 +273,7 @@
             app:layout_constraintRight_toLeftOf="@+id/share_btn"
             app:layout_constraintTop_toTopOf="@+id/share_btn"/>
 
-        <com.box.common.core.widget.CoreImageView
+        <com.mynews.common.core.widget.CoreImageView
             android:id="@+id/share_btn"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"

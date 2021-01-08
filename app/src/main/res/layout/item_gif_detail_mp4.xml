@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<com.box.common.core.widget.CoreConstraintLayout
+<com.mynews.common.core.widget.CoreConstraintLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
@@ -12,7 +12,7 @@
     tools:context=".page.activity.MainActivity"
     tools:ignore="RtlHardcoded,RtlSymmetry">
 
-    <com.box.common.core.widget.CoreConstraintLayout
+    <com.mynews.common.core.widget.CoreConstraintLayout
         android:id="@+id/news_item_layout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
@@ -22,7 +22,7 @@
             android:layout_width="match_parent"
             android:layout_height="0dp"
             app:layout_constraintDimensionRatio="h,16:9" />
-        <com.box.common.core.widget.CoreSimpleDraweeView
+        <com.mynews.common.core.widget.CoreSimpleDraweeView
             android:id="@+id/gif_cover"
             android:layout_width="match_parent"
             android:layout_height="0dp"
@@ -46,7 +46,7 @@
             app:layout_constraintTop_toTopOf="@id/gif_video_player"
             app:layout_constraintBottom_toBottomOf="@id/gif_video_player" />
 
-        <com.box.app.news.widget.FontTextView
+        <com.mynews.app.news.widget.FontTextView
             android:id="@+id/gif_title"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
@@ -63,7 +63,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             app:layout_constraintTop_toBottomOf="@id/gif_title">
-            <com.box.common.core.widget.CoreSimpleDraweeView
+            <com.mynews.common.core.widget.CoreSimpleDraweeView
                 android:id="@+id/user_img"
                 style="@style/AppTheme.Widget.DraweeView.Cover"
                 android:layout_width="24dp"
@@ -72,7 +72,7 @@
                 android:layout_centerVertical="true"
                 app:roundAsCircle="true" />
 
-            <com.box.common.core.widget.CoreImageView
+            <com.mynews.common.core.widget.CoreImageView
                 android:id="@+id/more_btn"
                 android:layout_width="wrap_content"
                 android:layout_height="38dp"
@@ -83,7 +83,7 @@
                 android:scaleType="centerInside"
                 android:src="@drawable/videolist_more_btn" />
 
-            <com.box.common.core.widget.CoreTextView
+            <com.mynews.common.core.widget.CoreTextView
                 android:id="@+id/bury_btn"
                 android:layout_width="wrap_content"
                 android:layout_height="38dp"
@@ -97,7 +97,7 @@
                 android:layout_toLeftOf="@id/more_btn"
                 android:layout_centerVertical="true" />
 
-            <com.box.common.core.widget.CoreTextView
+            <com.mynews.common.core.widget.CoreTextView
                 android:id="@+id/dig_btn"
                 android:layout_width="wrap_content"
                 android:layout_height="38dp"
@@ -111,7 +111,7 @@
                 android:textColor="@color/news_list_dig_text_selector"
                 android:textSize="10sp" />
 
-            <com.box.common.core.widget.CoreTextView
+            <com.mynews.common.core.widget.CoreTextView
                 android:id="@+id/gif_comment"
                 android:layout_width="wrap_content"
                 android:layout_height="38dp"
@@ -125,7 +125,7 @@
                 android:layout_toLeftOf="@id/dig_btn"
                 android:layout_centerVertical="true" />
 
-            <com.box.common.core.widget.CoreTextView
+            <com.mynews.common.core.widget.CoreTextView
                 android:id="@+id/user_name_txt"
                 android:layout_width="wrap_content"
                 android:layout_height="38dp"
@@ -140,7 +140,7 @@
                 android:layout_centerVertical="true"
                 android:textSize="11sp" />
 
-            <com.box.common.core.widget.CoreTextView
+            <com.mynews.common.core.widget.CoreTextView
                 android:id="@+id/news_emit_time_txt"
                 android:layout_width="wrap_content"
                 android:layout_height="38dp"
@@ -153,9 +153,9 @@
                 android:layout_alignTop="@id/user_name_txt"
                 android:layout_alignParentRight="true"/>
         </RelativeLayout>
-    </com.box.common.core.widget.CoreConstraintLayout>
+    </com.mynews.common.core.widget.CoreConstraintLayout>
 
-    <com.box.common.core.widget.CoreImageView
+    <com.mynews.common.core.widget.CoreImageView
         android:id="@+id/select_btn"
         style="@style/AppTheme.NewsItem.Select"
         android:layout_width="wrap_content"
@@ -167,4 +167,4 @@
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintTop_toTopOf="parent"/>
 
-</com.box.common.core.widget.CoreConstraintLayout>
+</com.mynews.common.core.widget.CoreConstraintLayout>

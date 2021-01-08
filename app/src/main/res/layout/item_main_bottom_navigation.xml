@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<com.box.common.core.widget.CoreConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<com.mynews.common.core.widget.CoreConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -22,7 +22,7 @@
     <!--tools:paddingBottom="5dp"-->
     <!--tools:visibility="visible"/>-->
 
-    <com.box.common.core.widget.CoreImageView
+    <com.mynews.common.core.widget.CoreImageView
         android:id="@+id/navigation_icon"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -37,7 +37,7 @@
         tools:background="@drawable/main_bottombar_me_normal"
         tools:ignore="ContentDescription" />
 
-    <com.box.common.core.widget.CoreTextView
+    <com.mynews.common.core.widget.CoreTextView
         android:id="@+id/navigation_title"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -55,7 +55,7 @@
         tools:ignore="SmallSp"
         tools:text="标题" />
 
-    <com.box.common.core.widget.CoreImageView
+    <com.mynews.common.core.widget.CoreImageView
         android:id="@+id/navigation_remind"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -68,4 +68,4 @@
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-</com.box.common.core.widget.CoreConstraintLayout>
+</com.mynews.common.core.widget.CoreConstraintLayout>

@@ -37,7 +37,7 @@ android {
     buildToolsVersion versions.build_tools
 
     defaultConfig {
-        applicationId "com.box.app.news"
+        applicationId "com.mynews.app.news"
         minSdkVersion versions.sdk_min
         targetSdkVersion versions.sdk_target
         versionCode 1
@@ -167,6 +167,11 @@ protobuf {
 }
 
 repositories {
+    mavenCentral()
+    maven {
+//        url 'https://maven.google.com/'
+        url 'http://maven.aliyun.com/nexus/content/groups/public/'
+    }
     flatDir {
         dirs 'libs'
     }

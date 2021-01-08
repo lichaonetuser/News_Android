@@ -16,7 +16,7 @@
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent">
 
-        <com.box.common.core.widget.CoreSimpleDraweeView
+        <com.mynews.common.core.widget.CoreSimpleDraweeView
             android:id="@+id/user_cover_img"
             style="@style/AppTheme.Widget.DraweeView.Cover"
             android:layout_width="60dp"
@@ -28,7 +28,7 @@
             app:roundingBorderColor="@color/color_8"
             app:roundingBorderWidth="0.5dp" />
 
-        <com.box.common.core.widget.CoreSimpleDraweeView
+        <com.mynews.common.core.widget.CoreSimpleDraweeView
             android:id="@+id/platform_img"
             style="@style/AppTheme.Widget.DraweeView.Cover"
             android:layout_width="21dp"
@@ -38,7 +38,7 @@
             app:layout_constraintLeft_toLeftOf="@+id/user_cover_img"
             app:roundAsCircle="true" />
 
-        <com.box.common.core.widget.CoreTextView
+        <com.mynews.common.core.widget.CoreTextView
             android:id="@+id/user_name_txt"
             style="@style/AppTheme.Widget.DraweeView.Cover"
             android:layout_width="0dp"

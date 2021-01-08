@@ -6,17 +6,17 @@
     style="@style/Core.Widget.Layout.Parent.Layer"
     tools:context=".page.activity.MainActivity">
 
-    <com.box.common.extension.widget.bar.status.StatusBar
+    <com.mynews.common.extension.widget.bar.status.StatusBar
         android:id="@id/status_bar"
         style="@style/Core.Widget.StatusBar"
         android:background="@color/color_status_bar"/>
 
-    <com.box.common.extension.widget.bar.title.TitleBar
+    <com.mynews.common.extension.widget.bar.title.TitleBar
         android:id="@id/title_bar"
         style="@style/Core.Widget.TitleBar"
         app:title="@string/Setting_Feedback"/>
 
-    <com.box.common.extension.widget.layout.loading.LoadingLayout
+    <com.mynews.common.extension.widget.layout.loading.LoadingLayout
         android:id="@id/loading_layout"
         android:layout_width="0dp"
         android:layout_height="0dp"
@@ -32,7 +32,7 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"/>
 
-    </com.box.common.extension.widget.layout.loading.LoadingLayout>
+    </com.mynews.common.extension.widget.layout.loading.LoadingLayout>
 
     <View
         android:id="@+id/line"
@@ -42,7 +42,7 @@
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"/>
 
-    <com.box.common.core.widget.CoreTextView
+    <com.mynews.common.core.widget.CoreTextView
         android:id="@+id/feedback_btn"
         android:layout_width="0dp"
         android:layout_height="0dp"

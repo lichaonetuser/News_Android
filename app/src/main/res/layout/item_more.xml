@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<com.box.common.core.widget.CoreLinearLayout
+<com.mynews.common.core.widget.CoreLinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
@@ -10,7 +10,7 @@
     android:paddingBottom="24dp"
     android:paddingTop="20dp">
 
-    <com.box.common.core.widget.CoreImageView
+    <com.mynews.common.core.widget.CoreImageView
         android:id="@+id/more_icon"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -20,7 +20,7 @@
         app:useCommonPressedEffect="true"
         tools:src="@drawable/more_share_twitter"/>
 
-    <com.box.common.core.widget.CoreTextView
+    <com.mynews.common.core.widget.CoreTextView
         android:id="@+id/more_txt"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -34,4 +34,4 @@
         android:textSize="10sp"
         tools:text="@string/Common_Twitter"/>
 
-</com.box.common.core.widget.CoreLinearLayout>
+</com.mynews.common.core.widget.CoreLinearLayout>

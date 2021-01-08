@@ -6,12 +6,12 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <com.box.common.extension.widget.bar.status.StatusBar
+    <com.mynews.common.extension.widget.bar.status.StatusBar
         android:id="@id/status_bar"
         style="@style/Core.Widget.StatusBar"
         android:background="@color/color_status_bar"/>
 
-    <com.box.common.extension.widget.bar.title.TitleBar
+    <com.mynews.common.extension.widget.bar.title.TitleBar
         android:id="@id/title_bar"
         style="@style/Core.Widget.TitleBar"
         app:showBack="false"
@@ -34,7 +34,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
 
-            <com.box.common.core.widget.CoreImageView
+            <com.mynews.common.core.widget.CoreImageView
                 android:id="@+id/coreImageView"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -48,7 +48,7 @@
                 app:layout_constraintRight_toRightOf="parent"
                 app:layout_constraintTop_toTopOf="parent"/>
 
-            <com.box.common.core.widget.CoreTextView
+            <com.mynews.common.core.widget.CoreTextView
                 android:id="@+id/can_not_get_location_label"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -69,7 +69,7 @@
                 android:layout_marginTop="30dp"
                 app:layout_constraintTop_toBottomOf="@+id/can_not_get_location_label"/>
 
-            <com.box.common.core.widget.CoreTextView
+            <com.mynews.common.core.widget.CoreTextView
                 android:id="@+id/weather_select_location_label"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -84,7 +84,7 @@
                 app:layout_constraintRight_toRightOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/line"/>
 
-            <com.box.common.core.widget.CoreTextView
+            <com.mynews.common.core.widget.CoreTextView
                 android:id="@+id/can_not_get_location_description_label"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -99,7 +99,7 @@
                 app:layout_constraintRight_toRightOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/weather_select_location_label"/>
 
-            <com.box.common.core.widget.CoreTextView
+            <com.mynews.common.core.widget.CoreTextView
                 android:id="@+id/choose_city_btn"
                 android:layout_width="0dp"
                 android:layout_height="44dp"
@@ -115,7 +115,7 @@
                 app:layout_constraintRight_toRightOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/can_not_get_location_description_label"/>
 
-            <com.box.common.core.widget.CoreTextView
+            <com.mynews.common.core.widget.CoreTextView
                 android:id="@+id/current_location_btn"
                 android:layout_width="0dp"
                 android:layout_height="44dp"

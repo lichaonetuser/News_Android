@@ -124,7 +124,7 @@ public class SwipeBackLayout extends FrameLayout {
 
     private void init() {
         mHelper = ViewDragHelper.create(this, 0.24f, new ViewDragCallback());
-        setShadow(com.box.app.news.R.drawable.core_shadow_left, EDGE_LEFT);
+        setShadow(com.mynews.app.news.R.drawable.core_shadow_left, EDGE_LEFT);
         setEdgeOrientation(EDGE_LEFT);
     }
 
@@ -160,7 +160,7 @@ public class SwipeBackLayout extends FrameLayout {
         mHelper.setEdgeTrackingEnabled(orientation);
 
         if (orientation == EDGE_RIGHT || orientation == EDGE_ALL) {
-            setShadow(com.box.app.news.R.drawable.core_shadow_right, EDGE_RIGHT);
+            setShadow(com.mynews.app.news.R.drawable.core_shadow_right, EDGE_RIGHT);
         }
     }
 

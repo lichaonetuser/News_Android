@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
-<com.box.common.core.widget.CoreRelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<com.mynews.common.core.widget.CoreRelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="49dp">
 
-    <com.box.common.core.widget.CoreTextView
+    <com.mynews.common.core.widget.CoreTextView
         android:id="@+id/content_txt"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -21,4 +21,4 @@
         app:useCommonPressedEffect="true"
         tools:ignore="PxUsage,SpUsage" />
 
-</com.box.common.core.widget.CoreRelativeLayout>
+</com.mynews.common.core.widget.CoreRelativeLayout>

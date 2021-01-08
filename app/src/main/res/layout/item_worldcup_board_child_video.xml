@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<com.box.common.core.widget.CoreConstraintLayout
+<com.mynews.common.core.widget.CoreConstraintLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
@@ -12,7 +12,7 @@
         android:id="@+id/comment_layout"
         layout="@layout/item_worldcup_board_include_comment"/>
 
-    <com.box.common.core.widget.CoreConstraintLayout
+    <com.mynews.common.core.widget.CoreConstraintLayout
         android:id="@+id/content_layout"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
@@ -22,7 +22,7 @@
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/comment_layout">
 
-        <com.box.common.core.widget.CoreSimpleDraweeView
+        <com.mynews.common.core.widget.CoreSimpleDraweeView
             android:id="@+id/cover_img"
             android:layout_width="84dp"
             android:layout_height="60dp"
@@ -30,7 +30,7 @@
             app:layout_constraintTop_toTopOf="parent"
             tools:background="@color/core_tools_design_img"/>
 
-        <com.box.common.core.widget.CoreImageView
+        <com.mynews.common.core.widget.CoreImageView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:src="@drawable/comment_video_play_ic"
@@ -39,7 +39,7 @@
             app:layout_constraintRight_toRightOf="@+id/cover_img"
             app:layout_constraintTop_toTopOf="@+id/cover_img"/>
 
-        <com.box.common.core.widget.CoreTextView
+        <com.mynews.common.core.widget.CoreTextView
             android:id="@+id/title_txt"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
@@ -58,6 +58,6 @@
             app:layout_constraintTop_toTopOf="@+id/cover_img"
             tools:text="视频标题"/>
 
-    </com.box.common.core.widget.CoreConstraintLayout>
+    </com.mynews.common.core.widget.CoreConstraintLayout>
 
-</com.box.common.core.widget.CoreConstraintLayout>
+</com.mynews.common.core.widget.CoreConstraintLayout>

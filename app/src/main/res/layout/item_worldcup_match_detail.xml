@@ -7,7 +7,7 @@
     android:layout_height="106dp"
     android:background="@color/color_9">
 
-    <com.box.common.core.widget.CoreViewPager
+    <com.mynews.common.core.widget.CoreViewPager
         android:id="@+id/banner_vp"
         android:layout_width="0dp"
         android:layout_height="100dp"
@@ -15,7 +15,7 @@
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent"/>
 
-    <com.box.common.extension.widget.bar.indicator.IndicatorBar
+    <com.mynews.common.extension.widget.bar.indicator.IndicatorBar
         android:id="@+id/banner_vp_indicator"
         android:layout_width="wrap_content"
         android:layout_height="4dp"

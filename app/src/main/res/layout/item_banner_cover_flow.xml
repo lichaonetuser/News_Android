@@ -9,7 +9,7 @@
     android:background="@color/color_9"
     android:clipChildren="false">
 
-    <com.box.common.core.widget.CoreViewPager
+    <com.mynews.common.core.widget.CoreViewPager
         android:id="@+id/banner_vp"
         android:layout_width="0dp"
         android:layout_height="match_parent"

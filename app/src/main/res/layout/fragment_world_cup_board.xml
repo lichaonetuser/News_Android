@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
-<com.box.common.extension.widget.layout.loading.LoadingLayout
+<com.mynews.common.extension.widget.layout.loading.LoadingLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@id/loading_layout"
     style="@style/Core.Widget.Layout.Parent.Layer"
     android:background="@color/transparent">
 
-    <com.box.common.core.widget.CoreRelativeLayout
+    <com.mynews.common.core.widget.CoreRelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
@@ -17,7 +17,7 @@
             android:overScrollMode="never"
             app:srlEnablePreviewInEditMode="true">
 
-            <com.box.app.news.widget.ArticleRefreshHeader
+            <com.mynews.app.news.widget.ArticleRefreshHeader
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"/>
 
@@ -25,7 +25,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent">
 
-                <com.box.common.core.widget.CoreRecyclerView
+                <com.mynews.common.core.widget.CoreRecyclerView
                     android:id="@id/common_content_rv"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
@@ -52,7 +52,7 @@
             app:cardUseCompatPadding="true"
             app:elevation="0dp">
 
-            <com.box.common.core.widget.CoreTextView
+            <com.mynews.common.core.widget.CoreTextView
                 android:layout_width="100dp"
                 android:layout_height="35dp"
                 android:layout_alignParentBottom="true"
@@ -69,6 +69,6 @@
 
         </androidx.cardview.widget.CardView>
 
-    </com.box.common.core.widget.CoreRelativeLayout>
+    </com.mynews.common.core.widget.CoreRelativeLayout>
 
-</com.box.common.extension.widget.layout.loading.LoadingLayout>
+</com.mynews.common.extension.widget.layout.loading.LoadingLayout>

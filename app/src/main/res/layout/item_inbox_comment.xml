@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<com.box.common.core.widget.CoreConstraintLayout
+<com.mynews.common.core.widget.CoreConstraintLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
@@ -11,7 +11,7 @@
     android:paddingTop="20dp"
     tools:ignore="RtlHardcoded">
 
-    <com.box.common.core.widget.CoreSimpleDraweeView
+    <com.mynews.common.core.widget.CoreSimpleDraweeView
         android:id="@+id/msg_cover_img"
         style="@style/AppTheme.Widget.DraweeView.Cover"
         android:layout_width="32dp"
@@ -23,7 +23,7 @@
         app:roundingBorderWidth="2dp"
         tools:background="@color/color_1"/>
 
-    <com.box.common.core.widget.CoreTextView
+    <com.mynews.common.core.widget.CoreTextView
         android:id="@+id/msg_title_txt"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -39,7 +39,7 @@
         app:layout_constraintBottom_toBottomOf="@+id/msg_cover_img"
         tools:text="消息标题"/>
 
-    <com.box.common.core.widget.CoreTextView
+    <com.mynews.common.core.widget.CoreTextView
         android:id="@+id/msg_description_txt"
         android:layout_width="0dp"
         android:layout_height="0dp"
@@ -55,7 +55,7 @@
         app:layout_constraintTop_toTopOf="@+id/msg_title_txt"
         tools:text="消息描述"/>
 
-    <com.box.common.core.widget.CoreTextView
+    <com.mynews.common.core.widget.CoreTextView
         android:id="@+id/msg_time_txt"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -66,7 +66,7 @@
         app:layout_constraintRight_toRightOf="parent"
         tools:text="17分前"/>
 
-    <com.box.common.core.widget.CoreConstraintLayout
+    <com.mynews.common.core.widget.CoreConstraintLayout
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="9dp"
@@ -75,7 +75,7 @@
         app:layout_constraintTop_toBottomOf="@+id/msg_title_txt"
         tools:ignore="RtlHardcoded,RtlSymmetry">
 
-        <com.box.app.news.widget.FontTextView
+        <com.mynews.app.news.widget.FontTextView
             android:id="@+id/comment_txt"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
@@ -87,7 +87,7 @@
             app:layout_constraintTop_toTopOf="parent"
             tools:text="评论内容"/>
 
-        <com.box.app.news.widget.FontTextView
+        <com.mynews.app.news.widget.FontTextView
             android:id="@+id/reply_txt"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
@@ -108,6 +108,6 @@
             tools:visibility="visible"/>
 
 
-    </com.box.common.core.widget.CoreConstraintLayout>
+    </com.mynews.common.core.widget.CoreConstraintLayout>
 
-</com.box.common.core.widget.CoreConstraintLayout>
+</com.mynews.common.core.widget.CoreConstraintLayout>

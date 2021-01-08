@@ -5,8 +5,8 @@
 using std::string;
 using std::transform;
 
-extern "C" JNIEXPORT bool JNICALL
-Java_com_box_app_news_ad_AdManager_checkIDValid(
+extern "C" JNIEXPORT jboolean JNICALL
+Java_com_mynews_app_news_ad_AdManager_checkIDValid(
         JNIEnv *env,
         jobject /* this */,
         jstring jAdId, jstring jCheckId) {

@@ -1,5 +1,5 @@
 syntax = "proto2";
-option java_package = "com.box.app.news.proto";
+option java_package = "com.mynews.app.news.proto";
 
 message Header {
     optional string app_id   = 1; // iOS:bundle id, Android: package

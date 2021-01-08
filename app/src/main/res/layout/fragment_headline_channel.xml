@@ -6,7 +6,7 @@
     android:background="@color/color_9"
     tools:context=".page.activity.MainActivity">
 
-    <com.box.common.extension.widget.layout.loading.LoadingLayout
+    <com.mynews.common.extension.widget.layout.loading.LoadingLayout
         android:id="@id/loading_layout"
         android:layout_width="match_parent"
         android:layout_height="0dp"
@@ -20,7 +20,7 @@
             android:overScrollMode="never"
             app:srlEnablePreviewInEditMode="true">
 
-            <com.box.app.news.widget.ArticleRefreshHeader
+            <com.mynews.app.news.widget.ArticleRefreshHeader
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content" />
 
@@ -31,5 +31,5 @@
                 android:overScrollMode="never" />
 
         </com.scwang.smartrefresh.layout.SmartRefreshLayout>
-    </com.box.common.extension.widget.layout.loading.LoadingLayout>
+    </com.mynews.common.extension.widget.layout.loading.LoadingLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

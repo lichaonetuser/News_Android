@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<com.box.common.core.widget.CoreConstraintLayout
+<com.mynews.common.core.widget.CoreConstraintLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
@@ -13,7 +13,7 @@
     app:layout_constraintTop_toTopOf="@+id/no_img_layout"
     tools:background="@color/color_1">
 
-    <com.box.common.core.widget.CoreTextView
+    <com.mynews.common.core.widget.CoreTextView
         android:id="@+id/push_content"
         android:layout_width="0dp"
         android:layout_height="0dp"
@@ -33,7 +33,7 @@
         tools:text="新闻标题2新闻标闻标闻标闻标闻标闻标闻标闻标题行2"
         tools:textSize="17sp"/>
 
-    <com.box.common.core.widget.CoreSimpleDraweeView
+    <com.mynews.common.core.widget.CoreSimpleDraweeView
         android:id="@+id/push_img"
         style="@style/AppTheme.NewsItem.Image"
         android:layout_width="106dp"
@@ -42,4 +42,4 @@
         app:layout_constraintTop_toTopOf="parent"
         tools:background="@drawable/releated_news_pic_img"/>
 
-</com.box.common.core.widget.CoreConstraintLayout>
+</com.mynews.common.core.widget.CoreConstraintLayout>

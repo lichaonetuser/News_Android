@@ -24,7 +24,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
 
-            <com.box.common.core.widget.CoreImageView
+            <com.mynews.common.core.widget.CoreImageView
                 android:id="@+id/profile_bg"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
@@ -48,7 +48,7 @@
                 android:background="@color/white"
                 android:layout_below="@+id/container_layout_profile">
 
-                <com.box.common.core.widget.CoreTextView
+                <com.mynews.common.core.widget.CoreTextView
                     android:id="@+id/favorite_btn"
                     android:layout_width="84dp"
                     android:layout_height="0dp"
@@ -69,7 +69,7 @@
                     app:useCenterDrawable="true"
                     tools:ignore="RtlHardcoded"/>
 
-                <com.box.common.core.widget.CoreTextView
+                <com.mynews.common.core.widget.CoreTextView
                     android:id="@+id/my_comment_btn"
                     android:layout_width="84dp"
                     android:layout_height="0dp"
@@ -90,7 +90,7 @@
                     app:useCenterDrawable="true"
                     tools:ignore="RtlHardcoded"/>
 
-                <com.box.common.core.widget.CoreTextView
+                <com.mynews.common.core.widget.CoreTextView
                     android:id="@+id/message_btn"
                     android:layout_width="84dp"
                     android:layout_height="0dp"
@@ -155,7 +155,7 @@
         app:layout_constraintRight_toRightOf="@+id/status_bar"
         app:layout_constraintTop_toTopOf="@+id/status_bar"/>
 
-    <com.box.common.extension.widget.bar.status.StatusBar
+    <com.mynews.common.extension.widget.bar.status.StatusBar
         android:id="@id/status_bar"
         style="@style/Core.Widget.StatusBar"
         android:background="@color/color_status_bar"/>

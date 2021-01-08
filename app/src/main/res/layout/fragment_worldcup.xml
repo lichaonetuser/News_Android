@@ -16,12 +16,12 @@
         app:layout_constraintTop_toTopOf="parent"
         tools:background="@color/core_tools_design_view"/>
 
-    <com.box.common.extension.widget.bar.status.StatusBar
+    <com.mynews.common.extension.widget.bar.status.StatusBar
         android:id="@id/status_bar"
         style="@style/Core.Widget.StatusBar"
         android:background="@color/color_indicator_select"/>
 
-    <com.box.common.core.widget.CoreImageView
+    <com.mynews.common.core.widget.CoreImageView
         android:id="@+id/logo_img"
         android:layout_width="0dp"
         android:layout_height="44dp"
@@ -41,7 +41,7 @@
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/logo_img">
 
-        <com.box.common.core.widget.CoreTextView
+        <com.mynews.common.core.widget.CoreTextView
             android:id="@+id/worldcup_date"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -56,7 +56,7 @@
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintLeft_toLeftOf="parent"/>
 
-        <com.box.common.extension.widget.bar.indicator.IndicatorBar
+        <com.mynews.common.extension.widget.bar.indicator.IndicatorBar
             android:id="@+id/container_indicator"
             android:layout_width="0dp"
             android:layout_height="@dimen/news_tab_height"
@@ -65,7 +65,7 @@
             app:layout_constraintRight_toRightOf="parent" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 
-    <com.box.common.core.widget.CoreViewPager
+    <com.mynews.common.core.widget.CoreViewPager
         android:id="@+id/container_vp"
         android:layout_width="0dp"
         android:layout_height="0dp"

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<com.box.common.extension.widget.layout.loading.LoadingLayout
+<com.mynews.common.extension.widget.layout.loading.LoadingLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
@@ -11,7 +11,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
-        <com.box.app.news.widget.nested.NestedParentScrollView
+        <com.mynews.app.news.widget.nested.NestedParentScrollView
             android:id="@+id/scroll_view"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
@@ -64,8 +64,8 @@
 
             </LinearLayout>
 
-        </com.box.app.news.widget.nested.NestedParentScrollView>
+        </com.mynews.app.news.widget.nested.NestedParentScrollView>
 
     </RelativeLayout>
 
-</com.box.common.extension.widget.layout.loading.LoadingLayout>
+</com.mynews.common.extension.widget.layout.loading.LoadingLayout>

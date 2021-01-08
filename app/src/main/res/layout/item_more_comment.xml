@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<com.box.common.core.widget.CoreLinearLayout
+<com.mynews.common.core.widget.CoreLinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
@@ -8,7 +8,7 @@
     android:gravity="center"
     android:orientation="vertical">
 
-    <com.box.common.core.widget.CoreTextView
+    <com.mynews.common.core.widget.CoreTextView
         android:id="@+id/more_txt"
         android:layout_width="match_parent"
         android:layout_height="45dp"
@@ -19,4 +19,4 @@
         app:useCommonPressedEffect="true"
         tools:text="TEXT"/>
 
-</com.box.common.core.widget.CoreLinearLayout>
+</com.mynews.common.core.widget.CoreLinearLayout>

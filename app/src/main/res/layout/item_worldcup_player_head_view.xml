@@ -7,7 +7,7 @@
     android:layout_width="match_parent"
     android:layout_height="186dp">
 
-    <com.box.common.core.widget.CoreImageView
+    <com.mynews.common.core.widget.CoreImageView
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:scaleType="centerCrop"
@@ -17,7 +17,7 @@
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent"/>
 
-    <com.box.common.core.widget.CoreSimpleDraweeView
+    <com.mynews.common.core.widget.CoreSimpleDraweeView
         android:id="@+id/player_image"
         android:layout_width="64dp"
         android:layout_height="64dp"
@@ -57,7 +57,7 @@
         <!--app:layout_constraintTop_toTopOf="parent"-->
         <!--app:layout_constraintStart_toStartOf="parent"-->
         <!--app:layout_constraintEnd_toEndOf="parent"/>-->
-        <com.box.common.core.widget.CoreTextView
+        <com.mynews.common.core.widget.CoreTextView
             android:id="@+id/player_title_japan"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -75,7 +75,7 @@
             app:layout_constraintTop_toTopOf="parent"
             />
 
-        <com.box.common.core.widget.CoreImageView
+        <com.mynews.common.core.widget.CoreImageView
             android:id="@+id/star"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -86,7 +86,7 @@
             app:layout_constraintLeft_toRightOf="@+id/player_title_japan"
             app:layout_constraintTop_toTopOf="@+id/player_title_japan"/>
 
-        <com.box.common.core.widget.CoreSimpleDraweeView
+        <com.mynews.common.core.widget.CoreSimpleDraweeView
             android:id="@+id/flag"
             android:layout_width="18dp"
             android:layout_height="12dp"
@@ -99,7 +99,7 @@
             app:layout_constraintLeft_toRightOf="@+id/star"
             app:layout_constraintTop_toTopOf="@+id/player_title_japan"/>
 
-        <com.box.common.core.widget.CoreTextView
+        <com.mynews.common.core.widget.CoreTextView
             android:id="@+id/player_title_eng"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -111,7 +111,7 @@
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintTop_toTopOf="parent"/>
 
-        <com.box.common.core.widget.CoreTextView
+        <com.mynews.common.core.widget.CoreTextView
             android:id="@+id/player_other"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"

@@ -5,18 +5,18 @@
     xmlns:tools="http://schemas.android.com/tools"
     style="@style/Core.Widget.Layout.Parent.Layer">
 
-    <com.box.common.extension.widget.bar.status.StatusBar
+    <com.mynews.common.extension.widget.bar.status.StatusBar
         android:id="@id/status_bar"
         style="@style/Core.Widget.StatusBar"
         android:background="@color/color_status_bar"/>
 
-    <com.box.common.extension.widget.bar.title.TitleBar
+    <com.mynews.common.extension.widget.bar.title.TitleBar
         android:id="@id/title_bar"
         style="@style/Core.Widget.TitleBar"
         app:showLine="false"
         app:title="@string/Common_Message"/>
 
-    <com.box.common.extension.widget.bar.indicator.IndicatorBar
+    <com.mynews.common.extension.widget.bar.indicator.IndicatorBar
         android:id="@+id/container_indicator"
         android:layout_width="0dp"
         android:layout_height="36dp"
@@ -29,7 +29,7 @@
         style="@style/AppTheme.Core.Widget.Line.Horizontal"
         app:layout_constraintTop_toBottomOf="@+id/container_indicator"/>
 
-    <com.box.common.core.widget.CoreViewPager
+    <com.mynews.common.core.widget.CoreViewPager
         android:id="@+id/container_vp"
         android:layout_width="0dp"
         android:layout_height="0dp"

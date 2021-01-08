@@ -6,12 +6,12 @@
     style="@style/Core.Widget.Layout.Parent.Layer"
     tools:context=".page.activity.MainActivity">
 
-    <com.box.common.extension.widget.bar.status.StatusBar
+    <com.mynews.common.extension.widget.bar.status.StatusBar
         android:id="@id/status_bar"
         style="@style/Core.Widget.StatusBar"
         android:background="@color/color_status_bar"/>
 
-    <com.box.common.extension.widget.bar.title.TitleBar
+    <com.mynews.common.extension.widget.bar.title.TitleBar
         android:id="@id/title_bar"
         style="@style/Core.Widget.TitleBar"
         app:title="@string/Setting_Profile"/>
@@ -25,7 +25,7 @@
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/title_bar">
 
-        <com.box.common.extension.widget.bar.setting.SettingBar
+        <com.mynews.common.extension.widget.bar.setting.SettingBar
             android:id="@+id/profile_avatar_bar"
             android:layout_width="match_parent"
             android:layout_height="50dp"
@@ -35,7 +35,7 @@
             app:titleColor="@color/color_1"
             app:valueColor="@color/color_4">
 
-            <com.box.common.core.widget.CoreSimpleDraweeView
+            <com.mynews.common.core.widget.CoreSimpleDraweeView
                 android:id="@+id/user_cover_img"
                 style="@style/AppTheme.Widget.DraweeView.Cover"
                 android:layout_width="29dp"
@@ -46,14 +46,14 @@
                 app:roundAsCircle="true"
                 tools:ignore="RtlHardcoded"/>
 
-        </com.box.common.extension.widget.bar.setting.SettingBar>
+        </com.mynews.common.extension.widget.bar.setting.SettingBar>
 
         <View
             style="@style/AppTheme.Core.Widget.Line.Horizontal"
             android:layout_marginLeft="13dp"
             android:layout_marginRight="13dp"/>
 
-        <com.box.common.extension.widget.bar.setting.SettingBar
+        <com.mynews.common.extension.widget.bar.setting.SettingBar
             android:id="@+id/profile_name_bar"
             android:layout_width="match_parent"
             android:layout_height="50dp"
@@ -68,7 +68,7 @@
             android:layout_marginLeft="13dp"
             android:layout_marginRight="13dp"/>
 
-        <com.box.common.extension.widget.bar.setting.SettingBar
+        <com.mynews.common.extension.widget.bar.setting.SettingBar
             android:id="@+id/profile_sex_bar"
             android:layout_width="match_parent"
             android:layout_height="50dp"
@@ -83,7 +83,7 @@
             android:layout_marginLeft="13dp"
             android:layout_marginRight="13dp"/>
 
-        <com.box.common.extension.widget.bar.setting.SettingBar
+        <com.mynews.common.extension.widget.bar.setting.SettingBar
             android:id="@+id/profile_age_bar"
             android:layout_width="match_parent"
             android:layout_height="50dp"

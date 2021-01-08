@@ -4,17 +4,17 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     style="@style/Core.Widget.Layout.Parent.Layer">
 
-    <com.box.common.extension.widget.bar.status.StatusBar
+    <com.mynews.common.extension.widget.bar.status.StatusBar
         android:id="@+id/status_bar"
         style="@style/Core.Widget.StatusBar"
         android:background="@color/color_status_bar"/>
 
-    <com.box.common.extension.widget.bar.title.TitleBar
+    <com.mynews.common.extension.widget.bar.title.TitleBar
         android:id="@+id/title_bar"
         app:title="@string/Setting_MyComment"
         style="@style/Core.Widget.TitleBar"/>
 
-    <com.box.common.extension.widget.layout.loading.LoadingLayout
+    <com.mynews.common.extension.widget.layout.loading.LoadingLayout
         android:id="@+id/loading_layout"
         android:layout_width="0dp"
         android:layout_height="0dp"
@@ -50,6 +50,6 @@
                 <!--android:text="@string/app_name"/>-->
         </RelativeLayout>
 
-    </com.box.common.extension.widget.layout.loading.LoadingLayout>
+    </com.mynews.common.extension.widget.layout.loading.LoadingLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

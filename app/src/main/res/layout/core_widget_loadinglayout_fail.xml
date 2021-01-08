@@ -9,12 +9,12 @@
               android:gravity="center"
               android:orientation="vertical">
 
-    <com.box.common.core.widget.CoreImageView
+    <com.mynews.common.core.widget.CoreImageView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:src="@drawable/loading_layout_fail_img"/>
 
-    <com.box.common.core.widget.CoreTextView
+    <com.mynews.common.core.widget.CoreTextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="25dp"

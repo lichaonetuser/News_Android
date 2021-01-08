@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<com.box.common.core.widget.CoreConstraintLayout
+<com.mynews.common.core.widget.CoreConstraintLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
@@ -14,7 +14,7 @@
         layout="@layout/layout_article_time_header"
         />
 
-    <com.box.common.core.widget.CoreConstraintLayout
+    <com.mynews.common.core.widget.CoreConstraintLayout
         android:id="@+id/news_item_layout"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
@@ -24,14 +24,14 @@
         style="@style/AppTheme.NewsItem.Padding"
         android:layout_marginTop="12dp">
 
-        <com.box.common.core.widget.CoreSimpleDraweeView
+        <com.mynews.common.core.widget.CoreSimpleDraweeView
             android:id="@+id/news_img"
             style="@style/AppTheme.NewsItem.Image"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             tools:background="@drawable/default_news_pic_img"/>
 
-        <com.box.common.core.widget.CoreTextView
+        <com.mynews.common.core.widget.CoreTextView
             android:id="@+id/duration_txt"
             android:layout_width="wrap_content"
             android:layout_height="0dp"
@@ -55,7 +55,7 @@
             tools:layout_editor_absoluteY="323dp"
             tools:visibility="visible"/>
 
-        <com.box.app.news.widget.FontTextView
+        <com.mynews.app.news.widget.FontTextView
             android:id="@+id/news_title_txt"
             style="@style/AppTheme.NewsItem.Title"
             android:layout_marginLeft="9dp"
@@ -68,7 +68,7 @@
             tools:text="新闻标题行1\n新闻标题行2\n新闻标题行3\n新闻标题行4\n"
             tools:textSize="16sp"/>
 
-        <!--<com.box.app.news.widget.TitleTextView-->
+        <!--<com.mynews.app.news.widget.TitleTextView-->
             <!--android:id="@+id/news_title_txt"-->
             <!--style="@style/AppTheme.NewsItem.Title"-->
             <!--android:layout_marginLeft="9dp"-->
@@ -81,7 +81,7 @@
             <!--tools:text="新闻标题行1\n新闻标题行2\n新闻标题行3\n新闻标题行4\n"-->
             <!--tools:textSize="16sp"/>-->
 
-        <com.box.common.core.widget.CoreTextView
+        <com.mynews.common.core.widget.CoreTextView
             android:id="@+id/news_source_txt"
             style="@style/AppTheme.NewsItem.Source"
             android:layout_width="wrap_content"
@@ -90,7 +90,7 @@
             app:layout_constraintTop_toBottomOf="@+id/news_title_txt"
             tools:text="来源来源来源来源来源"/>
 
-        <com.box.common.core.widget.CoreTextView
+        <com.mynews.common.core.widget.CoreTextView
             android:id="@+id/news_emit_time_txt"
             style="@style/AppTheme.NewsItem.Time"
             android:layout_marginLeft="11dp"
@@ -100,7 +100,7 @@
             app:layout_constraintTop_toTopOf="@+id/news_source_txt"
             tools:text="发布时间"/>
 
-        <com.box.common.core.widget.CoreImageView
+        <com.mynews.common.core.widget.CoreImageView
             android:id="@+id/remove_btn"
             style="@style/AppTheme.NewsItem.Remove"
             app:layout_constraintBottom_toBottomOf="parent"
@@ -114,10 +114,10 @@
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintRight_toRightOf="parent"/>
 
-    </com.box.common.core.widget.CoreConstraintLayout>
+    </com.mynews.common.core.widget.CoreConstraintLayout>
 
 
-    <com.box.common.core.widget.CoreImageView
+    <com.mynews.common.core.widget.CoreImageView
         android:id="@+id/select_btn"
         style="@style/AppTheme.NewsItem.Select"
         android:layout_width="wrap_content"
@@ -130,4 +130,4 @@
         app:layout_constraintTop_toTopOf="parent"/>
 
 
-</com.box.common.core.widget.CoreConstraintLayout>
+</com.mynews.common.core.widget.CoreConstraintLayout>

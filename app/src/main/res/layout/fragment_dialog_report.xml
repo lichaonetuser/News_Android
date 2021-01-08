@@ -11,7 +11,7 @@
         style="@style/AppTheme.Core.Widget.Line.Horizontal"
         app:layout_constraintTop_toTopOf="parent"/>
 
-    <com.box.common.core.widget.CoreTextView
+    <com.mynews.common.core.widget.CoreTextView
         android:id="@+id/report_txt"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
@@ -31,7 +31,7 @@
         style="@style/AppTheme.Core.Widget.Line.Horizontal"
         app:layout_constraintTop_toBottomOf="@+id/report_txt"/>
 
-    <com.box.common.core.widget.CoreRecyclerView
+    <com.mynews.common.core.widget.CoreRecyclerView
         android:id="@+id/report_rv"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -41,7 +41,7 @@
         android:focusable="true"
         app:layout_constraintBottom_toTopOf="@+id/cancel_btn"/>
 
-    <com.box.common.core.widget.CoreTextView
+    <com.mynews.common.core.widget.CoreTextView
         android:id="@+id/cancel_btn"
         android:layout_width="0dp"
         android:layout_height="wrap_content"

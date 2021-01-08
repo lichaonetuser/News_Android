@@ -7,19 +7,19 @@
     android:background="@color/transparent"
     tools:context=".page.activity.MainActivity">
 
-    <com.box.common.extension.widget.bar.status.StatusBar
+    <com.mynews.common.extension.widget.bar.status.StatusBar
         android:id="@id/status_bar"
         style="@style/Core.Widget.StatusBar"
         android:background="@color/color_status_bar"/>
 
-    <com.box.common.extension.widget.bar.title.TitleBar
+    <com.mynews.common.extension.widget.bar.title.TitleBar
         android:id="@id/title_bar"
         style="@style/Core.Widget.TitleBar"
         app:showBack="false"
         app:showLine="false"
         app:showTitle="false">
 
-        <com.box.common.core.widget.CoreTextView
+        <com.mynews.common.core.widget.CoreTextView
             android:id="@+id/region_name_txt"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
@@ -34,9 +34,9 @@
             android:textSize="16sp"
             tools:text="北海道"/>
 
-    </com.box.common.extension.widget.bar.title.TitleBar>
+    </com.mynews.common.extension.widget.bar.title.TitleBar>
 
-    <com.box.common.extension.widget.layout.loading.LoadingLayout
+    <com.mynews.common.extension.widget.layout.loading.LoadingLayout
         android:id="@id/loading_layout"
         android:layout_width="0dp"
         android:layout_height="0dp"
@@ -50,6 +50,6 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"/>
 
-    </com.box.common.extension.widget.layout.loading.LoadingLayout>
+    </com.mynews.common.extension.widget.layout.loading.LoadingLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

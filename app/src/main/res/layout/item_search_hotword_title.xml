@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
-<com.box.common.core.widget.CoreRelativeLayout
+<com.mynews.common.core.widget.CoreRelativeLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="45dp">
 
-    <com.box.common.core.widget.CoreImageView
+    <com.mynews.common.core.widget.CoreImageView
         android:id="@+id/icon_img"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -31,4 +31,4 @@
         tools:ignore="PxUsage"
         tools:text="热词"/>
 
-</com.box.common.core.widget.CoreRelativeLayout>
+</com.mynews.common.core.widget.CoreRelativeLayout>

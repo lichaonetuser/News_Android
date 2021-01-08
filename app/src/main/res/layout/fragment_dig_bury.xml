@@ -12,7 +12,7 @@
     android:focusable="true"
     android:focusableInTouchMode="true">
 
-    <com.box.common.core.widget.CoreTextView
+    <com.mynews.common.core.widget.CoreTextView
         android:id="@+id/dig_btn"
         android:layout_width="91dp"
         android:layout_height="34dp"
@@ -39,7 +39,7 @@
         app:useCenterDrawable="true"
         tools:ignore="HardcodedText"/>
 
-    <com.box.common.core.widget.CoreTextView
+    <com.mynews.common.core.widget.CoreTextView
         android:id="@+id/bury_btn"
         android:layout_width="91dp"
         android:layout_height="34dp"
@@ -67,7 +67,7 @@
         app:useCenterDrawable="true"
         tools:ignore="HardcodedText"/>
 
-    <com.box.common.core.widget.CoreTextView
+    <com.mynews.common.core.widget.CoreTextView
         android:id="@+id/delete_btn"
         android:layout_width="91dp"
         android:layout_height="34dp"

@@ -9,7 +9,7 @@
     android:paddingRight="10dp"
     android:paddingBottom="12dp">
 
-    <com.box.common.core.widget.CoreConstraintLayout xmlns:app="http://schemas.android.com/apk/res-auto"
+    <com.mynews.common.core.widget.CoreConstraintLayout xmlns:app="http://schemas.android.com/apk/res-auto"
         xmlns:tools="http://schemas.android.com/tools"
         android:id="@+id/ad_content_layout"
         android:layout_width="match_parent"
@@ -28,7 +28,7 @@
             app:layout_constraintRight_toLeftOf="@+id/ad_primary_img"
             app:layout_constraintTop_toTopOf="parent">
 
-            <com.box.common.core.widget.CoreTextView
+            <com.mynews.common.core.widget.CoreTextView
                 android:id="@+id/ad_headline_txt"
                 style="@style/AppTheme.NewsItem.Title"
                 android:layout_width="wrap_content"
@@ -66,7 +66,7 @@
             app:layout_constraintTop_toTopOf="parent"
             tools:ignore="RtlSymmetry" />
 
-        <com.box.common.core.widget.CoreImageView
+        <com.mynews.common.core.widget.CoreImageView
             android:id="@+id/ad_logo_img"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -74,7 +74,7 @@
             app:layout_constraintBottom_toBottomOf="@+id/ad_primary_img"
             app:layout_constraintLeft_toLeftOf="parent" />
 
-        <com.box.common.core.widget.CoreButton
+        <com.mynews.common.core.widget.CoreButton
             android:id="@+id/ad_action_btn"
             android:layout_width="0dp"
             android:layout_height="30dp"
@@ -87,6 +87,6 @@
             app:layout_constraintRight_toRightOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/ad_logo_img" />
 
-    </com.box.common.core.widget.CoreConstraintLayout>
+    </com.mynews.common.core.widget.CoreConstraintLayout>
 
 </FrameLayout>

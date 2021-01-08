@@ -21,7 +21,7 @@
         android:textSize="18sp"
         tools:text="Title"/>
 
-    <com.box.common.core.widget.CoreImageView
+    <com.mynews.common.core.widget.CoreImageView
         android:id="@+id/back_btn"
         android:layout_width="wrap_content"
         android:layout_height="match_parent"

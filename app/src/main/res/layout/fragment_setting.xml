@@ -12,7 +12,7 @@
         android:background="@color/white"
         android:orientation="vertical">
 
-        <com.box.common.extension.widget.bar.setting.SettingBar
+        <com.mynews.common.extension.widget.bar.setting.SettingBar
             android:id="@+id/setting_information_bar"
             style="@style/AppTheme.Widget.SettingBar.Setting"
             app:showArrow="true"
@@ -20,7 +20,7 @@
 
         <View style="@style/AppTheme.Widget.Line.Horizontal.Setting" />
 
-        <com.box.common.extension.widget.bar.setting.SettingBar
+        <com.mynews.common.extension.widget.bar.setting.SettingBar
             android:id="@+id/setting_feedback_bar"
             style="@style/AppTheme.Widget.SettingBar.Setting"
             app:showArrow="true"
@@ -28,7 +28,7 @@
 
         <View style="@style/AppTheme.Widget.Line.Horizontal.Setting" />
 
-        <com.box.common.extension.widget.bar.setting.SettingBar
+        <com.mynews.common.extension.widget.bar.setting.SettingBar
             android:id="@+id/setting_font_bar"
             style="@style/AppTheme.Widget.SettingBar.Setting"
             app:showArrow="true"
@@ -37,7 +37,7 @@
 
         <View style="@style/AppTheme.Widget.Line.Horizontal.Setting" />
 
-        <com.box.common.extension.widget.bar.setting.SettingBar
+        <com.mynews.common.extension.widget.bar.setting.SettingBar
             android:id="@+id/setting_version_bar"
             style="@style/AppTheme.Widget.SettingBar.Setting"
             app:showArrow="false"
@@ -50,7 +50,7 @@
             android:layout_marginLeft="0dp"
             android:layout_marginRight="0dp" />
 
-        <com.box.common.extension.widget.bar.setting.SettingBar
+        <com.mynews.common.extension.widget.bar.setting.SettingBar
             android:id="@+id/setting_video_clarity_bar"
             style="@style/AppTheme.Widget.SettingBar.Setting"
             app:showArrow="true"
@@ -59,7 +59,7 @@
 
         <View style="@style/AppTheme.Widget.Line.Horizontal.Setting" />
 
-        <com.box.common.extension.widget.bar.setting.SettingBar
+        <com.mynews.common.extension.widget.bar.setting.SettingBar
             android:id="@+id/setting_push_bar"
             style="@style/AppTheme.Widget.SettingBar.Setting"
             app:showArrow="true"
@@ -67,7 +67,7 @@
 
         <View style="@style/AppTheme.Widget.Line.Horizontal.Setting" />
 
-        <com.box.common.extension.widget.bar.setting.SettingBar
+        <com.mynews.common.extension.widget.bar.setting.SettingBar
             android:id="@+id/setting_term_bar"
             style="@style/AppTheme.Widget.SettingBar.Setting"
             app:showArrow="true"
@@ -79,7 +79,7 @@
             android:layout_marginLeft="0dp"
             android:layout_marginRight="0dp" />
 
-        <com.box.common.core.widget.CoreTextView
+        <com.mynews.common.core.widget.CoreTextView
             android:id="@+id/logout_btn"
             style="@style/AppTheme.Widget.SettingBar.Setting"
             android:gravity="center"

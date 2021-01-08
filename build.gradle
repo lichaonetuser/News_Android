@@ -9,7 +9,7 @@ buildscript {
         ]
 
         app = [
-                id          : 'com.box.app.news',
+                id          : 'com.mynews.app.news',
                 version_code: 166,
                 version_name: "7.4.14",
         ]
@@ -163,6 +163,11 @@ buildscript {
 allprojects {
     repositories {
         google()
+        mavenCentral()
+        maven {
+//            url 'https://maven.google.com/'
+            url 'http://maven.aliyun.com/nexus/content/groups/public/'
+        }
         jcenter {
             url "https://jcenter.bintray.com"
         }
@@ -176,9 +181,6 @@ allprojects {
         maven {
             name "UnityAds's maven repo"
             url repos.unityads
-        }
-        maven {
-            url 'https://maven.google.com/'
         }
         flatDir {
             dirs 'libs'

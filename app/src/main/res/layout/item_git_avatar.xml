@@ -4,7 +4,7 @@
     android:layout_height="wrap_content"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical">
-    <com.box.common.core.widget.CoreSimpleDraweeView
+    <com.mynews.common.core.widget.CoreSimpleDraweeView
         android:id="@+id/item_gif_avatar_sdv"
         android:layout_width="30dp"
         android:layout_height="30dp"
@@ -15,7 +15,7 @@
         app:placeholderImage="@drawable/feedback_default_avatar"
         app:roundingBorderWidth="1dp"
         app:roundingBorderColor="@color/color_6">
-    </com.box.common.core.widget.CoreSimpleDraweeView>
+    </com.mynews.common.core.widget.CoreSimpleDraweeView>
     <TextView
         android:id="@+id/item_gif_author_tv"
         android:layout_width="wrap_content"

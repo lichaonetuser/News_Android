@@ -6,12 +6,12 @@
     style="@style/Core.Widget.Layout.Parent.Layer"
     tools:context=".page.activity.MainActivity">
 
-    <com.box.common.extension.widget.bar.status.StatusBar
+    <com.mynews.common.extension.widget.bar.status.StatusBar
         android:id="@id/status_bar"
         style="@style/Core.Widget.StatusBar"
         android:background="@color/color_status_bar"/>
 
-    <com.box.common.extension.widget.bar.title.TitleBar
+    <com.mynews.common.extension.widget.bar.title.TitleBar
         android:id="@id/title_bar"
         style="@style/Core.Widget.TitleBar"
         app:title="@string/Setting_FontSize"/>
@@ -35,7 +35,7 @@
         android:visibility="invisible"
         app:layout_constraintBottom_toTopOf="@+id/font_size_bar"/>
 
-    <com.box.app.news.widget.FontSeekBar
+    <com.mynews.app.news.widget.FontSeekBar
         android:id="@+id/font_size_bar"
         android:layout_width="0dp"
         android:layout_height="60dp"

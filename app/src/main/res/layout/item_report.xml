@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<com.box.common.core.widget.CoreLinearLayout
+<com.mynews.common.core.widget.CoreLinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     style="@style/Core.Widget.Layout.Item"
@@ -9,7 +9,7 @@
     android:background="@drawable/report_btn_bg"
     tools:context=".page.activity.MainActivity">
 
-    <com.box.common.core.widget.CoreTextView
+    <com.mynews.common.core.widget.CoreTextView
         android:id="@+id/report_reason_txt"
         android:layout_width="wrap_content"
         android:layout_height="match_parent"
@@ -22,4 +22,4 @@
         tools:drawableRight="@drawable/report_go_ic"
         tools:text="举报理由"/>
 
-</com.box.common.core.widget.CoreLinearLayout>
+</com.mynews.common.core.widget.CoreLinearLayout>

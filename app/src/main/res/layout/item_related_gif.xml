@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<com.box.common.core.widget.CoreConstraintLayout
+<com.mynews.common.core.widget.CoreConstraintLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
@@ -13,7 +13,7 @@
     tools:context=".page.activity.MainActivity"
     tools:ignore="RtlHardcoded,RtlSymmetry">
 
-    <com.box.common.core.widget.CoreSimpleDraweeView
+    <com.mynews.common.core.widget.CoreSimpleDraweeView
         android:id="@+id/gif_img"
         style="@style/AppTheme.Widget.DraweeView.Cover"
         android:layout_width="0dp"
@@ -33,7 +33,7 @@
         app:layout_constraintTop_toTopOf="@id/gif_img"
         app:layout_constraintBottom_toBottomOf="@id/gif_img"/>
 
-    <com.box.app.news.widget.FontTextView
+    <com.mynews.app.news.widget.FontTextView
         android:id="@+id/news_title_txt"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
@@ -54,7 +54,7 @@
         tools:text="新闻标题行1\n新闻标题行2\n新闻标题行3\n新闻标题行4\n"
         tools:textSize="14sp"/>
 
-    <com.box.common.core.widget.CoreTextView
+    <com.mynews.common.core.widget.CoreTextView
         android:id="@+id/news_source_txt"
         style="@style/AppTheme.NewsItem.Source"
         android:layout_width="0dp"
@@ -69,4 +69,4 @@
         app:layout_constraintTop_toBottomOf="@id/news_title_txt"
         tools:ignore="SmallSp" />
 
-</com.box.common.core.widget.CoreConstraintLayout>
+</com.mynews.common.core.widget.CoreConstraintLayout>

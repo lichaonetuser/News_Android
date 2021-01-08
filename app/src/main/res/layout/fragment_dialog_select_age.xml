@@ -8,7 +8,7 @@
     tools:context=".page.activity.MainActivity"
     tools:ignore="RtlSymmetry">
 
-    <com.box.common.core.widget.CoreTextView
+    <com.mynews.common.core.widget.CoreTextView
         android:id="@+id/back_btn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -25,7 +25,7 @@
         app:useCommonPressedEffect="true"
         android:paddingStart="15dp" />
 
-    <com.box.common.core.widget.CoreTextView
+    <com.mynews.common.core.widget.CoreTextView
         android:id="@+id/confirm_btn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -48,7 +48,7 @@
         android:background="@color/color_6"
         app:layout_constraintTop_toBottomOf="@+id/back_btn"/>
 
-    <com.box.app.news.widget.AgeSelectView
+    <com.mynews.app.news.widget.AgeSelectView
         android:id="@+id/select_age_view"
         app:layout_constraintTop_toBottomOf="@+id/back_btn"
         android:layout_width="match_parent"

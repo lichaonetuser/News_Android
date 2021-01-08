@@ -3,6 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     style="@style/Core.Widget.Layout.Parent.Layer"
+    android:clipChildren="false"
     tools:context=".page.activity.MainActivity">
 
     <FrameLayout
@@ -20,14 +21,86 @@
         style="@style/AppTheme.Core.Widget.Line.Horizontal"
         app:layout_constraintBottom_toTopOf="@+id/bottom_navigation_bar" />
 
-    <me.majiajie.pagerbottomtabstrip.PageNavigationView
+    <LinearLayout
         android:id="@+id/bottom_navigation_bar"
+        android:layout_width="match_parent"
+        android:layout_height="49dp"
+        android:orientation="horizontal"
+        android:layout_gravity="bottom"
+        android:clipChildren="false"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        tools:ignore="MissingConstraints">
+        <RelativeLayout
+            android:id="@+id/ll_Refresh"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center">
+
+            <ImageView
+                android:id="@+id/iv_Refresh"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/main_bottombar_news_selector" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/iv_Refresh"
+                android:text="@string/Report_Back"/>
+        </RelativeLayout>
+        <RelativeLayout
+            android:id="@+id/rl_ic"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_gravity="bottom"
+            android:gravity="bottom">
+
+            <ImageView
+                android:id="@+id/iv_video1"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_centerHorizontal="true"
+                android:background="@drawable/main_bottombar_video_selector" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/iv_video1"
+                android:layout_centerHorizontal="true"
+                android:gravity="center_horizontal"
+                android:text="@string/Video_Video" />
+
+        </RelativeLayout>
+        <RelativeLayout
+            android:id="@+id/ll_Me"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center">
+
+            <ImageView
+                android:id="@+id/iv_me"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/main_bottombar_me_selector" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/iv_me"
+                android:text="@string/Setting_Me"/>
+
+        </RelativeLayout>
+    </LinearLayout>
+    <me.majiajie.pagerbottomtabstrip.PageNavigationView
         android:layout_width="0dp"
         android:layout_height="49dp"
         android:layout_gravity="bottom"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        tools:background="@color/core_tools_design_bar" />
+        tools:background="@color/core_tools_design_bar"
+        android:visibility="gone"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -5,7 +5,7 @@
                 android:layout_height="match_parent"
                 android:background="#ff000000">
 
-    <com.box.common.core.widget.CoreViewPager
+    <com.mynews.common.core.widget.CoreViewPager
         android:id="@+id/vp_picture_browse"
         android:layout_width="match_parent"
         android:layout_height="match_parent"/>

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<com.box.common.core.widget.CoreConstraintLayout
+<com.mynews.common.core.widget.CoreConstraintLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
@@ -9,7 +9,7 @@
     tools:context=".page.activity.MainActivity"
     tools:ignore="RtlHardcoded,RtlSymmetry">
 
-    <com.box.common.core.widget.CoreConstraintLayout
+    <com.mynews.common.core.widget.CoreConstraintLayout
         android:id="@+id/news_item_layout"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
@@ -17,7 +17,7 @@
         app:layout_constraintTop_toBottomOf="@+id/time_header_layout"
         android:layout_height="wrap_content">
 
-        <com.box.common.core.widget.CoreSimpleDraweeView
+        <com.mynews.common.core.widget.CoreSimpleDraweeView
             android:id="@+id/news_img"
             style="@style/AppTheme.NewsItem.Image"
             android:layout_width="137dp"
@@ -26,7 +26,7 @@
             app:layout_constraintTop_toTopOf="parent"
             tools:background="@drawable/default_news_pic_img"/>
 
-        <com.box.app.news.widget.TitleTextView
+        <com.mynews.app.news.widget.TitleTextView
             android:id="@+id/news_title_txt"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
@@ -42,7 +42,7 @@
             tools:textSize="14sp"
             tools:layout_height="50dp"/>
 
-        <com.box.common.core.widget.CoreTextView
+        <com.mynews.common.core.widget.CoreTextView
             android:id="@+id/news_source_txt"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
@@ -58,7 +58,7 @@
             tools:text="测试用户名"
             tools:ignore="SmallSp" />
 
-        <com.box.common.core.widget.CoreTextView
+        <com.mynews.common.core.widget.CoreTextView
             android:id="@+id/news_emit_time_txt"
             style="@style/AppTheme.NewsItem.Time"
             android:layout_height="wrap_content"
@@ -74,10 +74,10 @@
             tools:text="发布时间"
             tools:ignore="SmallSp" />
 
-    </com.box.common.core.widget.CoreConstraintLayout>
+    </com.mynews.common.core.widget.CoreConstraintLayout>
 
 
-    <com.box.common.core.widget.CoreImageView
+    <com.mynews.common.core.widget.CoreImageView
         android:id="@+id/select_btn"
         style="@style/AppTheme.NewsItem.Select"
         android:visibility="gone"
@@ -90,4 +90,4 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"/>
 
-</com.box.common.core.widget.CoreConstraintLayout>
+</com.mynews.common.core.widget.CoreConstraintLayout>

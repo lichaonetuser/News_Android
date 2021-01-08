@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.mynews.app.news.view.PullToRefreshView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:id="@+id/pull_to_refresh"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".page.activity.HomeActivity">
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:clipChildren="false"
+            >
+            <View
+                android:id="@+id/top_bg_view"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                app:layout_constraintBottom_toBottomOf="@+id/container_indicator"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:background="@color/core_tools_design_view" />
+
+            <com.mynews.common.extension.widget.bar.status.StatusBar
+                android:id="@id/status_bar"
+                style="@style/Core.Widget.StatusBar"
+                android:background="@color/transparent"
+                tools:ignore="MissingConstraints" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/header_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@id/status_bar">
+
+                <com.mynews.common.core.widget.CoreImageView
+                    android:id="@+id/logo_img"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/news_logo_height"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/news_topbar_logo_ic"
+                    app:layout_constraintBottom_toTopOf="parent"
+                    app:layout_constraintTop_toBottomOf="parent"
+                    tools:ignore="MissingConstraints" />
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/search_bar_layout"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:layout_marginBottom="8dp"
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginLeft="11dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginStart="11dp"
+                    android:layout_marginTop="8dp"
+                    android:background="@drawable/main_titlebar_search_style"
+                    android:padding="5dp"
+                    app:layout_constraintBottom_toBottomOf="@+id/logo_img"
+                    app:layout_constraintLeft_toRightOf="@+id/logo_img"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/logo_img"
+                    app:layout_goneMarginRight="10dp">
+
+                    <com.mynews.app.news.widget.SearchBanner
+                        android:id="@+id/search_hint_txt"
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+            <com.mynews.app.news.view.MyViewpager
+                android:id="@+id/vp_home_navigation"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:clipChildren="false"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="30dp"
+                android:overScrollMode="never"
+                app:layout_constraintTop_toTopOf="parent" />
+        </LinearLayout>
+    </ScrollView>
+</com.mynews.app.news.view.PullToRefreshView>

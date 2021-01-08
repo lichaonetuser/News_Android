@@ -22,7 +22,7 @@
             android:layout_height="wrap_content"
             android:orientation="vertical">
 
-            <com.box.common.core.image.fresco.photoview.photodraweeview.PhotoDraweeView
+            <com.mynews.common.core.image.fresco.photoview.photodraweeview.PhotoDraweeView
                 android:id="@+id/photo_drawee_view"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
@@ -33,7 +33,7 @@
 
     </ScrollView>
 
-    <com.box.common.core.image.fresco.photoview.loading.LoadingProgressBarView
+    <com.mynews.common.core.image.fresco.photoview.loading.LoadingProgressBarView
         android:id="@+id/progress_view"
         android:layout_width="60dp"
         android:layout_height="60dp"

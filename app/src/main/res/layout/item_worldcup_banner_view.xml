@@ -7,7 +7,7 @@
     android:layout_width="212dp"
     android:layout_height="119dp">
 
-    <com.box.common.core.widget.CoreSimpleDraweeView
+    <com.mynews.common.core.widget.CoreSimpleDraweeView
         android:id="@+id/banner_view_image"
         android:layout_width="0dp"
         android:layout_height="0dp"
@@ -18,7 +18,7 @@
         app:layout_constraintTop_toTopOf="parent"
         app:placeholderImage="@color/color_7"/>
 
-    <com.box.common.core.widget.CoreTextView
+    <com.mynews.common.core.widget.CoreTextView
         android:id="@+id/video_title"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
@@ -39,7 +39,7 @@
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"/>
 
-    <com.box.app.news.widget.VideoTagLayout
+    <com.mynews.app.news.widget.VideoTagLayout
         android:id="@+id/tag_layout"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -47,9 +47,9 @@
         android:layout_marginLeft="7dp"
         app:layout_constraintBottom_toTopOf="@+id/video_title"
         app:layout_constraintLeft_toLeftOf="parent">
-    </com.box.app.news.widget.VideoTagLayout>
+    </com.mynews.app.news.widget.VideoTagLayout>
 
-    <com.box.common.core.widget.CoreImageView
+    <com.mynews.common.core.widget.CoreImageView
         android:id="@+id/play_btn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -60,7 +60,7 @@
         app:layout_constraintRight_toRightOf="@+id/banner_view_image"
         app:layout_constraintTop_toTopOf="@+id/banner_view_image"/>
 
-    <com.box.common.core.widget.CoreImageView
+    <com.mynews.common.core.widget.CoreImageView
         android:id="@+id/gif_flag"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"

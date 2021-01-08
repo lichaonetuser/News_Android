@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<com.box.common.core.widget.CoreConstraintLayout
+<com.mynews.common.core.widget.CoreConstraintLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
@@ -9,7 +9,7 @@
     tools:background="@color/color_9"
     tools:layout_marginTop="24dp">
 
-    <com.box.common.core.widget.CoreTextView
+    <com.mynews.common.core.widget.CoreTextView
         android:id="@+id/time_txt"
         style="@style/AppTheme.FeedbackItem.Time"
         app:layout_constraintLeft_toLeftOf="parent"
@@ -17,7 +17,7 @@
         app:layout_constraintTop_toTopOf="parent"
         tools:text="时间"/>
 
-    <com.box.common.core.widget.CoreSimpleDraweeView
+    <com.mynews.common.core.widget.CoreSimpleDraweeView
         android:id="@+id/avatar_img"
         style="@style/AppTheme.FeedbackItem.Avatar"
         android:layout_marginTop="14dp"
@@ -25,7 +25,7 @@
         app:layout_constraintTop_toBottomOf="@+id/time_txt"
         app:placeholderImage="@drawable/feedback_default_avatar"/>
 
-    <com.box.common.core.widget.CoreLinearLayout
+    <com.mynews.common.core.widget.CoreLinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginEnd="70dp"
@@ -38,7 +38,7 @@
         app:layout_constraintLeft_toRightOf="@+id/avatar_img"
         app:layout_constraintTop_toTopOf="@id/avatar_img">
 
-        <com.box.common.core.widget.CoreTextView
+        <com.mynews.common.core.widget.CoreTextView
             android:id="@+id/content_txt"
             style="@style/AppTheme.FeedbackItem.Text"
             android:gravity="center_vertical|start"
@@ -55,6 +55,6 @@
             tools:background="@color/core_tools_design_img"
             tools:visibility="visible"/>
 
-    </com.box.common.core.widget.CoreLinearLayout>
+    </com.mynews.common.core.widget.CoreLinearLayout>
 
-</com.box.common.core.widget.CoreConstraintLayout>
+</com.mynews.common.core.widget.CoreConstraintLayout>

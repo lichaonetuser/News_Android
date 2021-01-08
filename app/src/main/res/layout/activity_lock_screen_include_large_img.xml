@@ -6,7 +6,7 @@
     android:layout_height="wrap_content"
     android:paddingLeft="19dp"
     android:paddingRight="19dp">
-    <com.box.common.core.widget.CoreConstraintLayout
+    <com.mynews.common.core.widget.CoreConstraintLayout
         android:id="@+id/large_img_container"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -15,7 +15,7 @@
         app:layout_constraintTop_toTopOf="@+id/no_img_layout"
         tools:background="@color/color_1">
 
-        <com.box.common.core.widget.CoreSimpleDraweeView
+        <com.mynews.common.core.widget.CoreSimpleDraweeView
             android:id="@+id/push_img"
             style="@style/AppTheme.NewsItem.Image"
             android:layout_width="0dp"
@@ -27,7 +27,7 @@
             app:roundedCornerRadius="3dp"
             tools:background="@color/core_tools_design_img"/>
 
-        <com.box.common.core.widget.CoreTextView
+        <com.mynews.common.core.widget.CoreTextView
             android:id="@+id/push_content"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
@@ -45,5 +45,5 @@
             tools:text="新闻标新闻标题22新标题行2新闻标题22新标题行2新闻标题22新标题行2新闻标题22新标题行2新闻标题22新标题行2新闻标题22新标题行2题22新标题行2"
             tools:textSize="17sp"/>
 
-    </com.box.common.core.widget.CoreConstraintLayout>
+    </com.mynews.common.core.widget.CoreConstraintLayout>
 </ScrollView>

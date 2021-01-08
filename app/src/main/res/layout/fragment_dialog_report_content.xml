@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<com.box.common.core.widget.CoreRelativeLayout
+<com.mynews.common.core.widget.CoreRelativeLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     style="@style/Core.Widget.Layout.Parent.Layer"
@@ -15,7 +15,7 @@
         style="@style/AppTheme.Core.Widget.Line.Horizontal"
         android:layout_above="@+id/comment_layout"/>
 
-    <com.box.common.core.widget.CoreRelativeLayout
+    <com.mynews.common.core.widget.CoreRelativeLayout
         android:id="@+id/comment_layout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -25,7 +25,7 @@
         android:paddingBottom="15dp"
         tools:ignore="KeyboardInaccessibleWidget">
 
-        <com.box.common.core.widget.CoreTextView
+        <com.mynews.common.core.widget.CoreTextView
             android:id="@+id/report_txt"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -38,7 +38,7 @@
             android:textSize="14sp"
             android:textStyle="bold"/>
 
-        <com.box.common.core.widget.CoreTextView
+        <com.mynews.common.core.widget.CoreTextView
             android:id="@+id/back_btn"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -54,7 +54,7 @@
             android:textColor="@color/color_2"
             android:textSize="14sp"/>
 
-        <com.box.common.core.widget.CoreEditText
+        <com.mynews.common.core.widget.CoreEditText
             android:id="@+id/report_input_etxt"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -80,7 +80,7 @@
             android:textSize="14sp"
             tools:ignore="RtlHardcoded"/>
 
-        <com.box.common.core.widget.CoreTextView
+        <com.mynews.common.core.widget.CoreTextView
             android:id="@+id/submit_btn"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -96,6 +96,6 @@
             android:textSize="16sp"
             tools:ignore="RtlHardcoded"/>
 
-    </com.box.common.core.widget.CoreRelativeLayout>
+    </com.mynews.common.core.widget.CoreRelativeLayout>
 
-</com.box.common.core.widget.CoreRelativeLayout>
+</com.mynews.common.core.widget.CoreRelativeLayout>

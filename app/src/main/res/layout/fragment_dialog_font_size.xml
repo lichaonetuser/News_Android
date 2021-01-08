@@ -19,7 +19,7 @@
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent">
 
-        <com.box.app.news.widget.FontSeekBar
+        <com.mynews.app.news.widget.FontSeekBar
             android:id="@+id/font_size_bar"
             android:layout_alignParentBottom="true"
             android:layout_width="match_parent"
@@ -41,7 +41,7 @@
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent">
 
-        <com.box.common.core.widget.CoreTextView
+        <com.mynews.common.core.widget.CoreTextView
             android:id="@+id/back_btn"
             android:layout_width="match_parent"
             android:layout_height="45dp"

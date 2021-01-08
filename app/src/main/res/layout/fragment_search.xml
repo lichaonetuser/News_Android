@@ -6,7 +6,7 @@
     android:background="@color/color_9"
     tools:context=".page.activity.MainActivity">
 
-    <com.box.common.extension.widget.bar.status.StatusBar
+    <com.mynews.common.extension.widget.bar.status.StatusBar
         android:id="@id/status_bar"
         style="@style/Core.Widget.StatusBar"
         android:background="@color/transparent" />
@@ -31,7 +31,7 @@
         app:layout_constraintTop_toBottomOf="@+id/status_bar"
         tools:ignore="RtlSymmetry">
 
-        <com.box.common.core.widget.CoreImageView
+        <com.mynews.common.core.widget.CoreImageView
             android:id="@+id/search_bar_icon_img"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -39,7 +39,7 @@
             app:layout_constraintBottom_toTopOf="parent"
             app:layout_constraintTop_toBottomOf="parent" />
 
-        <com.box.common.core.widget.CoreEditText
+        <com.mynews.common.core.widget.CoreEditText
             android:id="@+id/search_input_et"
             android:layout_width="0dp"
             android:layout_height="match_parent"
@@ -58,7 +58,7 @@
             app:layout_constraintTop_toBottomOf="parent"
             tools:ignore="RtlHardcoded" />
 
-        <com.box.common.core.widget.CoreImageView
+        <com.mynews.common.core.widget.CoreImageView
             android:id="@+id/search_input_clear_img"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
@@ -77,7 +77,7 @@
             app:useCommonPressedEffect="true" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 
-    <com.box.common.core.widget.CoreTextView
+    <com.mynews.common.core.widget.CoreTextView
         android:id="@+id/cancel_txt"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -94,7 +94,7 @@
         app:useCommonPressedEffect="true"
         tools:ignore="RtlHardcoded" />
 
-    <com.box.common.core.widget.CoreRecyclerView
+    <com.mynews.common.core.widget.CoreRecyclerView
         android:id="@id/common_content_rv"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

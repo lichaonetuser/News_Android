@@ -16,7 +16,7 @@
         android:paddingRight="10dp"
         app:layout_constraintTop_toTopOf="parent">
 
-        <com.box.common.core.widget.CoreImageView
+        <com.mynews.common.core.widget.CoreImageView
             android:id="@+id/video_flag"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -25,7 +25,7 @@
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintTop_toTopOf="parent"/>
 
-        <com.box.common.core.widget.CoreTextView
+        <com.mynews.common.core.widget.CoreTextView
             android:id="@+id/video_title"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -38,7 +38,7 @@
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
-    <com.box.common.core.widget.CoreRecyclerView
+    <com.mynews.common.core.widget.CoreRecyclerView
         android:id="@+id/worldcup_video_rv"
         android:layout_width="match_parent"
         android:layout_height="175.36dp"
@@ -60,7 +60,7 @@
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/worldcup_video_rv">
 
-        <com.box.common.core.widget.CoreTextView
+        <com.mynews.common.core.widget.CoreTextView
             android:id="@+id/video_more_title"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"

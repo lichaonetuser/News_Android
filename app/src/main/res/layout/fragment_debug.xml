@@ -6,13 +6,13 @@
     android:background="@color/color_9"
     tools:context=".page.activity.MainActivity">
 
-    <com.box.common.extension.widget.bar.status.StatusBar
+    <com.mynews.common.extension.widget.bar.status.StatusBar
         android:id="@id/status_bar"
         style="@style/Core.Widget.StatusBar"
         android:background="@color/color_status_bar"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <com.box.common.extension.widget.bar.title.TitleBar
+    <com.mynews.common.extension.widget.bar.title.TitleBar
         android:id="@id/title_bar"
         style="@style/Core.Widget.TitleBar"
         app:showBack="true"
@@ -32,7 +32,7 @@
             android:layout_height="wrap_content"
             android:orientation="vertical">
 
-            <com.box.common.core.widget.CoreCheckedTextView
+            <com.mynews.common.core.widget.CoreCheckedTextView
                 android:id="@+id/debug_setting_translate"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -47,7 +47,7 @@
 
             <View style="@style/AppTheme.Core.Widget.Line.Horizontal" />
 
-            <com.box.common.core.widget.CoreCheckedTextView
+            <com.mynews.common.core.widget.CoreCheckedTextView
                 android:id="@+id/debug_setting_show_refer"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -62,7 +62,7 @@
 
             <View style="@style/AppTheme.Core.Widget.Line.Horizontal" />
 
-            <com.box.common.core.widget.CoreCheckedTextView
+            <com.mynews.common.core.widget.CoreCheckedTextView
                 android:id="@+id/debug_setting_switch_base_url"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -77,7 +77,7 @@
 
             <View style="@style/AppTheme.Core.Widget.Line.Horizontal" />
 
-            <com.box.common.core.widget.CoreCheckedTextView
+            <com.mynews.common.core.widget.CoreCheckedTextView
                 android:id="@+id/debug_setting_ad_test"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -92,7 +92,7 @@
 
             <View style="@style/AppTheme.Core.Widget.Line.Horizontal" />
 
-            <com.box.common.core.widget.CoreCheckedTextView
+            <com.mynews.common.core.widget.CoreCheckedTextView
                 android:id="@+id/debug_setting_ad_test_2"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -107,7 +107,7 @@
 
             <View style="@style/AppTheme.Core.Widget.Line.Horizontal" />
 
-            <com.box.common.core.widget.CoreCheckedTextView
+            <com.mynews.common.core.widget.CoreCheckedTextView
                 android:id="@+id/debug_setting_list_ad_test"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -122,7 +122,7 @@
 
             <View style="@style/AppTheme.Core.Widget.Line.Horizontal" />
 
-            <com.box.common.core.widget.CoreTextView
+            <com.mynews.common.core.widget.CoreTextView
                 android:id="@+id/debug_setting_feedback"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"

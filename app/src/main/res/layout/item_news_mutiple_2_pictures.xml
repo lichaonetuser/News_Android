@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<com.box.common.core.widget.CoreConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<com.mynews.common.core.widget.CoreConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/root_layout"
@@ -12,7 +12,7 @@
         android:id="@+id/time_header_layout"
         layout="@layout/layout_article_time_header" />
 
-    <com.box.common.core.widget.CoreConstraintLayout
+    <com.mynews.common.core.widget.CoreConstraintLayout
         android:id="@+id/news_item_layout"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -33,7 +33,7 @@
             <!--tools:text="新闻标题行1\n新闻标题行2\n新闻标题行3\n新闻标题行4"-->
             <!--tools:textSize="16sp" />-->
 
-        <com.box.common.core.widget.CoreSimpleDraweeView
+        <com.mynews.common.core.widget.CoreSimpleDraweeView
             android:id="@+id/mutiple_news_img0"
             style="@style/AppTheme.NewsItem.Image"
             android:layout_width="100dp"
@@ -48,7 +48,7 @@
             tools:background="@drawable/default_news_pic_img"
             android:focusable="true" />
 
-        <com.box.common.core.widget.CoreSimpleDraweeView
+        <com.mynews.common.core.widget.CoreSimpleDraweeView
             android:id="@+id/mutiple_news_img1"
             style="@style/AppTheme.NewsItem.Image"
             android:layout_width="100dp"
@@ -62,7 +62,7 @@
             tools:background="@drawable/default_news_pic_img"
             android:focusable="true" />
 
-        <com.box.app.news.widget.FontTextView
+        <com.mynews.app.news.widget.FontTextView
             android:id="@+id/news_title_txt"
             style="@style/AppTheme.NewsItem.Title"
             android:layout_marginLeft="10dp"
@@ -77,7 +77,7 @@
             tools:textSize="16sp" />
 
 
-        <com.box.common.core.widget.CoreSimpleDraweeView
+        <com.mynews.common.core.widget.CoreSimpleDraweeView
             android:id="@+id/user_img"
             style="@style/AppTheme.Widget.DraweeView.Cover"
             android:layout_width="0dp"
@@ -89,7 +89,7 @@
             app:roundAsCircle="true"
             tools:layout_editor_absoluteX="30dp" />
 
-        <com.box.common.core.widget.CoreImageView
+        <com.mynews.common.core.widget.CoreImageView
             android:id="@+id/picture_more_ic"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
@@ -100,7 +100,7 @@
             app:layout_constraintRight_toRightOf="parent"
             tools:visibility="visible" />
 
-        <com.box.common.core.widget.CoreTextView
+        <com.mynews.common.core.widget.CoreTextView
             android:id="@+id/user_name_txt"
             android:layout_width="0dp"
             android:layout_height="38dp"
@@ -117,7 +117,7 @@
             tools:text="测试用户名"
             tools:ignore="SmallSp" />
 
-        <com.box.common.core.widget.CoreTextView
+        <com.mynews.common.core.widget.CoreTextView
             android:id="@+id/news_emit_time_txt"
             style="@style/AppTheme.NewsItem.Time"
             android:layout_height="wrap_content"
@@ -132,7 +132,7 @@
             app:layout_constraintTop_toTopOf="@+id/user_name_txt"
             tools:text="发布时间" />
 
-        <com.box.common.core.widget.CoreTextView
+        <com.mynews.common.core.widget.CoreTextView
             android:id="@+id/comment_txt"
             android:layout_width="wrap_content"
             android:layout_height="38dp"
@@ -148,7 +148,7 @@
             tools:text="0"
             tools:ignore="SmallSp" />
 
-        <com.box.common.core.widget.CoreTextView
+        <com.mynews.common.core.widget.CoreTextView
             android:id="@+id/dig_btn"
             android:layout_width="wrap_content"
             android:layout_height="38dp"
@@ -166,7 +166,7 @@
             tools:text="0"
             tools:ignore="SmallSp" />
 
-        <com.box.common.core.widget.CoreTextView
+        <com.mynews.common.core.widget.CoreTextView
             android:id="@+id/bury_btn"
             android:layout_width="wrap_content"
             android:layout_height="38dp"
@@ -184,7 +184,7 @@
             tools:text="0"
             tools:ignore="SmallSp" />
 
-        <com.box.common.core.widget.CoreImageView
+        <com.mynews.common.core.widget.CoreImageView
             android:id="@+id/more_btn"
             android:layout_width="wrap_content"
             android:layout_height="38dp"
@@ -197,9 +197,9 @@
             app:layout_constraintRight_toRightOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/news_title_txt" />
 
-    </com.box.common.core.widget.CoreConstraintLayout>
+    </com.mynews.common.core.widget.CoreConstraintLayout>
 
-    <com.box.common.core.widget.CoreImageView
+    <com.mynews.common.core.widget.CoreImageView
         android:id="@+id/select_btn"
         style="@style/AppTheme.NewsItem.Select"
         android:layout_width="wrap_content"
@@ -211,4 +211,4 @@
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         tools:visibility="visible" />
-</com.box.common.core.widget.CoreConstraintLayout>
+</com.mynews.common.core.widget.CoreConstraintLayout>

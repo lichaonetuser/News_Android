@@ -14,7 +14,7 @@
         app:layout_constraintLeft_toLeftOf="@+id/comment_txt"
         app:layout_constraintRight_toRightOf="@+id/comment_txt"/>
 
-    <com.box.common.core.widget.CoreTextView
+    <com.mynews.common.core.widget.CoreTextView
         android:id="@+id/comment_txt"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -30,7 +30,7 @@
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"/>
 
-    <com.box.common.extension.widget.layout.loading.LoadingLayout
+    <com.mynews.common.extension.widget.layout.loading.LoadingLayout
         android:id="@+id/loading_layout"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
@@ -42,7 +42,7 @@
         app:layout_constraintTop_toBottomOf="@+id/comment_txt"
         app:loadingId="@layout/layout_comment_loading">
 
-        <com.box.app.news.widget.nested.NestedChildRecyclerView
+        <com.mynews.app.news.widget.nested.NestedChildRecyclerView
             android:id="@id/common_content_rv"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -50,7 +50,7 @@
             android:fadingEdgeLength="0dp"
             android:requiresFadingEdge="none"/>
 
-    </com.box.common.extension.widget.layout.loading.LoadingLayout>
+    </com.mynews.common.extension.widget.layout.loading.LoadingLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
 

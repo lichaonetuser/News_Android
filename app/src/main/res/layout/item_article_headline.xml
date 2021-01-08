@@ -22,7 +22,7 @@
         android:paddingRight="10dp"
         android:layout_marginTop="8dp">
 
-        <com.box.common.core.widget.CoreSimpleDraweeView
+        <com.mynews.common.core.widget.CoreSimpleDraweeView
             android:id="@+id/headline_icon_img"
             android:layout_width="150dp"
             android:layout_height="26dp"
@@ -35,7 +35,7 @@
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintBottom_toBottomOf="parent"/>
 
-        <com.box.common.core.widget.CoreTextView
+        <com.mynews.common.core.widget.CoreTextView
             android:id="@+id/headline_time_txt"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -46,7 +46,7 @@
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintRight_toRightOf="parent"/>
 
-        <com.box.common.core.widget.CoreImageView
+        <com.mynews.common.core.widget.CoreImageView
             android:id="@+id/headline_time_icon_img"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -57,7 +57,7 @@
             android:layout_marginRight="6dp"/>
     </androidx.constraintlayout.widget.ConstraintLayout>
 
-    <com.box.common.core.widget.CoreRecyclerView
+    <com.mynews.common.core.widget.CoreRecyclerView
         android:id="@+id/headline_child_list_rv"
         android:layout_width="match_parent"
         android:layout_height="0dp"
@@ -65,7 +65,7 @@
         android:focusable="false"
         android:focusableInTouchMode="false"
         app:layout_constraintTop_toBottomOf="@+id/headline_header_layout">
-    </com.box.common.core.widget.CoreRecyclerView>
+    </com.mynews.common.core.widget.CoreRecyclerView>
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/headline_more_layout"
@@ -83,7 +83,7 @@
             app:layout_constraintRight_toRightOf="parent"
             app:layout_constraintLeft_toLeftOf="parent">
 
-            <com.box.common.core.widget.CoreTextView
+            <com.mynews.common.core.widget.CoreTextView
                 android:id="@+id/headline_go_txt"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -94,7 +94,7 @@
                 android:text="123123123123"
                 android:textStyle="bold"/>
 
-            <com.box.common.core.widget.CoreImageView
+            <com.mynews.common.core.widget.CoreImageView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:src="@drawable/article_headline_go_img"
@@ -105,7 +105,7 @@
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 
-        <com.box.common.core.widget.CoreImageView
+        <com.mynews.common.core.widget.CoreImageView
             android:id="@+id/headline_cancel_icon_img"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"

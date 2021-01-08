@@ -378,5 +378,34 @@
     <string name="Feedback_Param_Tip">以下の個人情報はあくまで問題を解決するために参考として使わせていただきます、絶対外部に漏れることや悪用などはしません。お手数ですが、こちらで問題に関する詳しい状況をご説明いただいたら幸いです、ご協力をお願い致します。何卒宜しくお願い致します。</string>
     <string name="UserInfoCollection_AlertMessage">あなたにぴったりな内容を用意しました！さっそく見てみよう</string>
 
+    <string name="channel_ForYou">おすすめ</string>
+    <string name="girl_ForYou">ガールズ</string>
+    <string name="music_ForYou">音楽</string>
+    <string name="cartoon_ForYou">マンガ</string>
+    <string name="entertainment_ForYou">エンタメ</string>
+    <string name="economics_ForYou">経済</string>
+    <string name="car_ForYou">自動車</string>
+    <string name="politics_ForYou">政治</string>
+    <string name="sports_ForYou">スポーツ</string>
+    <string name="gif_ForYou">GIF</string>
+    <string name="illustration_ForYou">イラスト</string>
+    <string name="headlines_ForYou">トップ</string>
+    <string name="restaurant_ForYou">グルメ</string>
+    <string name="international_ForYou">国際</string>
+    <string name="domestic_ForYou">国内</string>
+    <string name="travel_ForYou">トラベル</string>
+    <string name="summary_ForYou">まとめ</string>
+    <string name="it_ForYou">IT/テクノロジー</string>
+    <string name="report_ForYou">速報24</string>
+    <string name="woman_ForYou">女性</string>
+    <string name="healing_ForYou">癒し</string>
+    <string name="beauty_ForYou">美女</string>
+    <string name="interesting_ForYou">おもしろ</string>
+    <string name="beauty18_ForYou">美人(R18)</string>
+    <string name="story_ForYou">面白い話</string>
+    <string name="healed_ForYou">癒され</string>
+    <string name="bytheway_ForYou">ｱﾆﾒ·ﾏﾝｶﾞ</string>
+    <string name="life_ForYou">暮らし</string>
+    <string name="video_ForYou">動画</string>
 
 </resources>

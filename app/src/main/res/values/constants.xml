@@ -6,12 +6,12 @@
 <!--AFKey-->
     <string name="appsflyer_dev_key">TODO</string>
 <!--友盟Key-->
-    <string name="umeng_appkey">TODO</string>
+    <string name="umeng_appkey">5fed7d5844bb94418a6da512</string>
     <string name="umeng_channel">TODO</string>
 <!--FacebookKey-->
-    <string name="facebook_app_id">TODO</string>
+    <string name="facebook_app_id">134699991684523</string>
+    <string name="fb_login_protocol_scheme">fb134699991684523</string>
     <string name="facebook_content_provider">TODO</string>
-    <string name="fb_login_protocol_scheme">TODO</string>
 <!--VungleKey-->
 <!--<string name="vungle_app_id">PH</string>-->
 <!--ZCoup广告Key-->
@@ -21,8 +21,8 @@
 <!--JumpRawKey-->
     <string name="jumpraw_slot_id">TODO</string>
 <!--推特登录Key-->
-    <string name="com.twitter.sdk.android.CONSUMER_KEY">TODO</string>
-    <string name="com.twitter.sdk.android.CONSUMER_SECRET">TODO</string>
+    <string name="com.twitter.sdk.android.CONSUMER_KEY">2Zdk5zUYhzQZhTM4aX1gV2nnX</string>
+    <string name="com.twitter.sdk.android.CONSUMER_SECRET">CruntxqQDNbmYfbCIk35l2RdofLZLSL04Co87MgYKjNTAzl1Yv</string>
 <!--AdMobKey-->
     <string name="admob_app_id">ca-app-pub-3940256099942544~3347511713</string>
 <!--反馈Email-->

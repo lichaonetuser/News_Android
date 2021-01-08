@@ -6,12 +6,12 @@
     style="@style/Core.Widget.Layout.Parent.Layer"
     tools:context=".page.activity.MainActivity">
 
-    <com.box.common.extension.widget.bar.status.StatusBar
+    <com.mynews.common.extension.widget.bar.status.StatusBar
         android:id="@id/status_bar"
         style="@style/Core.Widget.StatusBar"
         android:background="@color/color_status_bar"/>
 
-    <com.box.common.extension.widget.bar.title.TitleBar
+    <com.mynews.common.extension.widget.bar.title.TitleBar
         android:id="@id/title_bar"
         style="@style/Core.Widget.TitleBar"
         app:title="@string/Push_Setting"/>
@@ -25,7 +25,7 @@
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/title_bar">
 
-        <com.box.common.extension.widget.bar.setting.SettingBar
+        <com.mynews.common.extension.widget.bar.setting.SettingBar
             android:id="@+id/push_use_sound_bar"
             android:layout_width="match_parent"
             android:layout_height="50dp"
@@ -44,12 +44,12 @@
                 android:layout_marginEnd="16dp"
                 android:layout_marginRight="16dp"/>
 
-        </com.box.common.extension.widget.bar.setting.SettingBar>
+        </com.mynews.common.extension.widget.bar.setting.SettingBar>
 
         <View
             style="@style/AppTheme.Core.Widget.Line.Horizontal"/>
 
-        <com.box.common.extension.widget.bar.setting.SettingBar
+        <com.mynews.common.extension.widget.bar.setting.SettingBar
             android:id="@+id/push_show_dialog_when_lock_bar"
             android:layout_width="match_parent"
             android:layout_height="50dp"
@@ -68,7 +68,7 @@
                 android:layout_marginEnd="16dp"
                 android:layout_marginRight="16dp"/>
 
-        </com.box.common.extension.widget.bar.setting.SettingBar>
+        </com.mynews.common.extension.widget.bar.setting.SettingBar>
 
         <View
             style="@style/AppTheme.Core.Widget.Line.Horizontal"/>

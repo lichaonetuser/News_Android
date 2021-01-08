@@ -22,7 +22,7 @@
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent">
 
-        <com.box.common.core.widget.CoreRecyclerView
+        <com.mynews.common.core.widget.CoreRecyclerView
             android:id="@+id/share_rv"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -39,7 +39,7 @@
             android:layout_width="match_parent"
             app:layout_constraintBottom_toTopOf="@+id/action_rv"/>
 
-        <com.box.common.core.widget.CoreRecyclerView
+        <com.mynews.common.core.widget.CoreRecyclerView
             android:id="@+id/action_rv"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -64,7 +64,7 @@
         android:layout_marginRight="13dp"
         android:background="@drawable/core_ios_dialog_sheet_bg_static">
 
-        <com.box.common.core.widget.CoreTextView
+        <com.mynews.common.core.widget.CoreTextView
             android:id="@+id/back_btn"
             android:layout_width="match_parent"
             android:layout_height="45dp"

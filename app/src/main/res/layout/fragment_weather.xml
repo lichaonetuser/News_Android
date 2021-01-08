@@ -16,13 +16,13 @@
         app:layout_constraintTop_toTopOf="parent"
         tools:background="@color/core_tools_design_container" />
 
-    <com.box.common.extension.widget.bar.status.StatusBar
+    <com.mynews.common.extension.widget.bar.status.StatusBar
         android:id="@id/status_bar"
         style="@style/Core.Widget.StatusBar"
         android:background="@color/color_status_bar"
         android:visibility="invisible" />
 
-    <com.box.common.core.widget.CoreImageView
+    <com.mynews.common.core.widget.CoreImageView
         android:id="@+id/back_btn"
         android:layout_width="wrap_content"
         android:layout_height="@dimen/title_bar_height"

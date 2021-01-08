@@ -4,7 +4,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent">
 
-    <com.box.common.core.image.fresco.photoview.loading.LoadingProgressBarView
+    <com.mynews.common.core.image.fresco.photoview.loading.LoadingProgressBarView
         android:id="@+id/progress_view"
         android:layout_width="60dp"
         android:layout_height="60dp"
@@ -19,7 +19,7 @@
         app:ppvStrokeColor="#96FFFFFF"
         app:ppvStrokeWidth="2dp"/>
 
-    <com.box.common.core.image.fresco.photoview.photodraweeview.LargePhotoView
+    <com.mynews.common.core.image.fresco.photoview.photodraweeview.LargePhotoView
         android:id="@+id/photo_view"
         android:layout_width="match_parent"
         android:layout_height="match_parent"/>

@@ -5,24 +5,24 @@
     xmlns:tools="http://schemas.android.com/tools"
     style="@style/Core.Widget.Layout.Parent.Layer">
 
-    <com.box.app.news.widget.WorldCupTeamHeaderView
+    <com.mynews.app.news.widget.WorldCupTeamHeaderView
         android:id="@+id/team_head_view"
         android:layout_width="match_parent"
         android:layout_height="186dp"
         app:layout_constraintTop_toTopOf="parent"/>
 
-    <com.box.common.extension.widget.bar.status.StatusBar
+    <com.mynews.common.extension.widget.bar.status.StatusBar
         android:id="@id/status_bar"
         style="@style/Core.Widget.StatusBar"
         android:background="@color/transparent"/>
 
-    <com.box.common.extension.widget.bar.title.TitleBar
+    <com.mynews.common.extension.widget.bar.title.TitleBar
         android:id="@id/title_bar"
         style="@style/Core.Widget.TitleBar"
         app:backTintColor="@color/color_9"
         app:showLine="false">
 
-        <com.box.common.core.widget.CoreImageView
+        <com.mynews.common.core.widget.CoreImageView
             android:id="@+id/share_btn"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -35,9 +35,9 @@
             app:useCommonPressedEffect="true"
             tools:ignore="RtlHardcoded"/>
 
-    </com.box.common.extension.widget.bar.title.TitleBar>
+    </com.mynews.common.extension.widget.bar.title.TitleBar>
 
-    <com.box.common.extension.widget.bar.indicator.IndicatorBar
+    <com.mynews.common.extension.widget.bar.indicator.IndicatorBar
         android:id="@+id/container_indicator"
         android:layout_width="0dp"
         android:layout_height="@dimen/worldcup_player_tab_height"
@@ -50,7 +50,7 @@
         style="@style/AppTheme.Core.Widget.Line.Horizontal"
         app:layout_constraintTop_toBottomOf="@+id/container_indicator"/>
 
-    <com.box.common.core.widget.CoreViewPager
+    <com.mynews.common.core.widget.CoreViewPager
         android:id="@+id/container_vp"
         android:layout_width="0dp"
         android:layout_height="0dp"

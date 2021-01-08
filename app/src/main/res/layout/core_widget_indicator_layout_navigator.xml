@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<com.box.common.core.widget.CoreHorizontalScrollView
+<com.mynews.common.core.widget.CoreHorizontalScrollView
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:id="@+id/scroll_view"
     android:layout_width="match_parent"
@@ -25,4 +25,4 @@
 
     </FrameLayout>
 
-</com.box.common.core.widget.CoreHorizontalScrollView>
+</com.mynews.common.core.widget.CoreHorizontalScrollView>

@@ -9,7 +9,7 @@
     android:orientation="horizontal"
     tools:context=".page.activity.MainActivity">
 
-    <com.box.common.core.widget.CoreTextView
+    <com.mynews.common.core.widget.CoreTextView
         android:id="@+id/clarity_txt"
         android:layout_width="0dp"
         android:layout_height="0dp"
@@ -29,7 +29,7 @@
         tools:ignore="SmallSp"
         tools:text="12345"/>
 
-    <com.box.common.core.widget.CoreImageView
+    <com.mynews.common.core.widget.CoreImageView
         android:id="@+id/choose_img"
         android:layout_width="wrap_content"
         android:layout_height="0dp"
