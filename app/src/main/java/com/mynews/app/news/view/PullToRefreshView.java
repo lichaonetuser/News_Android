@@ -1,6 +1,9 @@
 package com.mynews.app.news.view;
 
+import android.animation.IntArrayEvaluator;
 import android.content.Context;
+import android.content.res.TypedArray;
+import android.graphics.drawable.Drawable;
 import android.os.Handler;
 import android.os.Message;
 import android.util.AttributeSet;
@@ -32,6 +35,7 @@ import java.util.Date;
 public class PullToRefreshView extends LinearLayout {
 
     private static final String TAG = "PullToRefreshView";
+    private Context mContext;
     private static final int PULL_TO_REFRESH = 2;
     private static final int RELEASE_TO_REFRESH = 3;
     private static final int REFRESHING = 4;
@@ -67,14 +71,17 @@ public class PullToRefreshView extends LinearLayout {
     private OnItemLeft mOnItemLeft;
     private OnItemRight mOnItemRight;
     private OnItemClick mOnItemClick;
+    private int pullAnimRes[];
 
     public PullToRefreshView(Context context, AttributeSet attrs) {
         super(context, attrs);
+        mContext = context;
         init();
     }
 
     public PullToRefreshView(Context context) {
         super(context);
+        mContext = context;
         init();
     }
 
@@ -94,6 +101,19 @@ public class PullToRefreshView extends LinearLayout {
 
         // header view 在此添加,保证是第一个添加到linearlayout的最上端
         addHeaderView();
+        pullAnimRes = getAnimRes(R.array.frame_anim_news_refresh_pull);
+    }
+
+
+    private int[] getAnimRes(int arrayResId) {
+        TypedArray typedArray = mContext.getResources().obtainTypedArray(arrayResId);
+        int len = typedArray.length();
+        int resId[] = new int[len];
+        for (int i = 0; i < len; i++) {
+            resId[i] = typedArray.getResourceId(i, -1);
+        }
+        typedArray.recycle();
+        return resId;
     }
 
     private void addHeaderView() {
@@ -354,13 +374,28 @@ public class PullToRefreshView extends LinearLayout {
         if (Math.abs(newTopMargin) >= (mHeaderViewHeight + mFooterViewHeight) && mFooterState != RELEASE_TO_REFRESH) {
             Log.i(TAG, "松手可加载更多");
             mFooterTextView.setText("松手可加载更多");
-            mFooterImageView.clearAnimation();
-            mFooterImageView.startAnimation(mFlipAnimation);
+//            mFooterImageView.clearAnimation();
+//            mFooterImageView.startAnimation(mFlipAnimation);
+            mFooterImageView.post(new Runnable() {
+                @Override
+                public void run() {
+                    mFooterImageView.setBackgroundResource(pullAnimRes[0]);
+                }
+            });
             mFooterState = RELEASE_TO_REFRESH;
         } else if (Math.abs(newTopMargin) < (mHeaderViewHeight + mFooterViewHeight)) {
             Log.i(TAG, "上拉可加载更多");
-            mFooterImageView.clearAnimation();
-            mFooterImageView.startAnimation(mFlipAnimation);
+//            mFooterImageView.clearAnimation();
+//            mFooterImageView.startAnimation(mFlipAnimation);
+            mFooterImageView.post(new Runnable() {
+                @Override
+                public void run() {
+                    int index = Math.abs(deltaY);
+                    if (index < pullAnimRes.length){
+                        mFooterImageView.setBackgroundResource(pullAnimRes[index]);
+                    }
+                }
+            });
             mFooterTextView.setText("上拉可加载更多");
             mFooterState = PULL_TO_REFRESH;
         }

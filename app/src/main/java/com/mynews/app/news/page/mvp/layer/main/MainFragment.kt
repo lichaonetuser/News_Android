@@ -3,7 +3,6 @@ package com.mynews.app.news.page.mvp.layer.main
 import android.os.Bundle
 import androidx.annotation.DrawableRes
 import android.view.View
-import android.widget.RelativeLayout
 import com.mynews.app.news.R
 import com.mynews.app.news.page.mvp.layer.main.MainTabEnum.NEWS
 import com.mynews.app.news.page.mvp.layer.main.article.ArticleFragment
@@ -11,22 +10,19 @@ import com.mynews.app.news.page.mvp.layer.main.me.MeFragment
 import com.mynews.app.news.page.mvp.layer.main.video.VideoFragment
 import com.mynews.app.news.widget.navigation.MainBottomNavigationItemView
 import com.mynews.common.core.app.fragment.CoreBaseFragment
-import com.mynews.common.core.util.ResUtils
 import com.mynews.common.extension.app.mvp.base.MVPBaseFragment
 import kotlinx.android.synthetic.main.fragment_main.*
-import me.majiajie.pagerbottomtabstrip.NavigationController
 import me.majiajie.pagerbottomtabstrip.item.BaseTabItem
-import me.majiajie.pagerbottomtabstrip.listener.OnTabItemSelectedListener
 import me.yokeyword.fragmentation.SupportFragment
 
-class MainFragment : MVPBaseFragment<MainContract.View,
+class MainFragment constructor(mindex: Int) : MVPBaseFragment<MainContract.View,
         MainContract.Presenter<MainContract.View>>(),
         MainContract.View {
 
     override val mPresenter = MainPresenter()
     override val mLayoutRes = R.layout.fragment_main
     override var mDispatchBack = false
-
+    private var index :Int = mindex
     private val mFragments: Array<SupportFragment?> =
             arrayOfNulls(MainTabEnum.values().size)
 //    private val mBottomTabs: Array<BaseTabItem?> = arrayOfNulls(MainTabEnum.values().size)
@@ -46,7 +42,9 @@ class MainFragment : MVPBaseFragment<MainContract.View,
         val newsFragment = findChildFragment(ArticleFragment::class.java)
         if (newsFragment == null) {
             //首次加载各个页面
-            mFragments[MainTabEnum.NEWS.getPosition()] = CoreBaseFragment.instantiate(ArticleFragment::class.java)
+            var bundle = Bundle()
+            bundle.putInt("index",index)
+            mFragments[MainTabEnum.NEWS.getPosition()] = CoreBaseFragment.instantiate(ArticleFragment::class.java,bundle)
             mFragments[MainTabEnum.VIDEO.getPosition()] = CoreBaseFragment.instantiate(VideoFragment::class.java)
             mFragments[MainTabEnum.ME.getPosition()] = CoreBaseFragment.instantiate(MeFragment::class.java)
             //加载根布局

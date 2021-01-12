@@ -58,12 +58,15 @@ open class ArticleFragment<in V : ArticleContract.View,
                 ResUtils.getColor(R.color.color_28),
                 ResUtils.getColor(R.color.color_19))
     }
-
+    var index = 0;
     override fun initView(view: View?, savedInstanceState: Bundle?) {
         if (Build.VERSION.SDK_INT < Build.VERSION_CODES.M) {
             status_bar.setBackgroundColor(ResUtils.getColor(R.color.color_1))
         }
-
+        val bundle = arguments
+        if (bundle != null) {
+            index = bundle.getInt("index")
+        }
         initContainer()
 
         if (mArticleTab) {
@@ -180,6 +183,7 @@ open class ArticleFragment<in V : ArticleContract.View,
             mIndicatorNavigator.adapter.notifyDataSetChanged()
         }
         container_vp.adapter = getListPagerAdapter(channels)
+        container_vp.currentItem = index;
     }
 
     override fun getCurrentPagePosition(): Int {

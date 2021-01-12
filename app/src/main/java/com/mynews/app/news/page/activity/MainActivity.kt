@@ -62,6 +62,7 @@ class MainActivity : BaseAdActivity() {
     private var mAdShown: Boolean = false
     private var mOnStartCalled: Boolean = false
     private var mFirstSplashFlag: Boolean = false
+    private var index :Int = 0
 
     @AutoBundleField(required = false)
     var mShowInterstitialAdFlag = true // 针对首次启动的插屏广告标签
@@ -80,6 +81,8 @@ class MainActivity : BaseAdActivity() {
             }
         }
         super.onCreate(savedInstanceState)
+        var bundle = this.intent.extras
+        index = bundle.get("index") as Int
         preInit()
         // 如果有启动广告，展示启动广告，否则正常启动
         if (mShowInterstitialAdFlag && SplashActivity.isInterstitialAdAvailable()) {
@@ -133,7 +136,7 @@ class MainActivity : BaseAdActivity() {
         setDefaultFragmentBackground(R.color.transparent)
         // 加载根碎片
         if (findFragment(MainFragment::class.java) == null) {
-            loadRootFragment(R.id.container_layout, MainFragment(), false, false)
+            loadRootFragment(R.id.container_layout, MainFragment(index), false, false)
         }
 
         // 处理推送
