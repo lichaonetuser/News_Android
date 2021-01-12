@@ -9,7 +9,7 @@ import androidx.viewpager.widget.ViewPager;
 import com.mynews.app.news.R;
 
 /**
- * 项目名称：ViewPagerDemo
+ * 项目名称：New_Android
  * 类名：LoopTransformer
  * 创建人：Heaven.li
  * 创建时间：2020/12/26

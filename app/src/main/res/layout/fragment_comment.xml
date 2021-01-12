@@ -9,7 +9,7 @@
         android:layout_width="0dp"
         android:layout_height="5dp"
         android:layout_marginBottom="2.4dp"
-        android:background="@color/color_29"
+        android:background="@color/color_51"
         app:layout_constraintBottom_toBottomOf="@+id/comment_txt"
         app:layout_constraintLeft_toLeftOf="@+id/comment_txt"
         app:layout_constraintRight_toRightOf="@+id/comment_txt"/>

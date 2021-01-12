@@ -11,6 +11,8 @@ import android.view.View.INVISIBLE
 import android.view.View.VISIBLE
 import android.widget.ImageView
 import android.widget.TextView
+import com.kongzue.dialog.v2.TipDialog
+import com.kongzue.dialog.v2.WaitDialog
 import com.mynews.app.news.R
 import com.mynews.app.news.analytics.AnalyticsKey
 import com.mynews.app.news.bean.Channel
@@ -20,6 +22,7 @@ import com.mynews.app.news.data.DataManager
 import com.mynews.app.news.event.EventManager
 import com.mynews.app.news.event.change.HideOrShowNewChannelTipEvent
 import com.mynews.app.news.event.refresh.ChannelListChangeEvent
+import com.mynews.app.news.page.Adapter.MyGridAdapter
 import com.mynews.app.news.util.ReddotUtils
 import com.mynews.common.core.CoreApp
 import com.mynews.common.core.analytics.AnalyticsManager
@@ -28,8 +31,6 @@ import com.mynews.common.core.rx.schedulers.ioToMain
 import com.mynews.common.core.util.ResUtils
 import com.mynews.common.core.widget.CoreImageView
 import com.mynews.common.extension.app.mvp.loading.MVPLoadingFragment
-import com.kongzue.dialog.v2.TipDialog
-import com.kongzue.dialog.v2.WaitDialog
 import io.reactivex.Observable
 import io.reactivex.rxkotlin.subscribeBy
 import kotlinx.android.synthetic.main.activity_select_channel.*
@@ -43,27 +44,26 @@ import java.util.*
  */
 
 class ChannelEditFragment : MVPLoadingFragment<ChannelEditContract.View,
-        ChannelEditContract.Presenter<ChannelEditContract.View>>(), ChannelEditContract.View {
+        ChannelEditContract.Presenter<ChannelEditContract.View>>(), ChannelEditContract.View , MyGridAdapter.OnItemClick {
 
     override val mPresenter = ChannelEditPresenter()
     override val mLayoutRes: Int = R.layout.activity_select_channel
 
     companion object {
-        val SELECT_CHANNEL_ICON_DELETE = ResUtils.getDrawable(R.drawable.edit_delete)
-        val SELECT_CHANNEL_ICON_ADDED = ResUtils.getDrawable(R.drawable.edit_added)
-        val SELECT_CHANNEL_ICON_ADD = ResUtils.getDrawable(R.drawable.edit_add)
-
         val dp44 = CoreApp.getInstance().dip(44) //单个item的高度
         val dp150 = CoreApp.getInstance().dip(150)
     }
 
-    private var originChannels = arrayListOf<Channel>()
-    private var currentChannels = arrayListOf<Channel>()
-    private var allChannels = arrayListOf<Channel>()
+    private var originChannels = arrayListOf<Channel>()//现有频道
+    private var currentChannels = arrayListOf<Channel>()//现有频道，可以修改
+    private var allChannels = arrayListOf<Channel>()//未添加频道
+    private var temporaryChannels = arrayListOf<Channel>()//临时频道
 
     private var isUploading = false
 
     private var lastNewChannelIndex = -1
+    private lateinit var adapter1: MyGridAdapter
+    private lateinit var adapter2: MyGridAdapter
 
     override fun initView(view: View?, savedInstanceState: Bundle?) {
 
@@ -73,13 +73,6 @@ class ChannelEditFragment : MVPLoadingFragment<ChannelEditContract.View,
 
         title_bar.findViewById<CoreImageView>(R.id.back_btn).setOnClickListener {
             onBackPressedSupport()
-        }
-
-        selected_channels.setOnViewSwapListener { _, firstPosition, _, secondPosition ->
-            Collections.swap(currentChannels, firstPosition, secondPosition)
-
-            //目前该控件交换位置支持的不好暂时先不发这个友盟统计
-//            AnalyticsManager.logEvent(AnalyticsKey.Event.ARTICLE_CHANNEL_EDIT, AnalyticsKey.Parameter.SORT_MY_CHANNEL)
         }
 
         if (DataManager.Memory.getChannelList().articleChannels.isNotEmpty()
@@ -116,7 +109,7 @@ class ChannelEditFragment : MVPLoadingFragment<ChannelEditContract.View,
                     currentChannels.addAll(it.selectedChannels.articleChannels)
                     allChannels.addAll(it.recommendChannels.articleChannels)
                     addSelectedChannels(it.selectedChannels.articleChannels)
-                    addAllChannels(it.recommendChannels.articleChannels, true)
+                    addAllChannels(it.recommendChannels.articleChannels)
                     hideLoading()
 
                     scrollToLastNewChannel()
@@ -196,108 +189,120 @@ class ChannelEditFragment : MVPLoadingFragment<ChannelEditContract.View,
         return inflater.inflate(R.layout.item_selected_channel, null)
     }
 
-    private fun addSelectedChannel(channel: Channel) {
-        val view = getChannelView()
-        val iconView = view.find<ImageView>(R.id.select_channel_delete_icon)
-        iconView.image = SELECT_CHANNEL_ICON_DELETE
-        view.find<TextView>(R.id.selected_channel_tv).text = channel.name
-        selected_channels.addView(view)
-        selected_channels.setViewDraggable(view, view.find<ImageView>(R.id.drag_enabler))
+//    private fun addSelectedChannel(channel: Channel) {
+//        val view = getChannelView()
+//        val iconView = view.find<ImageView>(R.id.select_channel_delete_icon)
+//        iconView.image = SELECT_CHANNEL_ICON_DELETE
+//        view.find<TextView>(R.id.selected_channel_tv).text = channel.name
+//        selected_channels.addView(view)
+//        selected_channels.setViewDraggable(view, view.find<ImageView>(R.id.drag_enabler))
+//
+//        view.tag = channel.chid
+//        iconView.setOnClickListener {
+//            updateAllChannel(channel.chid)
+//        }
+//    }
 
-        view.tag = channel.chid
-        iconView.setOnClickListener {
-            updateAllChannel(channel.chid)
-        }
-    }
-
-    private fun deleteSelectedChannel(chid: String) {
-        val channel = currentChannels.filter { it.chid == chid }[0]
-        currentChannels.remove(channel)
-
-        repeat(selected_channels.childCount) {
-            val v = selected_channels.getChildAt(it)
-            if (chid == v.tag as String) {
-                selected_channels.removeDragView(v)
-                return
-            }
-        }
-    }
+//    private fun deleteSelectedChannel(chid: String) {
+//        val channel = currentChannels.filter { it.chid == chid }[0]
+//        currentChannels.remove(channel)
+//
+//        repeat(selected_channels.childCount) {
+//            val v = selected_channels.getChildAt(it)
+//            if (chid == v.tag as String) {
+//                selected_channels.removeDragView(v)
+//                return
+//            }
+//        }
+//    }
 
     private fun addSelectedChannels(selectedChannels: ArrayList<Channel>) {
-        selected_channels.removeAllViews()
-        selectedChannels.forEach {
-            addSelectedChannel(it)
-        }
+//        selected_channels.removeAllViews()
+        adapter1 = MyGridAdapter(_mActivity, 0)
+        drag_grid_view.adapter = adapter1
+        adapter1.listBean = selectedChannels
+        adapter1.setOnItemClick(this)
+//        selectedChannels.forEach {
+//            addSelectedChannel(it)
+//        }
     }
 
-    private fun addAllChannels(allChannels: ArrayList<Channel>, fromNet: Boolean = false) {
-        all_channels_container.removeAllViews()
-        var i = 0
-        allChannels.forEach { it ->
-            val view = getChannelView()
-            val chid = it.chid
-
-            val drawable = if (hasSelected(chid)) SELECT_CHANNEL_ICON_ADDED else SELECT_CHANNEL_ICON_ADD
-            view.find<ImageView>(R.id.select_channel_delete_icon).image = drawable
-            view.find<TextView>(R.id.selected_channel_tv).text = it.name
-            view.find<ImageView>(R.id.drag_enabler).visibility = INVISIBLE
-
-            view.tag = chid
-            view.setOnClickListener { updateAllChannel(chid) }
-            all_channels_container.addView(view)
-
-            if (!ReddotUtils.containRedDot(it.redDot.toString()) && fromNet) {
-                ReddotUtils.addRedDot(it.redDot.toString())
-                lastNewChannelIndex = i
-                view.find<ImageView>(R.id.new_channel_tip_icon).visibility = VISIBLE
-            }
-            i++
-        }
+    private fun addAllChannels(allChannels: ArrayList<Channel>) {
+//        selected_channels.removeAllViews()
+        adapter2 = MyGridAdapter(_mActivity, 0)
+        gv_channels_container.adapter = adapter2
+        adapter2.listBean = allChannels
+        adapter2.setOnItemClick(this)
     }
 
-    private fun updateAllChannel(chid: String) {
-        //全部频道的列表里是否含有当前的频道
-        var allChannelContains = false
+//    private fun addAllChannels(allChannels: ArrayList<Channel>, fromNet: Boolean = false) {
+//        all_channels_container.removeAllViews()
+//        var i = 0
+//        allChannels.forEach { it ->
+//            val view = getChannelView()
+//            val chid = it.chid
+//
+//            val drawable = if (hasSelected(chid)) SELECT_CHANNEL_ICON_ADDED else SELECT_CHANNEL_ICON_ADD
+//            view.find<ImageView>(R.id.select_channel_delete_icon).image = drawable
+//            view.find<TextView>(R.id.selected_channel_tv).text = it.name
+//            view.find<ImageView>(R.id.drag_enabler).visibility = INVISIBLE
+//
+//            view.tag = chid
+//            view.setOnClickListener { updateAllChannel(chid) }
+//            all_channels_container.addView(view)
+//
+//            if (!ReddotUtils.containRedDot(it.redDot.toString()) && fromNet) {
+//                ReddotUtils.addRedDot(it.redDot.toString())
+//                lastNewChannelIndex = i
+//                view.find<ImageView>(R.id.new_channel_tip_icon).visibility = VISIBLE
+//            }
+//            i++
+//        }
+//    }
 
-        //如果目标频道在全部频道里
-        repeat(all_channels_container.childCount) {
-            val v = all_channels_container.getChildAt(it)
-            val iv = v.find<ImageView>(R.id.select_channel_delete_icon)
-            if (chid == v.tag as String) {
-                allChannelContains = true
-                if (iv.image == SELECT_CHANNEL_ICON_ADDED) {
-                    iv.image = SELECT_CHANNEL_ICON_ADD
-                    deleteSelectedChannel(chid)
+//    private fun updateAllChannel(chid: String) {
+//        //全部频道的列表里是否含有当前的频道
+//        var allChannelContains = false
+//
+//        //如果目标频道在全部频道里
+//        repeat(all_channels_container.childCount) {
+//            val v = all_channels_container.getChildAt(it)
+//            val iv = v.find<ImageView>(R.id.select_channel_delete_icon)
+//            if (chid == v.tag as String) {
+//                allChannelContains = true
+//                if (iv.image == SELECT_CHANNEL_ICON_ADDED) {
+//                    iv.image = SELECT_CHANNEL_ICON_ADD
+//                    deleteSelectedChannel(chid)
+//
+//                    AnalyticsManager.logEvent(AnalyticsKey.Event.ARTICLE_CHANNEL_EDIT, AnalyticsKey.Parameter.DELETE_MY_CHANNEL)
+//
+//                } else {
+//                    iv.image = SELECT_CHANNEL_ICON_ADDED
+//                    val channel = allChannels.filter { it.chid == chid }[0]
+//                    currentChannels.add(channel)
+//                    addSelectedChannel(channel)
+//
+//                    AnalyticsManager.logEvent(AnalyticsKey.Event.ARTICLE_CHANNEL_EDIT, AnalyticsKey.Parameter.ADD_CANDIDATE_CHANNEL)
+//                }
+//                return
+//            }
+//        }
+//        //如果全部频道里面不含目前频道，则说明该频道已经下架或者因为其他原因已经不在全部频道里了，就应该从已经选择的频道里删除
+//        if (!allChannelContains) {
+//            deleteSelectedChannel(chid)
+//
+//            AnalyticsManager.logEvent(AnalyticsKey.Event.ARTICLE_CHANNEL_EDIT, AnalyticsKey.Parameter.DELETE_MY_CHANNEL)
+//        }
+//    }
 
-                    AnalyticsManager.logEvent(AnalyticsKey.Event.ARTICLE_CHANNEL_EDIT, AnalyticsKey.Parameter.DELETE_MY_CHANNEL)
-
-                } else {
-                    iv.image = SELECT_CHANNEL_ICON_ADDED
-                    val channel = allChannels.filter { it.chid == chid }[0]
-                    currentChannels.add(channel)
-                    addSelectedChannel(channel)
-
-                    AnalyticsManager.logEvent(AnalyticsKey.Event.ARTICLE_CHANNEL_EDIT, AnalyticsKey.Parameter.ADD_CANDIDATE_CHANNEL)
-                }
-                return
-            }
-        }
-        //如果全部频道里面不含目前频道，则说明该频道已经下架或者因为其他原因已经不在全部频道里了，就应该从已经选择的频道里删除
-        if (!allChannelContains) {
-            deleteSelectedChannel(chid)
-
-            AnalyticsManager.logEvent(AnalyticsKey.Event.ARTICLE_CHANNEL_EDIT, AnalyticsKey.Parameter.DELETE_MY_CHANNEL)
-        }
-    }
-
-    private fun hasSelected(chid: String): Boolean {
-        originChannels.forEach {
-            if (it.chid == chid) {
-                return true
-            }
-        }
-        return false
-    }
+//    private fun hasSelected(chid: String): Boolean {
+//        originChannels.forEach {
+//            if (it.chid == chid) {
+//                return true
+//            }
+//        }
+//        return false
+//    }
 
     private fun showLoading() {
         WaitDialog.show(CoreApp.getLastBaseActivityInstance(), ResUtils.getString(R.string.Tip_Loading))
@@ -350,5 +355,29 @@ class ChannelEditFragment : MVPLoadingFragment<ChannelEditContract.View,
         }
         animator.startDelay = 200//等待布局结束动画才开始
         animator.start()
+    }
+
+    override fun onItemClick(type: Int, position: Int) {
+//            updateAllChannel(channel.chid)
+        currentChannels.removeAll(currentChannels)
+        if (type == 0){
+            temporaryChannels.addAll(adapter1.listBean)
+            var mChannel : Channel = temporaryChannels.get(position)
+            originChannels.removeAt(position)
+            allChannels.add(mChannel)
+            temporaryChannels.removeAll(temporaryChannels)
+            adapter1.listBean = originChannels
+            adapter2.listBean = allChannels
+            currentChannels.addAll(originChannels)
+        }else{
+            temporaryChannels.addAll(adapter2.listBean)
+            var mChannel : Channel = temporaryChannels.get(position)
+            allChannels.removeAt(position)
+            originChannels.add(mChannel)
+            temporaryChannels.removeAll(temporaryChannels)
+            adapter1.listBean = originChannels
+            adapter2.listBean = allChannels
+            currentChannels.addAll(originChannels)
+        }
     }
 }

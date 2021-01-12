@@ -178,7 +178,7 @@ class SelectChannelActivity : CoreBaseActivity() {
     }
 
     private fun addAllChannels(allChannels: ArrayList<Channel>) {
-        all_channels_container.removeAllViews()
+//        all_channels_container.removeAllViews()
         allChannels.forEach {
             val view = getChannelView()
             val chid = it.chid
@@ -190,27 +190,27 @@ class SelectChannelActivity : CoreBaseActivity() {
 
             view.tag = chid
             view.setOnClickListener { updateAllChannel(chid) }
-            all_channels_container.addView(view)
+//            all_channels_container.addView(view)
         }
     }
 
     private fun updateAllChannel(chid: String) {
-        repeat(all_channels_container.childCount, {
-            val v = all_channels_container.getChildAt(it)
-            val iv = v.find<ImageView>(R.id.select_channel_delete_icon)
-            if (chid == v.tag as String) {
-                if (iv.image == SELECT_CHANEL_ICON_ADDED) {
-                    iv.image = SELECT_CHANEL_ICON_ADD
-                    deleteSelectedChannel(chid)
-                } else {
-                    iv.image = SELECT_CHANEL_ICON_ADDED
-                    val channel = allChannels.filter { it.chid == chid }[0]
-                    currentChannels.add(channel)
-                    addSelectedChannel(channel)
-                }
-                return
-            }
-        })
+//        repeat(all_channels_container.childCount, {
+//            val v = all_channels_container.getChildAt(it)
+//            val iv = v.find<ImageView>(R.id.select_channel_delete_icon)
+//            if (chid == v.tag as String) {
+//                if (iv.image == SELECT_CHANEL_ICON_ADDED) {
+//                    iv.image = SELECT_CHANEL_ICON_ADD
+//                    deleteSelectedChannel(chid)
+//                } else {
+//                    iv.image = SELECT_CHANEL_ICON_ADDED
+//                    val channel = allChannels.filter { it.chid == chid }[0]
+//                    currentChannels.add(channel)
+//                    addSelectedChannel(channel)
+//                }
+//                return
+//            }
+//        })
     }
 
     private fun hasSelected(chid: String): Boolean {

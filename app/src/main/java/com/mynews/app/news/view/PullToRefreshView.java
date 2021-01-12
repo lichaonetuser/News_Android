@@ -23,7 +23,7 @@ import com.mynews.app.news.R;
 import java.util.Date;
 
 /**
- * 项目名称：ViewPagerDemo
+ * 项目名称：New_Android
  * 类名：PullToRefreshView
  * 创建人：Heaven.li
  * 创建时间：2021/1/4

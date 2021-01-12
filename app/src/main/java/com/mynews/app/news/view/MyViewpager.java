@@ -10,7 +10,7 @@ import androidx.annotation.Nullable;
 import androidx.viewpager.widget.ViewPager;
 
 /**
- * 项目名称：ViewPagerDemo
+ * 项目名称：New_Android
  * 类名：MyViewpager
  * 创建人：Heaven.li
  * 创建时间：2021/1/4

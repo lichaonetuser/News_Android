@@ -197,6 +197,10 @@ open class ClassificationFragment<in V : ClassificationContract.View,
                     mClassDataBean.name = getString(R.string.video_ForYou)
                     mClassDataBean.viewid = R.mipmap.video_foryou
                 }
+                getString(R.string.game_ForYou)-> {
+                    mClassDataBean.name = getString(R.string.game_ForYou)
+                    mClassDataBean.viewid = R.mipmap.game_foryou
+                }
             }
             ListData.add(mClassDataBean)
         }

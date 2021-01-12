@@ -18,7 +18,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * 项目名称：ViewPagerDemo
+ * 项目名称：New_Android
  * 类名：CustomPagerAdapter
  * 创建人：Heaven.li
  * 创建时间：2020/12/26
@@ -59,12 +59,6 @@ public class HomePagerAdapter extends PagerAdapter {
         tv.setTag("tv"+position);
         iv_home_cardview.setBackgroundResource(mData.get(position).viewid);
         tv.setText(mData.get(position).name);
-//        view.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//                mContext.startActivity(new Intent(mContext, MainActivity.class));
-//            }
-//        });
         container.addView(view);
         return view;
     }
