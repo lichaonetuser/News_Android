@@ -116,8 +116,8 @@ class MainPresenter : MVPBasePresenter<MainContract.View>(),
     }
 
     @Subscribe(threadMode = ThreadMode.MAIN)
-    fun onOpenUpdateChannelDialogEvent(event: MainIcoBackEvent) {
-        event.name
+    fun onMainIcoBackEvent(event: MainIcoBackEvent) {
+        mView?.getTabIco(event.name)
     }
 }
 

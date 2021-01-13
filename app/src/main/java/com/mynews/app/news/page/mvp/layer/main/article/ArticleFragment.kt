@@ -61,14 +61,15 @@ open class ArticleFragment<in V : ArticleContract.View,
                 ResUtils.getColor(R.color.color_28),
                 ResUtils.getColor(R.color.color_19))
     }
-    var index = 0;
+    private lateinit var mChannel : List<Channel>
+    var Icon : String = ""
     override fun initView(view: View?, savedInstanceState: Bundle?) {
         if (Build.VERSION.SDK_INT < Build.VERSION_CODES.M) {
             status_bar.setBackgroundColor(ResUtils.getColor(R.color.color_1))
         }
         val bundle = arguments
-        if (bundle != null) {
-            index = bundle.getInt("index")
+        if (bundle != null && null != bundle.getString("Icon")) {
+            Icon = bundle.getString("Icon")
         }
         initContainer()
 
@@ -107,7 +108,7 @@ open class ArticleFragment<in V : ArticleContract.View,
                 if (mArticleTab) {
                     val titleView = mIndicatorNavigator.getTitleViewAt(position)
                     if (titleView != null && titleView is TextView) {
-                        EventManager.post(MainIcoBackEvent("redDot"))
+                        EventManager.post(MainIcoBackEvent(mChannel.get(position).name))
                         val redDot = titleView.tag as String
                         if (!ReddotUtils.containRedDot(redDot)) {
 //                            EventManager.post(FeedbackHasUnreadChangeEvent(true))
@@ -182,13 +183,26 @@ open class ArticleFragment<in V : ArticleContract.View,
     }
 
     override fun setChannels(channels: List<Channel>) {
+        mChannel = channels
         if (mIndicatorNavigator.adapter == null) {
             mIndicatorNavigator.adapter = NewsListNavigatorAdapter(channels)
         } else {
             mIndicatorNavigator.adapter.notifyDataSetChanged()
         }
         container_vp.adapter = getListPagerAdapter(channels)
-        container_vp.currentItem = index;
+        container_vp.currentItem = getBackgroundIco(Icon)
+    }
+
+
+    private fun getBackgroundIco(icon : String) : Int{
+        var indext : Int
+        for (index in mChannel.indices) {
+            var name :String = mChannel.get(index).name
+            if (icon == name){
+                return index
+            }
+        }
+        return 0
     }
 
     override fun getCurrentPagePosition(): Int {

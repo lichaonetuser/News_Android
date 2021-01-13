@@ -8,6 +8,7 @@ interface MainContract {
         fun changeTab(tab: IMainTab)
         fun setHasUnreadFeedback(hasUnread: Boolean)
         fun getCurrentTab(): IMainTab
+        fun getTabIco(ico : String)
     }
 
     interface Presenter<in V : View> : MVPBaseContract.Presenter<V> {

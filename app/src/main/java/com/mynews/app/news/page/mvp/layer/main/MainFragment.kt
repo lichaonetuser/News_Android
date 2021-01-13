@@ -1,11 +1,9 @@
 package com.mynews.app.news.page.mvp.layer.main
 
 import android.os.Bundle
-import androidx.annotation.DrawableRes
 import android.view.View
+import androidx.annotation.DrawableRes
 import com.mynews.app.news.R
-import com.mynews.app.news.event.OpenUpdateChannelDialogEvent
-import com.mynews.app.news.event.refresh.MainIcoBackEvent
 import com.mynews.app.news.page.mvp.layer.main.MainTabEnum.NEWS
 import com.mynews.app.news.page.mvp.layer.main.article.ArticleFragment
 import com.mynews.app.news.page.mvp.layer.main.me.MeFragment
@@ -16,17 +14,15 @@ import com.mynews.common.extension.app.mvp.base.MVPBaseFragment
 import kotlinx.android.synthetic.main.fragment_main.*
 import me.majiajie.pagerbottomtabstrip.item.BaseTabItem
 import me.yokeyword.fragmentation.SupportFragment
-import org.greenrobot.eventbus.Subscribe
-import org.greenrobot.eventbus.ThreadMode
 
-class MainFragment constructor(mindex: Int) : MVPBaseFragment<MainContract.View,
+class MainFragment constructor(Icon: String) : MVPBaseFragment<MainContract.View,
         MainContract.Presenter<MainContract.View>>(),
         MainContract.View {
 
     override val mPresenter = MainPresenter()
     override val mLayoutRes = R.layout.fragment_main
     override var mDispatchBack = false
-    private var index :Int = mindex
+    private var Icon :String = Icon
     private val mFragments: Array<SupportFragment?> =
             arrayOfNulls(MainTabEnum.values().size)
 //    private val mBottomTabs: Array<BaseTabItem?> = arrayOfNulls(MainTabEnum.values().size)
@@ -35,6 +31,7 @@ class MainFragment constructor(mindex: Int) : MVPBaseFragment<MainContract.View,
 //    private var mBottomNavigation: NavigationController? = null
 
     override fun initView(view: View?, savedInstanceState: Bundle?) {
+        iv_video1.setBackgroundResource(getBackgroundIco(Icon))
         initFragment()
         initBottomNavigationBar()
     }
@@ -47,7 +44,7 @@ class MainFragment constructor(mindex: Int) : MVPBaseFragment<MainContract.View,
         if (newsFragment == null) {
             //首次加载各个页面
             var bundle = Bundle()
-            bundle.putInt("index",index)
+            bundle.putString("Icon",Icon)
             mFragments[MainTabEnum.NEWS.getPosition()] = CoreBaseFragment.instantiate(ArticleFragment::class.java,bundle)
             mFragments[MainTabEnum.VIDEO.getPosition()] = CoreBaseFragment.instantiate(VideoFragment::class.java)
             mFragments[MainTabEnum.ME.getPosition()] = CoreBaseFragment.instantiate(MeFragment::class.java)
@@ -141,6 +138,78 @@ class MainFragment constructor(mindex: Int) : MVPBaseFragment<MainContract.View,
      */
     override fun changeTab(tab: IMainTab) {
 //        mBottomNavigation?.setSelect(tab.getPosition())
+    }
+
+    override fun getTabIco(name: String) {
+        iv_video1.setBackgroundResource(getBackgroundIco(name))
+    }
+
+    private fun getBackgroundIco(name : String) : Int{
+        var ico : Int
+        if (name == getString(R.string.channel_ForYou)) {
+            ico = R.mipmap.recommend_h
+        } else if (name == getString(R.string.girl_ForYou)) {
+            ico = R.mipmap.girl_h;
+        } else if (name == getString(R.string.music_ForYou)) {
+            ico = R.mipmap.music_h
+        } else if (name == getString(R.string.cartoon_ForYou)) {
+            ico = R.mipmap.cartoon_h
+        } else if (name == getString(R.string.entertainment_ForYou)) {
+            ico = R.mipmap.entertainment_h
+        } else if (name == getString(R.string.economics_ForYou)) {
+            ico = R.mipmap.economics_h
+        } else if (name == getString(R.string.car_ForYou)) {
+            ico = R.mipmap.car_h
+        } else if (name == getString(R.string.politics_ForYou)) {
+            ico = R.mipmap.politics_h
+        } else if (name == getString(R.string.sports_ForYou)) {
+            ico = R.mipmap.sports_h
+        } else if (name == getString(R.string.gif_ForYou)) {
+            ico = R.mipmap.gif_h
+        } else if (name == getString(R.string.illustration_ForYou)) {
+            ico = R.mipmap.illustration_h
+        } else if (name == getString(R.string.headlines_ForYou)) {
+            ico = R.mipmap.headlines_h
+        } else if (name == getString(R.string.restaurant_ForYou)) {
+            ico = R.mipmap.restaurant_h
+        } else if (name == getString(R.string.international_ForYou)) {
+            ico = R.mipmap.international_h
+        } else if (name == getString(R.string.domestic_ForYou)) {
+            ico = R.mipmap.domestic_h
+        } else if (name == getString(R.string.travel_ForYou)) {
+            ico = R.mipmap.travel_h
+        } else if (name == getString(R.string.summary_ForYou)) {
+            ico = R.mipmap.whole_h
+        } else if (name == getString(R.string.it_ForYou)) {
+            ico = R.mipmap.it_technology_h
+        } else if (name == getString(R.string.report_ForYou)) {
+            ico = R.mipmap.quick_report_h
+        } else if (name == getString(R.string.woman_ForYou)) {
+            ico = R.mipmap.female_h
+        } else if (name == getString(R.string.healing_ForYou)) {
+            ico = R.mipmap.be_cured_h
+        } else if (name == getString(R.string.beauty_ForYou)) {
+            ico = R.mipmap.beauty_h
+        } else if (name == getString(R.string.interesting_ForYou)) {
+            ico = R.mipmap.international_h
+        } else if (name == getString(R.string.beauty18_ForYou)) {
+            ico = R.mipmap.prohibit18_h
+        } else if (name == getString(R.string.story_ForYou)) {
+            ico = R.mipmap.funny_h
+        } else if (name == getString(R.string.healed_ForYou)) {
+            ico = R.mipmap.cure_h
+        } else if (name == getString(R.string.bytheway_ForYou)) {
+            ico = R.mipmap.comic_h
+        } else if (name == getString(R.string.life_ForYou)) {
+            ico = R.mipmap.life_h
+        } else if (name == getString(R.string.video_ForYou)) {
+            ico = R.mipmap.video_h
+        } else if (name == getString(R.string.game_ForYou)) {
+            ico = R.mipmap.game_h
+        }else{
+            ico = R.mipmap.recommend_h
+        }
+        return ico
     }
 
     /**

@@ -64,6 +64,10 @@ class HomeFragment : MVPBaseFragment<MainContract.View,
         return MainTabEnum.positionOf(0)
     }
 
+    override fun getTabIco(ico: String) {
+
+    }
+
     /**
      * 切换Tab，注意使用的枚举类
      */

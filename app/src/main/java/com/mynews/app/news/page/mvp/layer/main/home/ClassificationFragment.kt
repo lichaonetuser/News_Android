@@ -39,6 +39,7 @@ open class ClassificationFragment<in V : ClassificationContract.View,
     lateinit var mPagerAdapter: HomePagerAdapter
     var ListData : MutableList<ClassificationDataBean> = ArrayList<ClassificationDataBean>()
     var position :Int = 0
+    lateinit var Icon :String
     open val mArticleTab = true
 
     private var newChannelTipIndex = LinkedList<Int>()
@@ -241,7 +242,7 @@ open class ClassificationFragment<in V : ClassificationContract.View,
     override fun onFooterRefresh(view: PullToRefreshView?) {
         var intent = Intent(_mActivity,MainActivity::class.java)
         var bundle = Bundle()
-        bundle.putInt("index",position)
+        bundle.putString("Icon",Icon)
         intent.putExtras(bundle)
         _mActivity.startActivity(intent)
         pull_to_refresh.onFooterRefreshComplete()
@@ -266,7 +267,7 @@ open class ClassificationFragment<in V : ClassificationContract.View,
     override fun onItemItemClick() {
         var intent = Intent(_mActivity,MainActivity::class.java)
         var bundle = Bundle()
-        bundle.putInt("index",position)
+        bundle.putString("Icon",Icon)
         intent.putExtras(bundle)
         _mActivity.startActivity(intent)
     }
@@ -279,6 +280,7 @@ open class ClassificationFragment<in V : ClassificationContract.View,
 
     override fun onPageScrolled(index: Int, positionOffset: Float, positionOffsetPixels: Int) {
         position = index
+        Icon = ListData.get(index).name
     }
 
     override fun onPageSelected(position: Int) {
