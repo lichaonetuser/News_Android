@@ -70,7 +70,6 @@ public class PullToRefreshView extends LinearLayout {
     private OnHeaderRefreshListener mOnHeaderRefreshListener;
     private OnItemLeft mOnItemLeft;
     private OnItemRight mOnItemRight;
-    private OnItemClick mOnItemClick;
     private int pullAnimRes[];
 
     public PullToRefreshView(Context context, AttributeSet attrs) {
@@ -200,10 +199,33 @@ public class PullToRefreshView extends LinearLayout {
         child.measure(childWidthSpec, childHeightSpec);
     }
 
+//    @Override
+//    public boolean dispatchTouchEvent(MotionEvent ev) {
+//        switch(ev.getAction()) {
+//            case MotionEvent.ACTION_DOWN:
+//                getParent().requestDisallowInterceptTouchEvent(true);
+//                //todo 记录点击初始位置
+//                break;
+//            case MotionEvent.ACTION_MOVE:
+//                if (isTouch) {
+//                    getParent().requestDisallowInterceptTouchEvent(true);
+//                } else {
+//                    getParent().requestDisallowInterceptTouchEvent(false);
+//                }
+//                break;
+//            case MotionEvent.ACTION_UP:
+//                break;
+//        }
+//        return super.dispatchTouchEvent(ev);
+//    }
+
+    int deltaY = 0;
+    int deltaX = 0;
     @Override
     public boolean onInterceptTouchEvent(MotionEvent e) {
         int y = (int) e.getRawY();
         int x = (int) e.getRawX();
+        Log.d("ADB","<1>PullToRefreshView");
         switch (e.getAction()) {
             case MotionEvent.ACTION_DOWN:
                 // 首先拦截down事件,记录y坐标
@@ -212,29 +234,31 @@ public class PullToRefreshView extends LinearLayout {
                 break;
             case MotionEvent.ACTION_MOVE:
                 // deltaY > 0 是向下运动,< 0是向上运动
-                int deltaY = y - mLastMotionY;
-                if (isRefreshViewScroll(deltaY)) {
-                    Log.d("ADB","PullToRefreshView=onInterceptTouchEvent0");
+                deltaY = y - mLastMotionY;
+                deltaX = x-mLastMotionX;
+                Log.d("ADB","<2>PullToRefreshView");
+                if (deltaY < deltaX && isRefreshViewScroll(deltaY)) {
+                    Log.d("ADB","<3>PullToRefreshView = true");
+                    mLock = false;
                     return true;
                 }
-                if (x-mLastMotionX > 200){
+                if (deltaX > 200){
                     mLastMotionX = x;
                     mOnItemRight.onItemRight();
-                    Log.d("ADB","PullToRefreshView=onInterceptTouchEvent1"+"==="+mHeaderViewWidth);
-                }else if (x-mLastMotionX < -200){
+                    Log.d("ADB","<3>PullToRefreshView = 左 = "+mHeaderViewWidth);
+                }else if (deltaX < -200){
                     mLastMotionX = x;
                     mOnItemLeft.onItemLeft();
-                    Log.d("ADB","PullToRefreshView=onInterceptTouchEvent2"+"==="+mHeaderViewWidth);
+                    Log.d("ADB","<3>PullToRefreshView = 右 = "+mHeaderViewWidth);
                 }
-                Log.d("ADB","PullToRefreshView=onInterceptTouchEvent"+"==="+(x-mLastMotionX));
+                Log.d("ADB","<4>PullToRefreshView X= "+(deltaX));
+                Log.d("ADB","<4>PullToRefreshView Y= "+(deltaY));
                 break;
             case MotionEvent.ACTION_UP:
-                if (x-mLastMotionX > -10 && x-mLastMotionX < 10 && y - mLastMotionY > -10 && y - mLastMotionY < 10){
-                    mOnItemClick.onItemItemClick();
-                }
             case MotionEvent.ACTION_CANCEL:
                 break;
         }
+        mLock = true;
         return false;
     }
 
@@ -244,8 +268,9 @@ public class PullToRefreshView extends LinearLayout {
      */
     @Override
     public boolean onTouchEvent(MotionEvent event) {
+        Log.d("ADB","<1>onTouchEvent");
         if (mLock) {
-            Log.d("ADB","2");
+            Log.d("ADB","<2>onTouchEvent = true");
             return true;
         }
         int y = (int) event.getRawY();
@@ -256,21 +281,25 @@ public class PullToRefreshView extends LinearLayout {
                 break;
             case MotionEvent.ACTION_MOVE:
                 int deltaY = y - mLastMotionY;
-                Log.d("ADB","PullToRefreshView=onTouchEvent"+"==="+y);
+                Log.d("ADB","<2>onTouchEvent Y= "+ y);
+                Log.d("ADB","<2>onTouchEvent = mLastMotionY"+ mLastMotionY);
+                Log.d("ADB","<2>onTouchEvent = deltaY"+ deltaY);
                 if (mPullState == PULL_DOWN_STATE) {
                     // PullToRefreshView执行下拉
-                    Log.i(TAG, " pull down!parent view move!");
+                    Log.i("ADB", " pull down!parent view move!");
                     headerPrepareToRefresh(deltaY);
                     // setHeaderPadding(-mHeaderViewHeight);
                 } else if (mPullState == PULL_UP_STATE) {
                     // PullToRefreshView执行上拉
-                    Log.i(TAG, "pull up!parent view move!");
+                    Log.i("ADB", "pull up!parent view move!");
                     footerPrepareToRefresh(deltaY);
                 }
                 mLastMotionY = y;
+                Log.d("ADB","<2>onTouchEvent");
                 break;
             case MotionEvent.ACTION_UP:
             case MotionEvent.ACTION_CANCEL:
+                Log.d("ADB","<4>onTouchEvent");
                 int topMargin = getHeaderTopMargin();
                 if (mPullState == PULL_DOWN_STATE) {
                     if (topMargin >= 0) {
@@ -291,7 +320,7 @@ public class PullToRefreshView extends LinearLayout {
                 }
                 break;
         }
-        Log.d("ADB","3");
+        Log.d("ADB","<5>onTouchEvent");
         return super.onTouchEvent(event);
     }
 
@@ -303,11 +332,14 @@ public class PullToRefreshView extends LinearLayout {
      * @return
      */
     private boolean isRefreshViewScroll(int deltaY) {
+        Log.d("ADB","<5>onTouchEvent");
         if (mHeaderState == REFRESHING || mFooterState == REFRESHING) {
+            Log.d("ADB","<6>onTouchEvent");
             return false;
         }
         // 对于ScrollView
         if (mScrollView != null) {
+            Log.d("ADB","<7>onTouchEvent");
             if ((deltaY < 0)){
                 if (!enablePullLoadMoreDataStatus){
                     return false;
@@ -322,6 +354,7 @@ public class PullToRefreshView extends LinearLayout {
                     return false;
                 }
             }
+            Log.d("ADB","<8>onTouchEvent");
             // 子scroll view滑动到最顶端
             View child = mScrollView.getChildAt(0);
             if (deltaY > 0 && mScrollView.getScrollY() == 0) {
@@ -624,19 +657,11 @@ public class PullToRefreshView extends LinearLayout {
         mOnItemRight = onItemRight;
     }
 
-    public void setOnItemClick(OnItemClick onItemClick) {
-        mOnItemClick = onItemClick;
-    }
-
     public interface OnItemLeft {
         public void onItemLeft();
     }
 
     public interface OnItemRight {
         public void onItemRight();
-    }
-
-    public interface OnItemClick {
-        public void onItemItemClick();
     }
 }

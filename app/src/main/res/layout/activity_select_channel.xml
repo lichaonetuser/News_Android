@@ -22,6 +22,10 @@
         android:paddingBottom="44dp"
         app:layout_constraintTop_toBottomOf="@+id/title_bar">
 
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
@@ -56,13 +60,15 @@
                 app:layout_constraintRight_toRightOf="parent"
                 app:layout_constraintTop_toTopOf="@+id/has_added_channels_title"
                 tools:text="已添加频道已添加频道已添加频道已添加频道已添加频道已添加频道" />
-
+        </androidx.constraintlayout.widget.ConstraintLayout>
             <View
                 android:layout_width="match_parent"
                 android:layout_height="1px"
                 android:background="@color/color_6"
                 app:layout_constraintTop_toTopOf="@+id/recommend_top_text" />
-
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
             <ImageView
                 android:id="@+id/recommend_top_icon"
                 android:layout_width="wrap_content"
@@ -89,14 +95,14 @@
                 android:textSize="16sp"
                 android:textStyle="bold"
                 app:layout_constraintLeft_toRightOf="@+id/recommend_top_icon"
-                app:layout_constraintTop_toBottomOf="@+id/has_added_channels_description"
-                tools:text="推荐" />
+                tools:text="推荐"
+                tools:ignore="MissingConstraints" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
 
             <View
                 android:layout_width="match_parent"
                 android:layout_height="1px"
-                android:background="@color/color_6"
-                app:layout_constraintTop_toBottomOf="@+id/recommend_top_text" />
+                android:background="@color/color_6" />
 
             <com.mynews.app.news.view.MyDragGridView
                 android:id="@+id/drag_grid_view"
@@ -108,89 +114,94 @@
                 android:scrollbars="vertical"
                 android:stretchMode="columnWidth"
                 android:verticalSpacing="14dp"
-                app:layout_constraintTop_toBottomOf="@+id/recommend_top_text"
                 tools:ignore="MissingConstraints" />
             <com.jmedeisis.draglinearlayout.DragLinearLayout
                 android:id="@+id/selected_channels"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
-                app:layout_constraintTop_toBottomOf="@+id/recommend_top_text"
                 android:visibility="gone"/>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:background="@color/color_6" />
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:id="@+id/all_channels_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="23dp"
+                    android:text="@string/ChannelEdit_AllChannelSectionTitle"
+                    android:textColor="@color/color_1"
+                    android:textSize="12sp"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    tools:text="所有频道"
+                    tools:ignore="MissingConstraints" />
 
-            <TextView
-                android:id="@+id/all_channels_title"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="16dp"
-                android:layout_marginStart="16dp"
-                android:layout_marginTop="23dp"
-                android:text="@string/ChannelEdit_AllChannelSectionTitle"
-                android:textColor="@color/color_1"
-                android:textSize="12sp"
-                app:layout_constraintLeft_toLeftOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/drag_grid_view"
-                tools:text="所有频道" />
-
-            <TextView
-                android:id="@+id/all_channels_description"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="8dp"
-                android:layout_marginEnd="18dp"
-                android:layout_marginLeft="20dp"
-                android:layout_marginRight="18dp"
-                android:layout_marginStart="20dp"
-                android:lineSpacingExtra="3dp"
-                android:text="@string/ChannelEdit_AllChannelSectionDescription"
-                android:textColor="@color/color_4"
-                android:textSize="12sp"
-                app:layout_constraintLeft_toRightOf="@+id/all_channels_title"
-                app:layout_constraintRight_toRightOf="parent"
-                app:layout_constraintTop_toTopOf="@+id/all_channels_title"
-                tools:text="已添加频道已添加频道已添加频道已添加频道已添加频道已添加频道" />
-
+                <TextView
+                    android:id="@+id/all_channels_description"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="8dp"
+                    android:layout_marginEnd="18dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="18dp"
+                    android:layout_marginStart="20dp"
+                    android:lineSpacingExtra="3dp"
+                    android:text="@string/ChannelEdit_AllChannelSectionDescription"
+                    android:textColor="@color/color_4"
+                    android:textSize="12sp"
+                    app:layout_constraintLeft_toRightOf="@+id/all_channels_title"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/all_channels_title"
+                    tools:text="已添加频道已添加频道已添加频道已添加频道已添加频道已添加频道" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
             <View
                 android:layout_width="match_parent"
                 android:layout_height="1px"
                 android:background="@color/color_6"
                 app:layout_constraintTop_toTopOf="@+id/recommend_bottom_text" />
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <ImageView
+                    android:id="@+id/recommend_bottom_icon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginStart="16dp"
+                    android:background="@null"
+                    android:src="@drawable/edit_noadd"
+                    app:layout_constraintBottom_toBottomOf="@+id/recommend_bottom_text"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/recommend_bottom_text"
+                    tools:ignore="ContentDescription" />
 
-            <ImageView
-                android:id="@+id/recommend_bottom_icon"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="16dp"
-                android:layout_marginStart="16dp"
-                android:background="@null"
-                android:src="@drawable/edit_noadd"
-                app:layout_constraintBottom_toBottomOf="@+id/recommend_bottom_text"
-                app:layout_constraintLeft_toLeftOf="parent"
-                app:layout_constraintTop_toTopOf="@+id/recommend_bottom_text"
-                tools:ignore="ContentDescription" />
-
-            <TextView
-                android:id="@+id/recommend_bottom_text"
-                android:layout_width="wrap_content"
-                android:layout_height="44dp"
-                android:layout_marginLeft="13dp"
-                android:layout_marginStart="13dp"
-                android:layout_marginTop="8dp"
-                android:gravity="center_vertical"
-                android:text="@string/Channel_ForYou"
-                android:textColor="@color/color_4"
-                android:textSize="16sp"
-                android:textStyle="bold"
-                app:layout_constraintLeft_toRightOf="@+id/recommend_bottom_icon"
-                app:layout_constraintTop_toBottomOf="@+id/all_channels_description"
-                tools:text="推荐" />
-
+                <TextView
+                    android:id="@+id/recommend_bottom_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="44dp"
+                    android:layout_marginLeft="13dp"
+                    android:layout_marginStart="13dp"
+                    android:layout_marginTop="8dp"
+                    android:gravity="center_vertical"
+                    android:text="@string/Channel_ForYou"
+                    android:textColor="@color/color_4"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    app:layout_constraintLeft_toRightOf="@+id/recommend_bottom_icon"
+                    tools:text="推荐"
+                    tools:ignore="MissingConstraints" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
             <View
                 android:layout_width="match_parent"
                 android:layout_height="1px"
                 android:background="@color/color_6"
                 app:layout_constraintTop_toBottomOf="@+id/recommend_bottom_text" />
-
             <com.mynews.app.news.view.MyGridView
                 android:id="@+id/gv_channels_container"
                 android:layout_width="match_parent"
@@ -205,6 +216,6 @@
                 tools:ignore="MissingConstraints"
                 app:layout_constraintTop_toBottomOf="@+id/recommend_bottom_text"
                 />
-        </androidx.constraintlayout.widget.ConstraintLayout>
+        </LinearLayout>
     </ScrollView>
 </androidx.constraintlayout.widget.ConstraintLayout>

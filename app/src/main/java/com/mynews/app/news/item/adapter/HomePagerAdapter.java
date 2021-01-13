@@ -28,6 +28,7 @@ public class HomePagerAdapter extends PagerAdapter {
 
     private Context mContext;
     private List<ClassificationDataBean> mData;
+    private OnItemClick mOnItemClick;
 
     public HomePagerAdapter(Context context) {
         mContext = context;
@@ -60,6 +61,12 @@ public class HomePagerAdapter extends PagerAdapter {
         iv_home_cardview.setBackgroundResource(mData.get(position).viewid);
         tv.setText(mData.get(position).name);
         container.addView(view);
+        view.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                mOnItemClick.onItemItemClick();
+            }
+        });
         return view;
     }
 
@@ -71,5 +78,15 @@ public class HomePagerAdapter extends PagerAdapter {
     @Override
     public int getItemPosition(Object object) {
         return POSITION_NONE;
+    }
+
+
+    public void setOnItemClick(OnItemClick onItemClick) {
+        mOnItemClick = onItemClick;
+    }
+
+
+    public interface OnItemClick {
+        public void onItemItemClick();
     }
 }

@@ -28,7 +28,7 @@ open class ClassificationFragment<in V : ClassificationContract.View,
     : MVPBaseFragment<V, ClassificationContract.Presenter<V>>(),
     ClassificationContract.View , PullToRefreshView.OnFooterRefreshListener,
     PullToRefreshView.OnHeaderRefreshListener , PullToRefreshView.OnItemLeft , PullToRefreshView.OnItemRight,
-    PullToRefreshView.OnItemClick,
+    HomePagerAdapter.OnItemClick,
     ViewPager.OnPageChangeListener {
 
     @Suppress("UNCHECKED_CAST")
@@ -65,8 +65,8 @@ open class ClassificationFragment<in V : ClassificationContract.View,
         pull_to_refresh.setOnHeaderRefreshListener(this)
         pull_to_refresh.setOnItemLeft(this)
         pull_to_refresh.setOnItemRight(this)
-        pull_to_refresh.setOnItemClick(this)
         mPagerAdapter = HomePagerAdapter(_mActivity)
+        mPagerAdapter.setOnItemClick(this)
         vp_home_navigation.adapter = mPagerAdapter
         vp_home_navigation.offscreenPageLimit = 3//预加载3个页面
         vp_home_navigation.setPageTransformer(false, LoopTransformer())
@@ -284,4 +284,5 @@ open class ClassificationFragment<in V : ClassificationContract.View,
     override fun onPageSelected(position: Int) {
 
     }
+
 }
