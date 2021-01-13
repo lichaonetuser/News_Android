@@ -18,7 +18,7 @@ import com.mynews.app.news.util.ReddotUtils
 import com.mynews.common.core.log.Logger
 import com.mynews.common.core.rx.schedulers.io
 import com.mynews.common.core.util.ResUtils
-import com.crashlytics.android.Crashlytics
+//import com.crashlytics.android.Crashlytics
 import com.google.firebase.perf.metrics.AddTrace
 import io.reactivex.Completable
 import io.reactivex.Observable
@@ -341,7 +341,7 @@ open class InitTasks {
                         },
                         onError = {
                             Logger.e(it)
-                            Crashlytics.logException(it)
+//                            Crashlytics.logException(it)
                         }
                 )
     }

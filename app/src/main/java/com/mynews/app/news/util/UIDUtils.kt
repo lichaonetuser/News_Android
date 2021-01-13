@@ -3,7 +3,7 @@ package com.mynews.app.news.util
 import com.mynews.app.news.account.AccountManager
 import com.mynews.app.news.data.DataManager
 import com.mynews.common.core.net.http.HttpManager
-import com.crashlytics.android.Crashlytics
+//import com.crashlytics.android.Crashlytics
 
 object UIDUtils {
 
@@ -25,7 +25,7 @@ object UIDUtils {
                 HttpManager.removeCommonParams(HTTP_PARAMS_KEY_UID)
             }
         } catch (e: Exception) {
-            Crashlytics.logException(e)
+//            Crashlytics.logException(e)
         }
     }
 

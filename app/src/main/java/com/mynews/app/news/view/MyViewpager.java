@@ -40,7 +40,7 @@ public class MyViewpager extends ViewPager {
 
     @Override
     public boolean onTouchEvent(MotionEvent arg0) {
-        Log.d("ADB","<1>==========================================================");
+        Log.d("ADB","<2>==========================================================");
         if (noScroll)
             return false;
         else

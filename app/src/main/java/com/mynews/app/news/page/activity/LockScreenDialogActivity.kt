@@ -34,13 +34,13 @@ import com.mynews.common.core.rx.schedulers.obOnMain
 import com.mynews.common.core.util.ResUtils
 import com.mynews.common.core.util.extension.format2DateString
 import com.appsflyer.AppsFlyerLib
-import com.crashlytics.android.Crashlytics
+//import com.crashlytics.android.Crashlytics
 import com.facebook.drawee.backends.pipeline.Fresco
 import com.facebook.drawee.view.SimpleDraweeView
 import com.facebook.imagepipeline.postprocessors.IterativeBoxBlurPostProcessor
 import com.facebook.imagepipeline.request.ImageRequestBuilder
 import com.yatatsu.autobundle.AutoBundleField
-import io.fabric.sdk.android.Fabric
+//import io.fabric.sdk.android.Fabric
 import io.reactivex.*
 import io.reactivex.disposables.Disposable
 import io.reactivex.rxkotlin.subscribeBy
@@ -98,8 +98,8 @@ class LockScreenDialogActivity : CoreBaseActivity() {
                     AnalyticsManager.logEvent(AnalyticsKey.Event.LOCK_SCREEN, AnalyticsKey.Parameter.STATUS_OTHER)
                 }
             } catch (e: Exception) {
-                Fabric.with(context, Crashlytics())
-                Crashlytics.logException(e)
+//                Fabric.with(context, Crashlytics())
+//                Crashlytics.logException(e)
             }
         }
     }
@@ -136,8 +136,8 @@ class LockScreenDialogActivity : CoreBaseActivity() {
             resetUIAndData()
             AnalyticsManager.logEvent(AnalyticsKey.Event.LOCK_SCREEN, AnalyticsKey.Parameter.ENTER)
         } catch (e: Exception) {
-            Fabric.with(this, Crashlytics())
-            Crashlytics.logException(e)
+//            Fabric.with(this, Crashlytics())
+//            Crashlytics.logException(e)
             finish()
         }
     }
@@ -347,8 +347,8 @@ class LockScreenDialogActivity : CoreBaseActivity() {
             }
             mWakeLock?.acquire(timeout)
         } catch (e: Exception) {
-            Fabric.with(this, Crashlytics())
-            Crashlytics.logException(e)
+//            Fabric.with(this, Crashlytics())
+//            Crashlytics.logException(e)
         }
     }
 
@@ -373,13 +373,13 @@ class LockScreenDialogActivity : CoreBaseActivity() {
                                 mWakeLock?.release()
                             },
                             onError = {
-                                Fabric.with(this, Crashlytics())
-                                Crashlytics.logException(it)
+//                                Fabric.with(this, Crashlytics())
+//                                Crashlytics.logException(it)
                             }
                     )
         } catch (e: Exception) {
-            Fabric.with(this, Crashlytics())
-            Crashlytics.logException(e)
+//            Fabric.with(this, Crashlytics())
+//            Crashlytics.logException(e)
         }
     }
 
@@ -601,8 +601,8 @@ class LockScreenDialogActivity : CoreBaseActivity() {
                             updateTimeText(it)
                         },
                         onError = {
-                            Fabric.with(this, Crashlytics())
-                            Crashlytics.logException(it)
+//                            Fabric.with(this, Crashlytics())
+//                            Crashlytics.logException(it)
                         }
                 )
     }

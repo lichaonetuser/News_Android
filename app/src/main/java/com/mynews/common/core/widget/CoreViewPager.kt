@@ -8,7 +8,7 @@ import android.view.animation.AccelerateDecelerateInterpolator
 import android.view.animation.Interpolator
 import android.widget.Scroller
 import com.mynews.common.core.log.Logger
-import com.crashlytics.android.Crashlytics
+//import com.crashlytics.android.Crashlytics
 
 class CoreViewPager
 @JvmOverloads
@@ -21,7 +21,7 @@ constructor(context: Context, attrs: AttributeSet? = null)
         try {
             return super.dispatchTouchEvent(ev)
         } catch (e: Exception) {
-            Crashlytics.logException(e)
+//            Crashlytics.logException(e)
         }
         return false
     }
@@ -34,7 +34,7 @@ constructor(context: Context, attrs: AttributeSet? = null)
                 false
             }
         } catch (e: Exception) {
-            Crashlytics.logException(e)
+//            Crashlytics.logException(e)
         }
         return false
     }
@@ -47,7 +47,7 @@ constructor(context: Context, attrs: AttributeSet? = null)
                 true// 可行,消费,拦截事件
             }
         } catch (e: Exception) {
-            Crashlytics.logException(e)
+//            Crashlytics.logException(e)
         }
         return true
     }

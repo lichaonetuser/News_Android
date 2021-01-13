@@ -22,7 +22,7 @@ import com.mynews.app.news.proto.AppLog
 import com.mynews.common.core.analytics.AnalyticsManager
 import com.mynews.common.core.rx.schedulers.ioToMain
 import com.mynews.common.extension.app.mvp.base.MVPBasePresenter
-import com.crashlytics.android.Crashlytics
+//import com.crashlytics.android.Crashlytics
 import com.shuyu.gsyvideoplayer.GSYVideoManager
 import com.yatatsu.autobundle.AutoBundleField
 import io.reactivex.rxkotlin.subscribeBy
@@ -239,7 +239,7 @@ open class ArticlePresenter<V : ArticleContract.View> : MVPBasePresenter<V>(),
         val articleEmpty = mListChannel.articleChannels.isEmpty()
         val videoEmpty = mListChannel.videoChannels.isEmpty()
         if (articleEmpty || videoEmpty) {
-            Crashlytics.logException(Exception("ArticlePresenter onCreate() MemorySource getChannelList() EmptyList.->articleEmpty : $articleEmpty ->videoEmpty : $videoEmpty"))
+//            Crashlytics.logException(Exception("ArticlePresenter onCreate() MemorySource getChannelList() EmptyList.->articleEmpty : $articleEmpty ->videoEmpty : $videoEmpty"))
             DataManager.Init.start(InitTaskKey.INIT_NEWS_CHANNEL_LIST_LOCAL) //从本地重新初始化任务放入Memory
             mListChannel = DataManager.Memory.getChannelList() //从Memory重新获取
         }

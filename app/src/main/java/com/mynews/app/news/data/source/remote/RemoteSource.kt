@@ -22,7 +22,7 @@ import com.mynews.common.core.net.http.extension.extractData
 import com.mynews.common.core.net.http.factory.ProtoGsonConverterFactory
 import com.mynews.common.extension.prompt.Prompt
 import com.appsflyer.AppsFlyerLib
-import com.crashlytics.android.Crashlytics
+//import com.crashlytics.android.Crashlytics
 import io.reactivex.Observable
 import okhttp3.MediaType
 import okhttp3.MultipartBody
@@ -227,7 +227,7 @@ open class RemoteSource {
         val afId = try {
             AppsFlyerLib.getInstance().getAppsFlyerUID(CoreApp.getInstance()) ?: "unknown"
         } catch (e: Exception) {
-            Crashlytics.logException(e)
+//            Crashlytics.logException(e)
             "unknown"
         }
         return mAppConfigAPI.config(afId).extractData()

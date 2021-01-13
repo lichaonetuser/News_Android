@@ -5,7 +5,7 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import android.util.AttributeSet
 import android.view.MotionEvent
-import com.crashlytics.android.Crashlytics
+//import com.crashlytics.android.Crashlytics
 
 open class CoreRecyclerView
 @JvmOverloads
@@ -41,7 +41,7 @@ constructor(context: Context,
                             smoothScrollBy(0, top)
                         }
                     } catch (e: Exception) {
-                        Crashlytics.logException(e)
+//                        Crashlytics.logException(e)
                     }
                 }
             }
@@ -76,7 +76,7 @@ constructor(context: Context,
                 }
             }
         } catch (e: Exception) {
-            Crashlytics.logException(e)
+//            Crashlytics.logException(e)
         }
     }
 

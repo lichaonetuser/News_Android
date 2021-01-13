@@ -7,8 +7,8 @@ import androidx.annotation.CallSuper
 import androidx.multidex.MultiDexApplication
 import com.mynews.common.core.app.activity.CoreBaseActivity
 import com.mynews.common.core.util.ProcessUtils
-import com.crashlytics.android.Crashlytics
-import io.fabric.sdk.android.Fabric
+//import com.crashlytics.android.Crashlytics
+//import io.fabric.sdk.android.Fabric
 import java.util.*
 
 abstract class CoreApp : MultiDexApplication() {
@@ -124,8 +124,8 @@ abstract class CoreApp : MultiDexApplication() {
     @CallSuper
     open fun init() {
         if (inited) {
-            Fabric.with(this, Crashlytics())
-            Crashlytics.logException(Exception("App init more than once!"))
+//            Fabric.with(this, Crashlytics())
+//            Crashlytics.logException(Exception("App init more than once!"))
         }
         inited = true
         CoreApp.singleInstance = this

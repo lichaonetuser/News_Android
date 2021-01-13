@@ -32,10 +32,10 @@ import com.mynews.common.core.image.fresco.config.ImageLoaderConfig
 import com.mynews.common.core.image.fresco.listener.IResult
 import com.mynews.common.core.json.gson.util.CoreGsonUtils
 import com.mynews.common.core.log.Logger
-import com.crashlytics.android.Crashlytics
+//import com.crashlytics.android.Crashlytics
 import com.google.firebase.messaging.FirebaseMessagingService
 import com.google.firebase.messaging.RemoteMessage
-import io.fabric.sdk.android.Fabric
+//import io.fabric.sdk.android.Fabric
 import io.reactivex.rxkotlin.subscribeBy
 import io.reactivex.schedulers.Schedulers
 
@@ -50,8 +50,8 @@ class FCMMessagingService : FirebaseMessagingService() {
             DataManager.submitPushToken(token)
         } catch (e: Exception) {
             Logger.e("onNewToken error: $e")
-            Fabric.with(this, Crashlytics())
-            Crashlytics.logException(e)
+//            Fabric.with(this, Crashlytics())
+//            Crashlytics.logException(e)
         }
     }
 
@@ -60,8 +60,8 @@ class FCMMessagingService : FirebaseMessagingService() {
             sendNotification(remoteMessage ?: return)
             Logger.d("onMessageReceived")
         } catch (e: Exception) {
-            Fabric.with(this, Crashlytics())
-            Crashlytics.logException(e)
+//            Fabric.with(this, Crashlytics())
+//            Crashlytics.logException(e)
         }
     }
 
@@ -126,8 +126,8 @@ class FCMMessagingService : FirebaseMessagingService() {
             notifyLockScreenStyle(id, pushMessage, openUrl)
 
         } catch (e: Exception) {
-            Fabric.with(this, Crashlytics())
-            Crashlytics.logException(e)
+//            Fabric.with(this, Crashlytics())
+//            Crashlytics.logException(e)
         }
     }
 

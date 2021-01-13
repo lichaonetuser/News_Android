@@ -3,7 +3,7 @@ package com.mynews.app.news.util
 import com.mynews.app.news.analytics.AnalyticsKey
 import com.mynews.common.core.CoreApp
 import com.mynews.common.core.analytics.AnalyticsManager
-import com.crashlytics.android.Crashlytics
+//import com.crashlytics.android.Crashlytics
 import com.google.android.gms.common.ConnectionResult
 import com.google.android.gms.common.GoogleApiAvailability
 
@@ -58,7 +58,7 @@ object GoogleServiceUtils {
             }
             AnalyticsManager.logEvent(AnalyticsKey.Event.GOOGLE_SERVICE_AVAILABLE, parameter)
         } catch (e: Exception) {
-            Crashlytics.logException(e)
+//            Crashlytics.logException(e)
         }
     }
 

@@ -7,7 +7,7 @@ import android.view.Display
 import com.mynews.common.core.CoreApp
 
 import android.os.Build
-import com.crashlytics.android.Crashlytics
+//import com.crashlytics.android.Crashlytics
 import org.jetbrains.anko.powerManager
 
 object ScreenUtils {
@@ -27,7 +27,7 @@ object ScreenUtils {
                 return CoreApp.getInstance().powerManager.isScreenOn
             }
         } catch (e: Exception) {
-            Crashlytics.logException(e)
+//            Crashlytics.logException(e)
             return true
         }
     }

@@ -4,7 +4,7 @@ plugins {
     id 'kotlin-android-extensions'
     id 'kotlin-kapt'
     id 'com.google.protobuf'
-    id 'io.fabric'
+//    id 'io.fabric'
 }
 
 def getGitHash = { ->
@@ -66,7 +66,7 @@ android {
         debug {
             signingConfig signingConfigs.release
             multiDexEnabled true
-            ext.enableCrashlytics = false
+//            ext.enableCrashlytics = false
         }
         beta {
             debuggable = false
@@ -78,9 +78,7 @@ android {
         release {
             signingConfig signingConfigs.release
             multiDexEnabled true
-            shrinkResources true
-            minifyEnabled true
-            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+//            ext.enableCrashlytics = false
         }
     }
 
@@ -306,7 +304,7 @@ dependencies {
 //    implementation("com.crashlytics.sdk.android:crashlytics:$versions.crashlytics") {
 //        transitive = true
 //    }
-    implementation "com.crashlytics.sdk.android:crashlytics:$versions.crashlytics"
+//    implementation "com.crashlytics.sdk.android:crashlytics:$versions.crashlytics"
     implementation "com.appsflyer:af-android-sdk:$versions.appsflyer"
     implementation "com.android.installreferrer:installreferrer:$versions.install_referrer"
     implementation "com.umeng.umsdk:common:$versions.umeng_common"

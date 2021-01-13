@@ -89,7 +89,7 @@ import com.mynews.common.core.util.GooglePlayUtils
 import com.mynews.common.core.util.ResUtils
 import com.mynews.common.extension.share.ContentLink
 import com.mynews.common.extension.share.ShareManager
-import com.crashlytics.android.Crashlytics
+//import com.crashlytics.android.Crashlytics
 import me.yokeyword.fragmentation.SupportFragment
 
 object OpenUrlManager {
@@ -101,7 +101,7 @@ object OpenUrlManager {
             } ?: return
             checkOpenUrl(mainActivity, openUrl)
         } catch (e: Exception) {
-            Crashlytics.logException(e)
+//            Crashlytics.logException(e)
         }
     }
 
@@ -368,7 +368,7 @@ object OpenUrlManager {
                 }
             }
         } catch (e: Exception) {
-            Crashlytics.logException(e)
+//            Crashlytics.logException(e)
         }
     }
 

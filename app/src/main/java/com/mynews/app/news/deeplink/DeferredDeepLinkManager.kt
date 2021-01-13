@@ -15,7 +15,7 @@ import com.mynews.common.core.log.Logger
 import com.mynews.common.core.rx.schedulers.ioToMain
 import com.appsflyer.AppsFlyerConversionListener
 import com.appsflyer.AppsFlyerLib
-import com.crashlytics.android.Crashlytics
+//import com.crashlytics.android.Crashlytics
 import com.facebook.applinks.AppLinkData
 import io.reactivex.Single
 import io.reactivex.rxkotlin.subscribeBy
@@ -80,7 +80,7 @@ object DeferredDeepLinkManager {
                             jsonMap = jsonMap,
                             sourceID = sourceID)
                 } catch (e: Exception) {
-                    Crashlytics.logException(e)
+//                    Crashlytics.logException(e)
                 }
             }
 
@@ -177,7 +177,7 @@ object DeferredDeepLinkManager {
             }
         } catch (e: Exception) {
             Logger.e(e)
-            Crashlytics.logException(e)
+//            Crashlytics.logException(e)
         }
     }
 
@@ -207,7 +207,7 @@ object DeferredDeepLinkManager {
                     .show()
         } catch (e: Exception) {
             Logger.e(e)
-            Crashlytics.logException(e)
+//            Crashlytics.logException(e)
         }
     }
 

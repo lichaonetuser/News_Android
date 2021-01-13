@@ -23,12 +23,12 @@ import com.mynews.common.core.log.Logger
 import com.mynews.common.core.rx.schedulers.ioToMain
 import com.mynews.common.core.rx.schedulers.obOnIo
 import com.mynews.common.core.rx.schedulers.obOnMain
-import com.crashlytics.android.Crashlytics
+//import com.crashlytics.android.Crashlytics
 import com.pixplicity.easyprefs.library.Prefs
 import com.shuyu.gsyvideoplayer.GSYVideoManager
 import com.yatatsu.autobundle.AutoBundle
 import com.yatatsu.autobundle.AutoBundleField
-import io.fabric.sdk.android.Fabric
+//import io.fabric.sdk.android.Fabric
 import io.reactivex.disposables.Disposable
 import io.reactivex.rxkotlin.subscribeBy
 
@@ -52,15 +52,15 @@ class SplashActivity : BaseAdActivity() {
             when {
                 application is App -> {
                     (application as App).init()
-                    Crashlytics.logException(Exception("CoreApp is NOT AVAILABILITY.But reset application init success."))
+//                    Crashlytics.logException(Exception("CoreApp is NOT AVAILABILITY.But reset application init success."))
                 }
                 applicationContext is App -> {
                     (applicationContext as App).init()
-                    Crashlytics.logException(Exception("CoreApp is NOT AVAILABILITY.But reset applicationContext init success."))
+//                    Crashlytics.logException(Exception("CoreApp is NOT AVAILABILITY.But reset applicationContext init success."))
                 }
                 else -> {
-                    Fabric.with(this, Crashlytics())
-                    Crashlytics.logException(Exception("CoreApp is NOT AVAILABILITY.Can not launch App."))
+//                    Fabric.with(this, Crashlytics())
+//                    Crashlytics.logException(Exception("CoreApp is NOT AVAILABILITY.Can not launch App."))
                     finish()
                     android.os.Process.killProcess(android.os.Process.myPid())
                     return
@@ -257,7 +257,7 @@ class SplashActivity : BaseAdActivity() {
     }
 
     private fun startNextPage(finish: Boolean = true) {
-        Crashlytics.setString("UniqueDeviceId", UDIDUtils.getUniqueDeviceId())
+//        Crashlytics.setString("UniqueDeviceId", UDIDUtils.getUniqueDeviceId())
         AppsFlyerAnalytics.setCustomerUserId(UDIDUtils.getUniqueDeviceId())
         val notFirstRun = Prefs.getBoolean(LocalKeys.NOT_FIRST_RUN, false)
         if (!notFirstRun) {

@@ -61,7 +61,7 @@ public class HomePagerAdapter extends PagerAdapter {
         iv_home_cardview.setBackgroundResource(mData.get(position).viewid);
         tv.setText(mData.get(position).name);
         container.addView(view);
-        view.setOnClickListener(new View.OnClickListener() {
+        cv_home_cardview.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 mOnItemClick.onItemItemClick();

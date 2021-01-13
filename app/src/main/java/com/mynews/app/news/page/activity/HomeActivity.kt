@@ -9,7 +9,7 @@ import android.os.Bundle
 import android.view.WindowManager
 import androidx.constraintlayout.widget.ConstraintLayout
 import com.appsflyer.AppsFlyerLib
-import com.crashlytics.android.Crashlytics
+//import com.crashlytics.android.Crashlytics
 import com.google.firebase.iid.FirebaseInstanceId
 import com.mynews.app.news.App
 import com.mynews.app.news.R
@@ -351,7 +351,7 @@ class HomeActivity : BaseAdActivity(){
             }
             lockActivity?.finish()
         } catch (e: Exception) {
-            Crashlytics.logException(e)
+//            Crashlytics.logException(e)
         }
     }
 
@@ -409,7 +409,7 @@ class HomeActivity : BaseAdActivity(){
                 },
                 onError = {
                     Logger.e(it)
-                    Crashlytics.logException(it)
+//                    Crashlytics.logException(it)
                 }
             )
             lastFetchConfigTime = now
@@ -503,7 +503,7 @@ class HomeActivity : BaseAdActivity(){
             }
         } catch (e: Exception) {
             Logger.e(e)
-            Crashlytics.logException(e)
+//            Crashlytics.logException(e)
         }
 
     }
@@ -769,7 +769,7 @@ class HomeActivity : BaseAdActivity(){
         val size = SaveInstanceStateHelper.save(this, bundle)
         if (size > 2048) {
             SaveInstanceStateHelper.clear(this)
-            Crashlytics.logException(Exception("onSaveInstanceState too large.size : $size"))
+//            Crashlytics.logException(Exception("onSaveInstanceState too large.size : $size"))
         }
         outState.clear()
     }

@@ -12,7 +12,7 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import android.util.Base64;
 
-import com.crashlytics.android.Crashlytics;
+//import com.crashlytics.android.Crashlytics;
 
 import java.util.HashMap;
 import java.util.HashSet;
@@ -184,7 +184,7 @@ class BridgeDelegate {
             mSavedStateHandler.restoreInstanceState(target, bundle);
             clearDataForUuid(uuid);
         } catch (Throwable e) {
-            Crashlytics.logException(e);
+//            Crashlytics.logException(e);
         }
     }
 
@@ -208,7 +208,7 @@ class BridgeDelegate {
             writeToDisk(uuid, bundle);
             clearStaleData();
         } catch (Throwable e) {
-            Crashlytics.logException(e);
+//            Crashlytics.logException(e);
         }
     }
 

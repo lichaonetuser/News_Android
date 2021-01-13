@@ -16,7 +16,7 @@ buildscript {
 
         versions = [
 
-                classpath_fabric             : '1.26.1',
+//                classpath_fabric             : '1.26.1',
                 //Dependencies Classpath
                 classpath_gradle             : '3.1.3',
                 classpath_kotlin             : '1.3.72',
@@ -58,7 +58,7 @@ buildscript {
                 toolargetool                 : '0.1.3@aar',
 
                 //Analytics
-                crashlytics                  : '2.9.8',
+//                crashlytics                  : '2.9.8',
                 appsflyer                    : '4.8.8@aar',
                 umeng                        : '8.0.0',
                 umeng_common                 : '2.0.0',
@@ -134,7 +134,7 @@ buildscript {
                 exoplayer: 'https://google.bintray.com/exoplayer/',
                 fyber    : 'https://fyber.bintray.com/maven/',
                 unityads : 'https://dl.bintray.com/unityads/UnityAds/',
-                fabric   : 'https://maven.fabric.io/public'
+//                fabric   : 'https://maven.fabric.io/public'
         ]
     }
 
@@ -146,7 +146,7 @@ buildscript {
         maven { url repos.jitpack }
         maven { url repos.umeng }
         maven { url repos.fyber }
-        maven { url repos.fabric }
+//        maven { url repos.fabric }
     }
 
     dependencies {
@@ -155,7 +155,7 @@ buildscript {
         classpath "com.google.gms:google-services:$versions.classpath_google_services"
         classpath "com.google.firebase:firebase-plugins:$versions.classpath_firebase_plugins"
         classpath "com.google.protobuf:protobuf-gradle-plugin:$versions.classpath_protobuf"
-        classpath "io.fabric.tools:gradle:$versions.classpath_fabric"
+//        classpath "io.fabric.tools:gradle:$versions.classpath_fabric"
 //        classpath "com.tencent.mm:AndResGuard-gradle-plugin:$versions.classpath_and_res_guard"
     }
 }

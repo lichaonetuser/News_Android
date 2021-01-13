@@ -13,7 +13,7 @@ import com.mynews.common.core.util.ResUtils
 import com.mynews.common.extension.share.ContentLink
 import com.mynews.common.extension.share.IShareListener
 import com.mynews.common.extension.share.SharePlatform
-import com.crashlytics.android.Crashlytics
+//import com.crashlytics.android.Crashlytics
 
 object ShareUtils {
     const val PLATFORM_COPY = "copylink"
@@ -207,7 +207,7 @@ object ShareUtils {
 
                 when (sharePlatform) {
                     SharePlatform.LINE -> {
-                        Crashlytics.logException(e)
+//                        Crashlytics.logException(e)
                         ToastUtils.showToast(ResUtils.getString(R.string.Common_ShareToLineFailedNotice))
                     }
                     SharePlatform.SMS, SharePlatform.MAIL -> {

@@ -13,7 +13,7 @@ import com.mynews.app.news.data.DataDictionary
 import com.mynews.app.news.data.DataManager
 import com.mynews.app.news.item.base.TitleInterface
 import com.mynews.common.core.CoreApp
-import com.crashlytics.android.Crashlytics
+//import com.crashlytics.android.Crashlytics
 import org.jetbrains.anko.dip
 import java.lang.Exception
 import java.util.*
@@ -503,7 +503,7 @@ constructor(context: Context, attrs: AttributeSet? = null,
                 canvas.drawText(ESLI, leftList[lastVisibleIndex].toFloat() + 2, baselineList[lastVisibleIndex].toFloat(), paint)
             }
         } catch (e: Exception) {
-            Crashlytics.logException(e)
+//            Crashlytics.logException(e)
         }
     }
 }

@@ -13,7 +13,7 @@ import com.mynews.app.news.event.EventManager
 import com.mynews.app.news.event.change.*
 import com.mynews.app.news.util.PKUtils
 import com.mynews.common.core.rx.schedulers.io
-import com.crashlytics.android.Crashlytics
+//import com.crashlytics.android.Crashlytics
 import com.google.firebase.perf.metrics.AddTrace
 import io.reactivex.Single
 import io.reactivex.rxkotlin.subscribeBy
@@ -237,7 +237,7 @@ object DataManager {
                                 Local.savePushTokenSubmit(false)
                             })
         } catch (e: Exception) {
-            Crashlytics.logException(e)
+//            Crashlytics.logException(e)
         }
     }
 

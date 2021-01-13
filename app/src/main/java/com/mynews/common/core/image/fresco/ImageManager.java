@@ -8,7 +8,7 @@ import android.util.Log;
 import android.view.ViewGroup;
 import android.widget.Toast;
 
-import com.crashlytics.android.Crashlytics;
+//import com.crashlytics.android.Crashlytics;
 import com.davemorrissey.labs.subscaleview.ImageSource;
 import com.davemorrissey.labs.subscaleview.SubsamplingScaleImageView;
 import com.facebook.binaryresource.BinaryResource;
@@ -65,7 +65,7 @@ public final class ImageManager {
             Fresco.shutDown();
             builder.experiment().setNativeCodeDisabled(true);
             Fresco.initialize(context, builder.build());
-            Crashlytics.logException(error);
+//            Crashlytics.logException(error);
             error.printStackTrace();
         }
     }
