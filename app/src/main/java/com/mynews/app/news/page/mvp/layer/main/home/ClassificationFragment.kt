@@ -239,8 +239,12 @@ open class ClassificationFragment<in V : ClassificationContract.View,
     }
 
     override fun onFooterRefresh(view: PullToRefreshView?) {
+        var intent = Intent(_mActivity,MainActivity::class.java)
+        var bundle = Bundle()
+        bundle.putInt("index",position)
+        intent.putExtras(bundle)
+        _mActivity.startActivity(intent)
         pull_to_refresh.onFooterRefreshComplete()
-        _mActivity.startActivity( Intent(_mActivity, MainActivity::class.java))
     }
 
     override fun onHeaderRefresh(view: PullToRefreshView?) {

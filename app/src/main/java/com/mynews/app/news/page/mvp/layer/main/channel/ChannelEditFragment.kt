@@ -88,7 +88,6 @@ class ChannelEditFragment : MVPLoadingFragment<ChannelEditContract.View,
             addSelectedChannels(selectedChannelInCache)
             addAllChannels(recommendChannelInCache)
         }
-
         initChannelFromNet()
 
         EventManager.post(HideOrShowNewChannelTipEvent(false))
@@ -108,8 +107,12 @@ class ChannelEditFragment : MVPLoadingFragment<ChannelEditContract.View,
                     originChannels.addAll(it.selectedChannels.articleChannels)
                     currentChannels.addAll(it.selectedChannels.articleChannels)
                     allChannels.addAll(it.recommendChannels.articleChannels)
-                    addSelectedChannels(it.selectedChannels.articleChannels)
-                    addAllChannels(it.recommendChannels.articleChannels)
+                    //推荐频道由客户端自行添加
+                    val articleRecommendChannel = Channel(DataDictionary.CHANNEL_ID_RECOMMEND_ARTICLE, ResUtils.getString(R.string.Channel_ForYou), index = 0)
+                    currentChannels.add(0,articleRecommendChannel)
+                    originChannels.add(0,articleRecommendChannel)
+                    addSelectedChannels(originChannels)
+                    addAllChannels(allChannels)
                     hideLoading()
 
                     scrollToLastNewChannel()
@@ -144,7 +147,9 @@ class ChannelEditFragment : MVPLoadingFragment<ChannelEditContract.View,
         val input = ChannelInput()
 
         for (item in currentChannels) {
-            input.clientChannels.channels.add(item.chid)
+            if (!item.chid.equals("__for_you__")){
+                input.clientChannels.channels.add(item.chid)
+            }
         }
         input.clientChannels.mtime = System.currentTimeMillis()
 
@@ -229,7 +234,7 @@ class ChannelEditFragment : MVPLoadingFragment<ChannelEditContract.View,
 
     private fun addAllChannels(allChannels: ArrayList<Channel>) {
 //        selected_channels.removeAllViews()
-        adapter2 = MyGridAdapter(_mActivity, 0)
+        adapter2 = MyGridAdapter(_mActivity, 1)
         gv_channels_container.adapter = adapter2
         adapter2.listBean = allChannels
         adapter2.setOnItemClick(this)
@@ -327,57 +332,66 @@ class ChannelEditFragment : MVPLoadingFragment<ChannelEditContract.View,
 
     //滑动到所有频道里最后一个新频道处
     private fun scrollToLastNewChannel(){
-        if (lastNewChannelIndex == -1) {
-            return
-        }
-        val parentTop = all_channels_description.height + has_added_channels_description.height + dp150
-        val lastChannelTop = parentTop + (currentChannels.size + lastNewChannelIndex) * dp44
-        val wholeHeight = parentTop + (currentChannels.size + allChannels.size) * dp44 + dp44
-        val scrollViewHeight = channel_root_view.height - title_bar.bottom
-        val scrollEnd = if (wholeHeight - lastChannelTop > scrollViewHeight) {
-            lastChannelTop
-        } else {
-            wholeHeight - scrollViewHeight
-        }
-
-        //滑动到最后一个新频道处
-        val animator = ValueAnimator.ofInt(0, scrollEnd)
-        animator.duration = 300
-        animator.addUpdateListener {
-            try {
-                channel_scroll_view?.scrollTo(0, it.animatedValue as? Int ?: 0)
-                if (it.animatedValue as? Int ?: 0 == scrollEnd) {
-                    channel_scroll_view?.isEnabled = true
-                }
-            } catch (e: Exception) {
-                channel_scroll_view?.isEnabled = true
-            }
-        }
-        animator.startDelay = 200//等待布局结束动画才开始
-        animator.start()
+        channel_scroll_view?.scrollTo(0,  0)
+//        if (lastNewChannelIndex == -1) {
+//            return
+//        }
+//        val parentTop = all_channels_description.height + has_added_channels_description.height + dp150
+//        val lastChannelTop = parentTop + (currentChannels.size + lastNewChannelIndex) * dp44
+//        val wholeHeight = parentTop + (currentChannels.size + allChannels.size) * dp44 + dp44
+//        val scrollViewHeight = channel_root_view.height - title_bar.bottom
+//        val scrollEnd = if (wholeHeight - lastChannelTop > scrollViewHeight) {
+//            lastChannelTop
+//        } else {
+//            wholeHeight - scrollViewHeight
+//        }
+//
+//        //滑动到最后一个新频道处
+//        val animator = ValueAnimator.ofInt(0, scrollEnd)
+//        animator.duration = 300
+//        animator.addUpdateListener {
+//            try {
+//                channel_scroll_view?.scrollTo(0, it.animatedValue as? Int ?: 0)
+//                if (it.animatedValue as? Int ?: 0 == scrollEnd) {
+//                    channel_scroll_view?.isEnabled = true
+//                }
+//            } catch (e: Exception) {
+//                channel_scroll_view?.isEnabled = true
+//            }
+//        }
+//        animator.startDelay = 200//等待布局结束动画才开始
+//        animator.start()
     }
 
     override fun onItemClick(type: Int, position: Int) {
 //            updateAllChannel(channel.chid)
-        currentChannels.removeAll(currentChannels)
         if (type == 0){
+            currentChannels.removeAll(currentChannels)
             temporaryChannels.addAll(adapter1.listBean)
             var mChannel : Channel = temporaryChannels.get(position)
-            originChannels.removeAt(position)
             allChannels.add(mChannel)
-            temporaryChannels.removeAll(temporaryChannels)
-            adapter1.listBean = originChannels
+            temporaryChannels.removeAt(position)
+            currentChannels.addAll(temporaryChannels)
+            adapter1.listBean = currentChannels
             adapter2.listBean = allChannels
-            currentChannels.addAll(originChannels)
+            temporaryChannels.removeAll(temporaryChannels)
+//            temporaryChannels.addAll(adapter1.listBean)
+//            var mChannel : Channel = temporaryChannels.get(position)
+//            originChannels.removeAt(position)
+//            allChannels.add(mChannel)
+//            temporaryChannels.removeAll(temporaryChannels)
+//            adapter1.listBean = originChannels
+//            adapter2.listBean = allChannels
+//            currentChannels.addAll(originChannels)
         }else{
             temporaryChannels.addAll(adapter2.listBean)
             var mChannel : Channel = temporaryChannels.get(position)
             allChannels.removeAt(position)
-            originChannels.add(mChannel)
+            currentChannels.add(mChannel)
+            temporaryChannels.removeAt(position)
             temporaryChannels.removeAll(temporaryChannels)
-            adapter1.listBean = originChannels
+            adapter1.listBean = currentChannels
             adapter2.listBean = allChannels
-            currentChannels.addAll(originChannels)
         }
     }
 }

@@ -159,7 +159,18 @@ public class MyDragGridView extends GridView implements AdapterView.OnItemLongCl
             }
             if (layoutParams == null) {
                 layoutParams = new WindowManager.LayoutParams();
-                layoutParams.type = WindowManager.LayoutParams.TYPE_PHONE;
+                // 设置窗体显示类型
+                if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
+                    layoutParams.type = WindowManager.LayoutParams.TYPE_APPLICATION_OVERLAY;
+                } else {
+                    layoutParams.type = WindowManager.LayoutParams.TYPE_PHONE;
+                }
+//                if (Build.VERSION.SDK_INT > 25) {
+//                    params.type = WindowManager.LayoutParams.TYPE_APPLICATION_OVERLAY;
+//                } else {
+//                    params.type = WindowManager.LayoutParams.TYPE_SYSTEM_ALERT;
+//                }
+//                layoutParams.type = WindowManager.LayoutParams.TYPE_PHONE;
                 layoutParams.format = PixelFormat.RGBA_8888;
                 layoutParams.gravity = Gravity.TOP | Gravity.LEFT;
                 layoutParams.flags = WindowManager.LayoutParams.FLAG_NOT_TOUCH_MODAL

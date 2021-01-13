@@ -9,6 +9,7 @@ import com.mynews.app.news.event.EventManager
 import com.mynews.app.news.event.change.FeedbackHasUnreadChangeEvent
 import com.mynews.app.news.event.change.InboxUnreadCountChangeEvent
 import com.mynews.app.news.event.change.MainTabChangeEvent
+import com.mynews.app.news.event.refresh.MainIcoBackEvent
 import com.mynews.app.news.event.refresh.NewsListRefreshEvent
 import com.mynews.common.core.analytics.AnalyticsManager
 import com.mynews.common.core.rx.schedulers.io
@@ -114,5 +115,9 @@ class MainPresenter : MVPBasePresenter<MainContract.View>(),
         mView?.changeTab(event.tab)
     }
 
+    @Subscribe(threadMode = ThreadMode.MAIN)
+    fun onOpenUpdateChannelDialogEvent(event: MainIcoBackEvent) {
+        event.name
+    }
 }
 

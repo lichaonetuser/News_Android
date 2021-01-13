@@ -4,6 +4,8 @@ import android.os.Bundle
 import androidx.annotation.DrawableRes
 import android.view.View
 import com.mynews.app.news.R
+import com.mynews.app.news.event.OpenUpdateChannelDialogEvent
+import com.mynews.app.news.event.refresh.MainIcoBackEvent
 import com.mynews.app.news.page.mvp.layer.main.MainTabEnum.NEWS
 import com.mynews.app.news.page.mvp.layer.main.article.ArticleFragment
 import com.mynews.app.news.page.mvp.layer.main.me.MeFragment
@@ -14,6 +16,8 @@ import com.mynews.common.extension.app.mvp.base.MVPBaseFragment
 import kotlinx.android.synthetic.main.fragment_main.*
 import me.majiajie.pagerbottomtabstrip.item.BaseTabItem
 import me.yokeyword.fragmentation.SupportFragment
+import org.greenrobot.eventbus.Subscribe
+import org.greenrobot.eventbus.ThreadMode
 
 class MainFragment constructor(mindex: Int) : MVPBaseFragment<MainContract.View,
         MainContract.Presenter<MainContract.View>>(),

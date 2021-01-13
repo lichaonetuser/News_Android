@@ -6,10 +6,8 @@ import android.graphics.Color
 import android.graphics.Point
 import android.os.Build
 import android.os.Bundle
-import android.util.Log
 import android.view.WindowManager
 import androidx.constraintlayout.widget.ConstraintLayout
-import androidx.fragment.app.FragmentStatePagerAdapter
 import com.appsflyer.AppsFlyerLib
 import com.crashlytics.android.Crashlytics
 import com.google.firebase.iid.FirebaseInstanceId
@@ -25,10 +23,8 @@ import com.mynews.app.news.ad.IInterstitialAd
 import com.mynews.app.news.analytics.AnalyticsKey
 import com.mynews.app.news.applog.AppLogKey
 import com.mynews.app.news.applog.AppLogManager
-import com.mynews.app.news.bean.Channel
 import com.mynews.app.news.bean.ExtraInfo
 import com.mynews.app.news.bean.HtmlResource
-import com.mynews.app.news.bean.list.ListChannel
 import com.mynews.app.news.data.DataDictionary
 import com.mynews.app.news.data.DataManager
 import com.mynews.app.news.data.source.local.preference.PreferenceAPI
@@ -37,7 +33,6 @@ import com.mynews.app.news.deeplink.DeferredDeepLinkManager
 import com.mynews.app.news.openurl.OpenUrlManager
 import com.mynews.app.news.page.mvp.layer.main.HomeFragment
 import com.mynews.app.news.util.*
-import com.mynews.app.news.view.PullToRefreshView
 import com.mynews.app.news.widget.NewsVideoView
 import com.mynews.common.core.CoreApp
 import com.mynews.common.core.analytics.AnalyticsManager
@@ -58,9 +53,10 @@ import io.reactivex.Completable
 import io.reactivex.disposables.Disposable
 import io.reactivex.rxkotlin.subscribeBy
 import kotlinx.android.synthetic.main.activity_home.*
-import kotlinx.android.synthetic.main.activity_main.*
 import org.jetbrains.anko.keyguardManager
 import java.util.concurrent.TimeUnit
+import android.provider.Settings
+
 
 /**
  * 项目名称：New_Android
@@ -215,6 +211,16 @@ class HomeActivity : BaseAdActivity(){
 
     private fun initWindow() {
         window.addFlags(WindowManager.LayoutParams.FLAG_DISMISS_KEYGUARD)
+        if (Build.VERSION.SDK_INT >= 23) {
+            if (!Settings.canDrawOverlays(this)) {
+                val intent =
+                    Intent(Settings.ACTION_MANAGE_OVERLAY_PERMISSION)
+                intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK)
+                startActivityForResult(intent, 1)
+            } else {
+                //TODO do something you need
+            }
+        }
     }
 
     private fun requestDismissKeyguard() {

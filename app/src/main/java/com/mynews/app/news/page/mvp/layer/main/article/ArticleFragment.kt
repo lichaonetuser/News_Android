@@ -16,6 +16,9 @@ import com.mynews.app.news.R
 import com.mynews.app.news.analytics.AnalyticsKey
 import com.mynews.app.news.bean.Channel
 import com.mynews.app.news.data.DataDictionary
+import com.mynews.app.news.event.EventManager
+import com.mynews.app.news.event.change.FeedbackHasUnreadChangeEvent
+import com.mynews.app.news.event.refresh.MainIcoBackEvent
 import com.mynews.app.news.page.mvp.layer.main.article.headline.HeadlineChannelFragment
 import com.mynews.app.news.page.mvp.layer.main.list.news.NewsListFragment
 import com.mynews.app.news.page.mvp.layer.main.list.news.NewsListPresenterAutoBundle
@@ -104,8 +107,10 @@ open class ArticleFragment<in V : ArticleContract.View,
                 if (mArticleTab) {
                     val titleView = mIndicatorNavigator.getTitleViewAt(position)
                     if (titleView != null && titleView is TextView) {
+                        EventManager.post(MainIcoBackEvent("redDot"))
                         val redDot = titleView.tag as String
                         if (!ReddotUtils.containRedDot(redDot)) {
+//                            EventManager.post(FeedbackHasUnreadChangeEvent(true))
                             ReddotUtils.addRedDot(redDot)
                             titleView.setCompoundDrawablesWithIntrinsicBounds(0, 0, 0, 0)
 

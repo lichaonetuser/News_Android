@@ -82,7 +82,9 @@ class MainActivity : BaseAdActivity() {
         }
         super.onCreate(savedInstanceState)
         var bundle = this.intent.extras
-        index = bundle.get("index") as Int
+        if(bundle != null ){
+            index = bundle.get("index") as Int
+        }
         preInit()
         // 如果有启动广告，展示启动广告，否则正常启动
         if (mShowInterstitialAdFlag && SplashActivity.isInterstitialAdAvailable()) {
