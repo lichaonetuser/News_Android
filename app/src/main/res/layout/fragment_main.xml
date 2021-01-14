@@ -64,12 +64,12 @@
                 android:layout_centerHorizontal="true"/>
 
             <TextView
+                android:id="@+id/tv_name"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/iv_video1"
                 android:layout_centerHorizontal="true"
-                android:gravity="center_horizontal"
-                android:text="@string/Video_Video" />
+                android:gravity="center_horizontal" />
 
         </RelativeLayout>
         <RelativeLayout

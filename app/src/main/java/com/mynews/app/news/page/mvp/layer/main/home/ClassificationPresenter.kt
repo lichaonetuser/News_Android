@@ -11,10 +11,7 @@ import com.mynews.app.news.data.DataManager
 import com.mynews.app.news.data.task.initialization.InitTaskKey
 import com.mynews.app.news.event.EventManager
 import com.mynews.app.news.event.change.HideOrShowNewChannelTipEvent
-import com.mynews.app.news.event.refresh.ChannelListChangeEvent
-import com.mynews.app.news.event.refresh.NewsListRefreshEvent
-import com.mynews.app.news.event.refresh.SwitchSearchWordEvent
-import com.mynews.app.news.event.refresh.UpdateArticleVideoChannelEvent
+import com.mynews.app.news.event.refresh.*
 import com.mynews.app.news.page.mvp.layer.main.article.search.SearchFragment
 import com.mynews.app.news.page.mvp.layer.main.article.search.SearchPresenterAutoBundle
 import com.mynews.app.news.page.mvp.layer.main.channel.ChannelEditFragment
@@ -58,7 +55,6 @@ open class ClassificationPresenter<V : ClassificationContract.View> : MVPBasePre
         } else {
             mView?.setChannels(getListChannels())
         }
-
         EventManager.register(this)
     }
 
@@ -136,6 +132,7 @@ open class ClassificationPresenter<V : ClassificationContract.View> : MVPBasePre
                 AnalyticsKey.Event.VIDEO -> { DataManager.Memory.putCurrentVideoChannel(channel) }
             }
         }
+        mView?.setChannels(getListChannels())
     }
 
     override fun getSearchHotwords(type: Int) {
@@ -197,6 +194,11 @@ open class ClassificationPresenter<V : ClassificationContract.View> : MVPBasePre
         }
         mListChannel.articleChannels = arrayListOf()
         mListChannel.articleChannels.addAll(event.channels)
+    }
+
+    @Subscribe(threadMode = ThreadMode.MAIN)
+    fun onMainIcoBackEvent(event: MainIcoBackEvent) {
+        mView?.getTabIco(event.name)
     }
 
     //初始化频道列表

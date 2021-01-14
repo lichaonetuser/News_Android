@@ -38,7 +38,7 @@ import okhttp3.OkHttpClient
 class App : CoreApp() {
 
     companion object {
-        fun isDebug() = true
+        fun isDebug() = BuildConfig.DEBUG
         fun getInstance() = CoreApp.getInstance() as App
     }
 

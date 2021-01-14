@@ -6,6 +6,7 @@ import android.os.Bundle
 import android.util.Log
 import android.view.View
 import androidx.viewpager.widget.ViewPager
+import com.facebook.stetho.common.ListUtil
 import com.mynews.app.news.R
 import com.mynews.app.news.bean.Channel
 import com.mynews.app.news.bean.date.ClassificationDataBean
@@ -22,6 +23,7 @@ import kotlinx.android.synthetic.main.fragment_article.search_hint_txt
 import kotlinx.android.synthetic.main.fragment_article.status_bar
 import kotlinx.android.synthetic.main.fragment_classification.*
 import java.util.*
+import kotlin.collections.ArrayList
 
 open class ClassificationFragment<in V : ClassificationContract.View,
         out P : ClassificationContract.Presenter<V>>
@@ -38,7 +40,9 @@ open class ClassificationFragment<in V : ClassificationContract.View,
 //    open lateinit var mIndicatorNavigator: CommonNavigator
     lateinit var mPagerAdapter: HomePagerAdapter
     var ListData : MutableList<ClassificationDataBean> = ArrayList<ClassificationDataBean>()
+    var mChannels: List<Channel> = ArrayList<Channel>()
     var position :Int = 0
+    var mName :String = ""
     lateinit var Icon :String
     open val mArticleTab = true
 
@@ -77,6 +81,22 @@ open class ClassificationFragment<in V : ClassificationContract.View,
 
     override fun setChannels(channels: List<Channel>) {
         Log.d("ADB",channels.toString())
+        if (ListUtil.identityEquals(mChannels,channels)){
+            if (mName !== ""){
+                var index : Int = 0
+                for (i in channels.indices){
+                    if (mName.equals(channels.get(i).name) ){
+                        index = i
+                        break
+                    }
+                }
+                if (position != index){
+                    vp_home_navigation.currentItem = index
+                }
+            }
+            return
+        }
+        mChannels = channels;
         var mClassDataBean : ClassificationDataBean
         ListData = ArrayList<ClassificationDataBean>()
         for (i in channels){
@@ -206,6 +226,16 @@ open class ClassificationFragment<in V : ClassificationContract.View,
             ListData.add(mClassDataBean)
         }
         mPagerAdapter.addAll(ListData)
+        if (mName !== ""){
+            var index : Int = 0
+            for (i in channels.indices){
+                if (mName.equals(channels.get(i).name) ){
+                    index = i
+                    break
+                }
+            }
+            vp_home_navigation.setCurrentItem(index)
+        }
         Log.d("ADB",ListData.toString())
     }
 
@@ -222,6 +252,9 @@ open class ClassificationFragment<in V : ClassificationContract.View,
         } else {
             search_hint_txt.nextText(currentHotword)
         }
+    }
+    override fun getTabIco(icoName: String) {
+        mName = icoName
     }
 
     override fun onSupportVisible() {
@@ -263,13 +296,18 @@ open class ClassificationFragment<in V : ClassificationContract.View,
             vp_home_navigation.currentItem = --position
         }
     }
+    var triggerLastTime :Long = 0
 
     override fun onItemItemClick() {
-        var intent = Intent(_mActivity,MainActivity::class.java)
-        var bundle = Bundle()
-        bundle.putString("Icon",Icon)
-        intent.putExtras(bundle)
-        _mActivity.startActivity(intent)
+        val currentClickTime = System.currentTimeMillis()
+        if(currentClickTime - triggerLastTime  > 1000){
+            triggerLastTime = 0
+            var intent = Intent(_mActivity,MainActivity::class.java)
+            var bundle = Bundle()
+            bundle.putString("Icon",Icon)
+            intent.putExtras(bundle)
+            _mActivity.startActivity(intent)
+        }
     }
 
     /**
@@ -279,6 +317,7 @@ open class ClassificationFragment<in V : ClassificationContract.View,
     }
 
     override fun onPageScrolled(index: Int, positionOffset: Float, positionOffsetPixels: Int) {
+        triggerLastTime = System.currentTimeMillis()
         position = index
         Icon = ListData.get(index).name
     }

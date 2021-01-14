@@ -12,6 +12,7 @@ interface ClassificationContract {
         fun getCurrentPagePosition(): Int
         fun setCurrentPagePosition(position: Int)
         fun setSearchData(currentHotword : String)
+        fun getTabIco(ico : String)
     }
 
     interface Presenter<in V : View> : MVPBaseContract.Presenter<V> {

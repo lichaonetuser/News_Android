@@ -142,6 +142,7 @@ class MainFragment constructor(Icon: String) : MVPBaseFragment<MainContract.View
 
     override fun getTabIco(name: String) {
         iv_video1.setBackgroundResource(getBackgroundIco(name))
+        tv_name.text = name
     }
 
     private fun getBackgroundIco(name : String) : Int{
