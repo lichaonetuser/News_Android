@@ -175,6 +175,10 @@ public class MyGridAdapter extends BaseAdapter {
         notifyDataSetChanged();
     }
 
+    public int changePosition (){
+        return mListBean.size();
+    }
+
     private OnItemClick mOnItemClick;
 
     public void setOnItemClick(OnItemClick onItemClick) {

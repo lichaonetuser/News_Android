@@ -415,6 +415,7 @@ open class ArticleFragment<in V : ArticleContract.View,
 
     //频道编辑后，有可能新频道的位置发生了变化，需要重新检查一下
     private fun updateNewChannelTip(channels: List<Channel>, selectPostion: Int) {
+        EventManager.post(MainIcoBackEvent(mChannel.get(selectPostion).name))
         newChannelTipIndex.clear()
         repeat(mIndicatorNavigator.titleViewCount, {
             val view = mIndicatorNavigator.getTitleViewAt(it)

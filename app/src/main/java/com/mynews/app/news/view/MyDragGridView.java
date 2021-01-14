@@ -386,25 +386,29 @@ public class MyDragGridView extends GridView implements AdapterView.OnItemLongCl
                 mWindowManager.removeView(dragView);
                 dragView = null;
                 layoutParams = null;
+                itemDrop();
+                mode = MODE_NORMAL;
             }
-            itemDrop();
-            mode = MODE_NORMAL;
         }
 
         /**
          * 手指抬起时，item下落
          */
         private void itemDrop() {
+            ListAdapter adapter = getAdapter();
             if (tempPosition == position || tempPosition == GridView.INVALID_POSITION) {
-                View mView = getChildAt(position);
-                mView.setVisibility(VISIBLE);
-                if (index == tempPosition){
-                    mView.findViewById(R.id.delete_image_view).setVisibility(VISIBLE);
-                }else {
-                    mView.findViewById(R.id.delete_image_view).setVisibility(INVISIBLE);
+                if (adapter != null && adapter instanceof MyGridAdapter) {
+                    View mView = getChildAt(position);
+                    mView.setVisibility(VISIBLE);
+                    if (((MyGridAdapter) adapter).changePosition() > 8){
+                        if (index == tempPosition){
+                            mView.findViewById(R.id.delete_image_view).setVisibility(VISIBLE);
+                        }else {
+                            mView.findViewById(R.id.delete_image_view).setVisibility(INVISIBLE);
+                        }
+                    }
                 }
             } else {
-                ListAdapter adapter = getAdapter();
                 if (adapter != null && adapter instanceof MyGridAdapter) {
                     ((MyGridAdapter) adapter).exchangePosition(position, tempPosition, false);
                 }
